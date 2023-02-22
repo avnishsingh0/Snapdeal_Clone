@@ -1,0 +1,60 @@
+{
+  "products": [
+    {
+      "image": "https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/j/h/n/-original-imagkx55swz2wzk8.jpeg?q=70",
+      "brand": "Adidas",
+      "price": 789,
+      "description": "Being Human",
+      "collection": "Men",
+      "id": 1
+    },
+    {
+      "image": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/719wwSkOlBL._UY741_.jpg",
+      "brand": "Nike",
+      "price": 293,
+      "description": "For summer only",
+      "collection": "Men",
+      "id": 2
+    },
+    {
+      "image": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/51II4tiA2yL._UY741_.jpg",
+      "brand": "Being Human",
+      "price": 232,
+      "description": "For winter",
+      "collection": "Women",
+      "id": 3
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/9127dE8RlIL._AC_UL320_.jpg",
+      "brand": "Pisara",
+      "price": 259,
+      "description": "Women's Art Silk Printed Saree With Unstitched Blouse Piece",
+      "collection": "Women",
+      "id": 4
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/31zTx4VIh8L._AC_UL320_.jpg",
+      "brand": "Googo Gaaga",
+      "price": 824,
+      "description": "Googogaaga Boy's Cotton Full Sleeves Army Style Sweatshirt with Pant",
+      "collection": "Kids",
+      "id": 5
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/61TMa6vUHzL._AC_UL320_.jpg",
+      "brand": "Gauri Laxmi Enterprise",
+      "price": 349,
+      "description": "Cotton Blend Solid Short Kurta for Men (Luppi Kurta)",
+      "collection": "Men",
+      "id": 6
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/41aTueuwrkL._AC_SR400,600_.jpg",
+      "brand": "dasa",
+      "price": 200,
+      "description": "HJ HASASI - Blue Cotton Blend Slim Fit Men's Jeans",
+      "collection": "Men",
+      "id": 7
+    }
+  ]
+}
