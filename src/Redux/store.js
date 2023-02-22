@@ -1,4 +1,4 @@
-import { applyMiddleware, legacy_createStore } from "redux";
+import { applyMiddleware, combineReducers, legacy_createStore } from "redux";
 import thunk from "redux-thunk";
 import { reducer as AdminReducer } from "./AdminReducer/reducer";
 import { reducer as ProductReducer } from './ProductReducer/reducer'
