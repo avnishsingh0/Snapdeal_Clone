@@ -8,7 +8,7 @@ export const ProductView = () => {
     const [change,setChange]=useState(false)
     // const [pro,setPro]=useState([])
     
-    const product=useSelector((store)=>store.products
+    const product=useSelector((store)=>store.AdminReducer.products
     )
     // console.log("pro:",pro)
    /*
