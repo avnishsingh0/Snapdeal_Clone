@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineMobile } from "react-icons/ai";
-import { GrCart } from "react-icons/gr";
+import { BsCart } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 import { MdSearch } from "react-icons/md";
-// import "./Navbar.scss";
+import "./Navbar.scss";
 import logo from "../../Assets/logo.png";
+import { Show, Hide } from '@chakra-ui/react'
+
 function Navbar() {
+  const [sticky,setSticky]  = useState(false)
+  let handelScroll = () => {
+    
+  }
   return (
     <div className="nav_primary">
+      <Show breakpoint='(min-width: 1186px)'>
       <div className="nav_top">
         <div>
           <p>Brand Waali Quality, Bazaar Waali Deal!</p>
@@ -22,8 +29,7 @@ function Navbar() {
           </a>
         </div>
       </div>
-
-      <div className="nav">
+      <div className="nav" onScroll={handelScroll}>
         <div className="nav_inner">
 
           <div className="nav_image">
@@ -36,6 +42,7 @@ function Navbar() {
               <input
                 type="text"
                 className="form-control"
+                
                 placeholder="Search product & brand"
                 aria-label="Recipient's username"
                 aria-describedby="button-addon2"
@@ -54,18 +61,25 @@ function Navbar() {
           <div className="nav_cart">
             <div className="cart">
                 <p>Cart</p>
-                <GrCart/>
+                <icon>
+                <BsCart/>
+                </icon>
             </div>
 
             <div className="nav_login">
                 <p>Sign In</p>
+                <icon>
                 <CgProfile/>
+                </icon>
             </div>
           </div>
 
 
         </div>
       </div>
+      </Show>
+
+
     </div>
   );
 }
