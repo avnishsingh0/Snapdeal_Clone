@@ -12,6 +12,7 @@ function App() {
       {/* <ProductView/> */}
       <Navbar/>
       <AllRoutes/>
+
     </div>
   );
 }
