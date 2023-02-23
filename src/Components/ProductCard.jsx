@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./product.module.css";
+import styles from "../Components/product.module.css";
 const ProductCard = ({ image, title, old_price, price, discount, rating }) => {
   return (
     <div className={styles.productCard}>
