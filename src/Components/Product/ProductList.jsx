@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getProducts } from "../Redux/ProductReducer/action";
+import { getProducts } from "../../Redux/ProductReducer/action";
 import ProductCard from "./ProductCard";
 import styles from "./product.module.css";
+import { Link } from "react-router-dom";
 
 const ProductList = () => {
   const { isLoading, products, isError } = useSelector((store) => {
@@ -23,8 +24,9 @@ const ProductList = () => {
       {products.length > 0 &&
         products.map((el) => {
           return (
+            <Link to={`${el.id}`} key={el.id} >
             <ProductCard
-              key={el.id}
+              
               image={el.image}
               price={el.price}
               old_price={el.oldprice}
@@ -54,6 +56,7 @@ const ProductList = () => {
                 ) : null
               }
             />
+            </Link>
           );
         })}
     </div>
