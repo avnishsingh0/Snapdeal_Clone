@@ -11,6 +11,7 @@ function App() {
       {/* <AddProduct/> */}
       {/* <ProductView/> */}
       <Navbar/>
+      <AllRoutes/>
     </div>
   );
 }
