@@ -1,0 +1,122 @@
+$primary-color: #e40046 !important;
+$font-color:#fff;
+
+.nav_primary{
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.nav_top{
+    display: flex;
+    justify-content: space-between;
+    background: $primary-color;
+    height: 30px;
+    opacity: 0.9;
+    width: 100%;
+    // position: fixed;
+    // top: 0;
+    div{
+        display: flex;
+        margin: 0 100px;
+        gap: 15px;
+        align-items: center;
+        color: $font-color;
+        font-size: 0.9rem;
+    }
+    a{
+        display: flex;
+        align-items: center;
+        
+    }
+    
+}
+
+.nav{
+    width: 100%;
+    background: $primary-color;
+    height: 70px;
+    color: $font-color;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    .nav_inner{
+        width: 80%;
+        margin: auto;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+
+        .nav_image{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 20%;
+            // border: 1px solid black;
+            img{
+                width: 3rem;
+                height: 3rem;
+                border-radius: 50%;
+            }
+            h2{
+                font-size: 2rem;
+                font-weight: 500;
+            }
+        }
+
+        .nav_search{
+            width: 50%;
+            align-items: center;
+            // border: 1px solid black;
+            .form-control:focus{
+                border: none;
+                box-shadow: none;
+            }
+            button{
+                display: flex;
+                gap: 2px;
+                align-items: center;
+                background-color: #333;
+            }
+        }
+
+        .nav_cart{
+            display: flex;
+            width: 20%;
+            // border: 1px solid black;
+            // padding-bottom: 20px;
+            // margin-top: 10px;
+            justify-content: space-between;
+            icon{
+                font-size: 35px;
+            }
+            .cart{
+                display: flex;
+                width: 40%;
+                gap: 5px;
+                cursor: pointer;
+                margin-top: 2px;
+                padding-left: 3px;
+                padding-top: 8px;
+                padding-bottom: 18px;
+            }
+
+            .nav_login{
+                display: flex;
+                width: 60%;
+                justify-content: center;
+                margin: auto;
+                gap: 8px;
+                padding-left: 3px;
+                padding-top: 12px;
+                padding-bottom: 18px;
+                // cursor: pointer;
+                border-radius: 3px 3px 0 0;
+            }
+
+            .nav_login:hover{
+                background-color: #333;
+            }
+        }
+    }
+}
