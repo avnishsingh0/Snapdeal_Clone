@@ -7,10 +7,6 @@ import AllRoutes from "./Pages/AllRoutes";
 function App() {
   return (
     <div>
-      {/* <AllRoutes/> */}
-      {/* <AddProduct/> */}
-      {/* <ProductView/> */}
-      <Navbar/>
     </div>
   );
 }
