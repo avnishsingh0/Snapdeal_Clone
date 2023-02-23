@@ -8,8 +8,8 @@ const initialState={
 }
 
 export const reducer=(state=initialState,{type,payload})=>{
-    console.log("payload1:",payload)
-    console.log("state:",state)
+    // console.log("payload1:",payload)
+    // console.log("state:",state)
     switch(type){
         
         case POST_PRODUCT_REQUEST:
