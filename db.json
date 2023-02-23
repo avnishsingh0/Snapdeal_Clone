@@ -1,0 +1,12 @@
+{
+  "products": [
+    {
+      "image": "https://m.media-amazon.com/images/I/41aTueuwrkL._AC_SR400,600_.jpg",
+      "brand": "Asus",
+      "price": 448,
+      "description": "YHA - Blue Cotton Regular Fit Men's Casual Shirt",
+      "collection": "Men",
+      "id": 3
+    }
+  ]
+}
