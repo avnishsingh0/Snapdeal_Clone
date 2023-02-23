@@ -1,8 +1,18 @@
 import { DeleteIcon, EditIcon } from '@chakra-ui/icons'
-import { Box, Table, TableCaption, TableContainer, Tbody, Td, Tfoot, Th, Thead, Tr } from '@chakra-ui/react'
+import { AlertIcon, Box, Stack, Table, TableCaption, TableContainer, Tbody, Td, Tfoot, Th, Thead, Tr } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { deleteProduct, getProduct } from '../../Redux/AdminReducer/action'
+import { deleteProduct, getProduct } from '../../../Redux/AdminReducer/action'
+
+const Alert=()=>{
+  return (<Stack>
+    <Alert status='success' variant='solid'>
+      <AlertIcon />
+    Data uploaded to the server. Fire on!   
+  </Alert>
+</Stack>)
+  
+}
 
 export const ProductView = () => {
     const [change,setChange]=useState(false)
@@ -26,15 +36,19 @@ export const ProductView = () => {
     useEffect(() => {
         dispatch(getProduct)
         
-    }, [change])
+    }, [])
 
     const updateUI=()=>{
         setChange((prev)=>!prev)
     }
 
+    
+
     const handleDelete=(id)=>{
         // console.log("id:",id)
+        Alert()
         dispatch(deleteProduct(id)).then(()=>{
+            
             updateUI()
             
         })

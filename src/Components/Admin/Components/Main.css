@@ -1,0 +1,23 @@
+.Side1{
+    /* border: 2px solid red; */
+    width: 15%;
+    background-color: dimgray;
+    color: white;
+    font-size: larger;
+    
+}
+
+.Side2{
+    /* border: 2px solid red; */
+    width: 100%;
+    margin-left: 50px;
+}
+
+.bar{
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+.bar span{
+    margin-left: 30px;
+}
