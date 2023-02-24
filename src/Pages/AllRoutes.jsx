@@ -1,5 +1,6 @@
 import React from 'react'
 import {Route,Routes} from 'react-router-dom'
+import { Edit } from '../Components/Admin/Pages/Edit'
 import { Cart } from './Cart'
 
 
@@ -16,7 +17,7 @@ const AllRoutes = () => {
         <Route path='/products/:id' element={<SingleProductPage/>} />
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/productpage' element={<ProductPage/>}/>
-
+        
     </Routes>
   )
 }

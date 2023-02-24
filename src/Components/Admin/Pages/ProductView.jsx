@@ -1,62 +1,56 @@
 import { DeleteIcon, EditIcon } from '@chakra-ui/icons'
-import { AlertIcon, Box, Stack, Table, TableCaption, TableContainer, Tbody, Td, Tfoot, Th, Thead, Tr } from '@chakra-ui/react'
+import {  Box, Table, TableCaption, TableContainer, Tbody, Td, Tfoot, Th, Thead, Tr, useToast, Wrap, WrapItem } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { deleteProduct, getProduct } from '../../../Redux/AdminReducer/action'
+import pop from '../../../Assets/pop.wav'
 
-const Alert=()=>{
-  return (<Stack>
-    <Alert status='success' variant='solid'>
-      <AlertIcon />
-    Data uploaded to the server. Fire on!   
-  </Alert>
-</Stack>)
+import { Link, useNavigate } from 'react-router-dom'
+
+
+
+// const Alert=()=>{
+//   return (<Stack>
+//     <Alert status='success' variant='solid'>
+//       <AlertIcon />
+//     Data uploaded to the server. Fire on!   
+//   </Alert>
+// </Stack>)
   
-}
+// }
 
 export const ProductView = () => {
-    const [change,setChange]=useState(false)
-    // const [pro,setPro]=useState([])
+    
+    
     
     const product=useSelector((store)=>store.AdminReducer.products
     )
-    // console.log("pro:",pro)
-   /*
-   {
-    "image": "https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/j/h/n/-original-imagkx55swz2wzk8.jpeg?q=70",
-    "brand": "Adidas",
-    "price": 789,
-    "description": "Being Human",
-    "collection": "Men",
-    "id": 1
-  },
-   */
-    // console.log("propd:",product)
+
+    // const navigate=useNavigate()
+    
     const dispatch=useDispatch()
     useEffect(() => {
         dispatch(getProduct)
         
     }, [])
 
-    const updateUI=()=>{
-        setChange((prev)=>!prev)
+   
+
+    const play=()=>{
+      new Audio(pop).play()
+  }
+
+
+
+    const handleDelete=(id)=>{
+        
+      play()
+      
+        dispatch(deleteProduct(id))
+        
     }
 
     
-
-    const handleDelete=(id)=>{
-        // console.log("id:",id)
-        Alert()
-        dispatch(deleteProduct(id)).then(()=>{
-            
-            updateUI()
-            
-        })
-    }
-
-    const handleEdit=(id)=>{
-        console.log("edit:",id)
-    }
   return (
     <Box>
         <TableContainer>
@@ -80,7 +74,7 @@ export const ProductView = () => {
         <Td>{el.brand}</Td>
         <Td>Rs.{el.price}</Td>
         <Td>{el.collection}</Td>
-        <Td><EditIcon onClick={()=>handleEdit(el.id)}/></Td>
+        <Link to={`/edit/${el.id}`}><Td><EditIcon/></Td></Link>
         <Td><DeleteIcon color={"red"} onClick={()=>handleDelete(el.id)}/></Td>
       </Tr>
       })}
@@ -92,3 +86,5 @@ export const ProductView = () => {
     </Box>
   )
 }
+
+// onClick={()=>handleEdit(el.id)}
