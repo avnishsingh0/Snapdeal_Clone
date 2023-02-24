@@ -3,7 +3,7 @@ import { AiOutlineMobile } from "react-icons/ai";
 import { GrCart } from "react-icons/gr";
 import { CgProfile } from "react-icons/cg";
 import { MdSearch } from "react-icons/md";
-// import "./Navbar.scss";
+import "./Navbar.scss";
 import logo from "../../Assets/logo.png";
 function Navbar() {
   return (
