@@ -1,5 +1,11 @@
 
-// import { AddProduct } from "./Components/Admin/Pages/AddProduct";
+
+
+
+import { LandingPage } from "../src/Components/Curousel/LandingPage";
+
+
+
 import { MainPage } from "./Components/Admin/Components/MainPage";
 import { Edit } from "./Components/Admin/Pages/Edit";
 // import { ProductView } from "./Components/Admin/Pages/ProductView";
@@ -9,6 +15,7 @@ import { Edit } from "./Components/Admin/Pages/Edit";
 
 import Navbar from "./Components/Navbar/Navbar";
 
+
 import AllRoutes from "./Pages/AllRoutes";
 
 
@@ -16,15 +23,8 @@ function App() {
   return (
     <div>
       <Navbar/>
-      <MainPage/>
+      {/* <MainPage/> */}
       <AllRoutes/>
-      {/* <Edit/> */}
-      
-      
-      
-
-    
-  
 
 
     </div>

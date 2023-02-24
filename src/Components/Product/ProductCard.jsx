@@ -12,6 +12,7 @@ const ProductCard = ({ image, title, old_price, price, discount, rating }) => {
       </div>
       <p className={styles.rating}> {rating}</p>
     </div>
+   
   );
 };
 
