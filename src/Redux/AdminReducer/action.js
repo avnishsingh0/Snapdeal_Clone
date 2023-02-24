@@ -1,3 +1,4 @@
+import { Alert, AlertIcon, Stack } from "@chakra-ui/react"
 import axios from "axios"
 import { DELETE_PRODUCT_FAILURE, DELETE_PRODUCT_REQUEST, DELETE_PRODUCT_SUCCESS, GET_PRODUCT_FAILURE, GET_PRODUCT_REQUEST, GET_PRODUCT_SUCCESS, POST_PRODUCT_FAILURE, POST_PRODUCT_REQUEST, POST_PRODUCT_SUCCESS } from "./actionTypes"
 
@@ -57,6 +58,8 @@ export const deleteProduct=(id,dispatch)=>{
     
     return axios.delete(`http://localhost:8080/products/${id}`).then((res)=>{
         // console.log("3232ID:",id)
+        
+            
         dispatch(deleteSuccessAction(id))
         getProduct(id)
     })

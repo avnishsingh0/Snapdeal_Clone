@@ -2,7 +2,7 @@ import { Button, FormControl, FormHelperText, FormLabel, Input, Select, Stack } 
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
-import { addProduct } from '../../Redux/AdminReducer/action';
+import { addProduct } from '../../../Redux/AdminReducer/action';
 
 
 let initialState={
