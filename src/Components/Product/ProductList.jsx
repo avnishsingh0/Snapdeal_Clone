@@ -3,21 +3,38 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../Redux/ProductReducer/action";
 import ProductCard from "./ProductCard";
 import styles from "./product.module.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useSearchParams } from "react-router-dom";
 
 const ProductList = () => {
-  const { isLoading, products, isError } = useSelector((store) => {
+  const { isLoading, products, isError,filter } = useSelector((store) => {
     return {
       isLoading: store.ProductReducer.isLoading,
       products: store.ProductReducer.products,
       isError: store.ProductReducer.isError,
+      filter:store.ProductReducer.filter
     };
   });
   const dispatch = useDispatch();
+  const [searchParams] = useSearchParams();
+  const location = useLocation();
+
+  let obj = {
+    params: {
+      rating: searchParams.getAll("rating"),
+    },
+  };
+  
+  const filteredProducts = products.filter(product => {
+    return (
+      product.price >= filter.minPrice && product.price <= filter.maxPrice
+    );
+  });
+  
+ 
 
   useEffect(() => {
-    dispatch(getProducts);
-  }, []);
+    dispatch(getProducts(obj));
+  }, [location.search]);
 
   return (
     <div id={styles.productlist}>
