@@ -84,7 +84,7 @@ import HomeCarousel2 from "./HomeCarousel2";
 
                   {/* <!-- ---4th row --> */}
 
-                  <img
+                  <img 
                     src="https://n4.sdlcdn.com/imgs/i/f/f/BlockbusterDeals-cb277.jpg"
                     alt=""
                   />
@@ -466,43 +466,43 @@ import HomeCarousel2 from "./HomeCarousel2";
         </div>
         <div className={styles.rightside}>
           {/* Slider starts here */}
-          {/* <Carousel>
+          <Carousel>
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="https://n4.sdlcdn.com/imgs/k/a/z/Tshirt_WEB_10dec-dce51.jpg"
+                src="https://n3.sdlcdn.com/imgs/j/8/e/Health_ID_Snapdeal_ABDM_1300X410-6c79d.jpg"
                 alt="First slide"
               />
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="https://n2.sdlcdn.com/imgs/k/a/z/Dresess_WEB_10dec-89750.jpg"
+                src="https://n4.sdlcdn.com/imgs/k/k/z/web_banner_07-092e2.jpg"
                 alt="Second slide"
               />
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="https://n3.sdlcdn.com/imgs/k/a/z/Footwear_Collection_WEB_10dec-fea6a.jpg"
+                src="https://n3.sdlcdn.com/imgs/k/f/v/12_april_WB_Breezy_Dresses_WEB-5febf.jpg"
                 alt="Third slide"
               />
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="https://n4.sdlcdn.com/imgs/k/a/z/Tshirt_WEB_10dec-dce51.jpg"
+                src="https://n1.sdlcdn.com/imgs/k/f/v/12_april_WB_Festive_kurta_sets_WEB_1-9d9b7.jpg"
                 alt="Third slide"
               />
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="https://n4.sdlcdn.com/imgs/j/t/8/Web1min-cbb30.jpg"
+                src="https://n1.sdlcdn.com/imgs/k/f/v/12_april_WB_Kitchen_Essentials_WEB-cca82.jpg"
                 alt="Third slide"
               />
             </Carousel.Item>
-          </Carousel> */}
+          </Carousel>
           {/* <!-- ---cardslider-- --> */}
           <div className={styles.Container}>
             <h2 style={{letterSpacing:"2px",marginTop:"25px",padding:"5px"}}>RECENTLY VIEWED PRODUCTS</h2>
@@ -511,7 +511,7 @@ import HomeCarousel2 from "./HomeCarousel2";
             </Link>
           
             <Link to={'/product'}>
-            {/* <HomeCarousel1/> */}
+            <HomeCarousel1/>
             </Link>
 
             <h2 style={{letterSpacing:"2px",marginTop:"25px",padding:"5px"}}>POPULAR PRODUCTS</h2>
@@ -525,7 +525,7 @@ import HomeCarousel2 from "./HomeCarousel2";
           
         </div>
       </div>
-{/*       
+      
       <div className={styles.downloadsnap}>
         <img src="https://i1.sdlcdn.com/img/appScreenshot@1x.png" alt="" />
         <div className={styles.snapText}>
@@ -539,7 +539,7 @@ import HomeCarousel2 from "./HomeCarousel2";
           src="https://i1.sdlcdn.com/img/leaves1x.png"
           alt=""
         />
-      </div> */}
+      </div>
      
     </div>
   );

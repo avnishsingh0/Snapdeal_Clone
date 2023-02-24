@@ -208,7 +208,7 @@
     grid-area: l;
     background-color: white;
     margin: 0 24px 0 42px;
-    height: auto;
+    height: 60%;
   }
   
   .topCat {
@@ -604,6 +604,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    margin: auto;
   }
   
   .downloadsnap img {
