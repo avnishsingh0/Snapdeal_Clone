@@ -12,6 +12,9 @@ import { Routes, Route } from "react-router-dom";
 import { ProductView } from "../Pages/ProductView";
 import { AddProduct } from "../Pages/AddProduct";
 import { Dashboard } from "../Pages/Dashboard";
+import { Orders } from "../Pages/Orders";
+import { Edit } from "../Pages/Edit";
+// import { Edit } from "./Edit";
 
 const NavPage = () => {
   return (
@@ -21,6 +24,8 @@ const NavPage = () => {
         <Route path="/" element={<Dashboard/>} />
         <Route path="/admin_products" element={<ProductView/>} />
         <Route path="/add_products" element={<AddProduct />} />
+        <Route path="/orders" element={<Orders />} />
+        <Route path="/edit/:id" element={<Edit />} />
         {/* <Route path="/php" element={<Php />} />
         <Route path="/figma" element={<Figma />} />
         <Route path="/git" element={<Git />} />

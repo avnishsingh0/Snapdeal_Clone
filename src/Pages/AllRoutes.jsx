@@ -1,7 +1,11 @@
 import React from 'react'
 import {Route,Routes} from 'react-router-dom'
 
+import { Edit } from '../Components/Admin/Pages/Edit'
+
+
 import LandingPage from '../Components/Curousel/LandingPage'
+
 
 
 
@@ -24,7 +28,12 @@ const AllRoutes = () => {
         <Route path='/products' element={<ProductPage/>}  />
         <Route path='/products/:id' element={<SingleProductPage/>} />
         <Route path='/cart' element={<Cart/>}/>
+
+       
+        
+
       
+
 
 
     </Routes>
