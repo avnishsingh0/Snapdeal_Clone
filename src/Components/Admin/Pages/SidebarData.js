@@ -1,4 +1,7 @@
+import { AiOutlineUserSwitch } from "react-icons/ai";
+import { BiMessageAltAdd } from "react-icons/bi";
 import * as FaIcons from "react-icons/fa";
+import { MdProductionQuantityLimits } from "react-icons/md";
 
 export const SidebarData=[
     {
@@ -9,38 +12,36 @@ export const SidebarData=[
       {
         title: "Products",
         path: "/admin_products",
-        icon: <FaIcons.FaGit />,
+        icon: <MdProductionQuantityLimits />,
       },
       {
         title: "Add Products",
         path: "/add_products",
-        icon: <FaIcons.FaCss3Alt />,
-      },
-      {
-        title: "Categories",
-        path: "/categories",
-        icon: <FaIcons.FaPhp />,
+        icon: <BiMessageAltAdd />,
       },
       {
         title: "Orders",
         path: "/orders",
-        icon: <FaIcons.FaJava />,
+        icon: <BiMessageAltAdd />,
       },
      
       {
         title: "Users",
         path: "/users",
-        icon: <FaIcons.FaNodeJs />,
+        icon: <AiOutlineUserSwitch />,
       },
       {
         title: "Sellers",
         path: "/seller",
-        icon: <FaIcons.FaFigma />,
-      },
-      {
-        title: "Transaction",
-        path: "/transaction",
-        icon: <FaIcons.FaAngular />,
-        
+        icon: <FaIcons.FaSellcast />,
       }
 ]
+
+/*
+,
+      {
+        title: "Categories",
+        path: "/categories",
+        icon: <FaIcons.FaPhp />,
+      }
+*/

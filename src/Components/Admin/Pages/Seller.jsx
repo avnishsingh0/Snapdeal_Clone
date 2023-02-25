@@ -2,35 +2,24 @@ import { DeleteIcon, EditIcon } from '@chakra-ui/icons'
 import {  Box, Table, TableCaption, TableContainer, Tbody, Td, Tfoot, Th, Thead, Tr, useToast, Wrap, WrapItem } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { deleteProduct, getProduct } from '../../../Redux/AdminReducer/action'
+import { deleteProduct, getLogin, getProduct } from '../../../Redux/AdminReducer/action'
 import pop from '../../../Assets/pop.wav'
 
 import { Link, useNavigate } from 'react-router-dom'
 
 
-
-// const Alert=()=>{
-//   return (<Stack>
-//     <Alert status='success' variant='solid'>
-//       <AlertIcon />
-//     Data uploaded to the server. Fire on!   
-//   </Alert>
-// </Stack>)
-  
-// }
-
-export const ProductView = () => {
+export const Seller = () => {
     
     
     
-    const product=useSelector((store)=>store.AdminReducer.products
+    const product=useSelector((store)=>store.AdminReducer.data
     )
 
     // const navigate=useNavigate()
     
     const dispatch=useDispatch()
     useEffect(() => {
-        dispatch(getProduct)
+        dispatch(getLogin)
         
     }, [])
 
@@ -59,10 +48,10 @@ export const ProductView = () => {
     <Thead>
       <Tr bgColor={"red.300"} >
         <Th color={"white"}>S.No</Th>
-        <Th color={"white"}>Brand Name</Th>
-        <Th color={"white"}>Price</Th>
-        <Th color={"white"}>Collection</Th>
-        <Th color={"white"}>Edit</Th>
+        <Th color={"white"}>Email</Th>
+        <Th color={"white"}>Password</Th>
+        <Th color={"white"}>Department</Th>
+        <Th color={"white"}>EmployeeId</Th>
         <Th color={"white"}>Delete</Th>
       </Tr>
     </Thead>
@@ -71,10 +60,10 @@ export const ProductView = () => {
         var newId=el.id+Date.now()
         return <Tr key={el.id}>
         <Td>{newId}</Td>
-        <Td>{el.brand}</Td>
-        <Td>Rs.{el.price}</Td>
-        <Td>{el.collection}</Td>
-        <Link to={`/edit/${el.id}`}><Td><EditIcon/></Td></Link>
+        <Td>{el.email}</Td>
+        <Td>{el.password}***</Td>
+        <Td>Operation Team</Td>
+        <Td>Masai_{Math.random().toFixed(3)*1000}</Td>
         <Td><DeleteIcon color={"red"} onClick={()=>handleDelete(el.id)}/></Td>
       </Tr>
       })}

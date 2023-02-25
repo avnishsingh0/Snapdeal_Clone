@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { AiOutlineMobile } from "react-icons/ai";
 import { BsCart } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
@@ -10,18 +10,12 @@ import { AiOutlineHeart } from "react-icons/ai";
 
 import "./Navbar.scss";
 import logo from "../../Assets/logo.png";
-import { Show, Input, Flex } from '@chakra-ui/react'
+import { Cart } from "../../Pages/Cart";
+import { Show, Input } from '@chakra-ui/react'
+
 
 function Navbar() {
-//   var header = document.getElementsByClassName("mb_downNav");
-// var btns = header.getElementsByClassName("btn");
-// for (var i = 0; i < btns.length; i++) {
-//   btns[i].addEventListener("click", function() {
-//   var current = document.getElementsByClassName("active");
-//   current[0].className = current[0].className.replace(" active", "");
-//   this.className += " active";
-//   });
-// }
+
   return (
     <div className="nav_primary">
       <Show breakpoint='(min-width: 1186px)'>
@@ -71,16 +65,25 @@ function Navbar() {
           <div className="nav_cart">
             <div className="cart">
                 <p>Cart</p>
+
                 <Text>
                 <BsCart className="icon"/>
                 </Text>
+
+                
+                <Cart/>
+            
             </div>
 
             <div className="nav_login">
                 <p>Sign In</p>
+
                 <Text>
                 <CgProfile className="icon"/>
                 </Text>
+              
+                <CgProfile/>
+               
             </div>
           </div>
 

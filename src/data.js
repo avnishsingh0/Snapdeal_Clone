@@ -1,11 +1,11 @@
 export const dataDigitalBestSeller = [
     {
       id: 1,
-      title: 'Mario Kart™ 8 Deluxe',
+      title: 'Bhawna Collection Loard Shiv Trishul Damru Locket',
       price: '₹59.99',
       category: 'Nintendo Switch',
       linkImg:
-        'https://n1.sdlcdn.com/imgs/k/h/v/large/White-Moon-Navy-Sweatshirt-Pack-SDL096228504-1-0246d.jpg',
+        'https://n1.sdlcdn.com/imgs/i/n/r/large/bhawna-collection-Loard-Shiv-Trishul-SDL890408077-1-86933.jpeg',
     },
     {
       id: 2,
@@ -17,11 +17,11 @@ export const dataDigitalBestSeller = [
     },
     {
       id: 3,
-      title: 'Pokémon™ Legends: Arceus',
+      title: 'Maxbell USB Rechargeable Electronic Flameless Lighter',
       price: '₹59.99',
       category: 'Nintendo Switch',
       linkImg:
-      "https://n2.sdlcdn.com/imgs/k/h/v/large/Zebu-Maroon-Sweatshirt-SDL534372374-1-052e2.jpg"
+      "https://n4.sdlcdn.com/imgs/i/z/e/large/Maxbell-USB-Rechargeable-Electronic-Flameless-SDL679184483-1-08e0f.jpg"
     },
     {
       id: 4,
@@ -33,11 +33,11 @@ export const dataDigitalBestSeller = [
     },
     {
       id: 5,
-      title: 'Cuphead',
+      title: 'Bentag kitchenware Vegetable & Fruit Clever Cutter Stainless Steel Vegetable Scissor',
       price: '₹19.99',
       category: 'Nintendo Switch',
       linkImg:
-      "https://n4.sdlcdn.com/imgs/k/g/0/large/Kuchipoo-Multi-Cotton-Blend-Girls-SDL594381453-1-865d0.jpg"
+      "https://n1.sdlcdn.com/imgs/i/z/e/Bentag-Vegetable-Fruit-Clever-Cutter-SDL841893040-1-ea5e3.jpg"
     },
     {
       id: 6,

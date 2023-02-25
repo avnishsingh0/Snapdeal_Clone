@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import { addProduct } from '../../../Redux/AdminReducer/action';
-
+import sound from '../../../Assets/sound.wav'
 
 let initialState={
     image:"",
@@ -27,9 +27,15 @@ export const AddProduct = () => {
         })
         // console.log(product)
     }
+
+    const play=()=>{
+        new Audio(sound).play()
+    }
+
     const handleSubmit=(e)=>{
         e.preventDefault()
         dispatch(addProduct(product))
+        play()
         setProduct(product)
         setProduct(initialState)
     }
@@ -41,15 +47,15 @@ export const AddProduct = () => {
         <h1>MegaDeals Admin Panel</h1>
         <form onSubmit={handleSubmit}>
         <FormLabel>Image Url</FormLabel>
-        <Input type='url' name='image' value={product.image} onChange={(e)=>handleChange(e)}/>
+        <Input type='url' name='image' value={product.image} onChange={(e)=>handleChange(e)} required/>
         
         <FormLabel>Brand</FormLabel>
-        <Input type='text' name='brand' value={product.brand} onChange={(e)=>handleChange(e)} />
+        <Input type='text' name='brand' value={product.brand} onChange={(e)=>handleChange(e)} required/>
         
         <FormLabel>Price</FormLabel>
-        <Input type='number' name='price' value={product.price} onChange={(e)=>handleChange(e)}/>
+        <Input type='number' name='price' value={product.price} onChange={(e)=>handleChange(e)} required/>
         <FormLabel>Description</FormLabel>
-        <Input type='text' name='description' value={product.description} onChange={(e)=>handleChange(e)}/>
+        <Input type='text' name='description' value={product.description} onChange={(e)=>handleChange(e)} required/>
         
         <FormLabel>Collection</FormLabel>
         <Select name="collection" onChange={(e)=>handleChange(e)}>
@@ -60,7 +66,7 @@ export const AddProduct = () => {
         </Select>
 
         <Stack direction='row' spacing={4} align='center' mt={"20px"}>
-            <Button colorScheme='teal' variant='solid' ml={"40%"} type="submit">
+            <Button colorScheme='pink' variant='solid' ml={"40%"} type="submit">
                 Button
             </Button>
   
@@ -77,7 +83,7 @@ const Wrapper=styled.div`
     background-color: palegreen;
 }
 
-border:2px solid teal;
+border:2px solid pink;
 width:40%;
 margin:auto;
 border-Radius:14px;

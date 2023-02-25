@@ -26,6 +26,7 @@
     "react-scripts": "^5.0.1",
     "react-slick": "^0.29.0",
     "react-slick-carousel": "^0.14.9",
+    "recharts": "^2.4.3",
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2",
     "sass": "^1.58.3",
