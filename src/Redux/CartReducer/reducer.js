@@ -1,4 +1,4 @@
-import { GET_CART_ERROR, GET_CART_REQUEST, GET_CART_SUCCESS } from "./actionTypes";
+import {  GET_CART_ERROR, GET_CART_REQUEST, GET_CART_SUCCESS } from "./actionTypes";
 
 const initialState = {
     isLoading: false,
@@ -16,7 +16,7 @@ const initialState = {
   
       case GET_CART_ERROR:
         return { ...state, isLoading: false, isError: true };
-  
+        
       default:
         return state;
     }

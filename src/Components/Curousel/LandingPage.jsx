@@ -21,7 +21,7 @@ import HomeCarousel2 from "./HomeCarousel2";
             <div class="topCat">TOP CATEGORIES</div>
             <li className={styles.list1}>
               <img
-                src="https://n3.sdlcdn.com/imgs/d/h/3/Discount_Right_icon-f5105.png"
+                src="https://i3.sdlcdn.com/img/leftnavicon09/30x30mobile4.png"
                 alt=""
               />
               <span style={{ cursor: "pointer" }}>All Offers</span>
@@ -84,7 +84,7 @@ import HomeCarousel2 from "./HomeCarousel2";
 
                   {/* <!-- ---4th row --> */}
 
-                  <img
+                  <img 
                     src="https://n4.sdlcdn.com/imgs/i/f/f/BlockbusterDeals-cb277.jpg"
                     alt=""
                   />
@@ -93,7 +93,7 @@ import HomeCarousel2 from "./HomeCarousel2";
             </li>
             <li className={styles.list2} style={{ cursor: "pointer" }}>
               <img
-                src="https://i1.sdlcdn.com/img/leftnavicon09/30x30mobile2.png"
+                src="https://i2.sdlcdn.com/img/leftnavicon09/30x30home_living2.png"
                 alt=""
               />
               <span>Mobile & Tablets</span>
@@ -168,7 +168,7 @@ import HomeCarousel2 from "./HomeCarousel2";
             </li>
             <li className={styles.list3} style={{ cursor: "pointer" }}>
               <img
-                src="https://n2.sdlcdn.com/imgs/d/2/c/Electronic-6212c.png"
+                src="https://n2.sdlcdn.com/imgs/c/0/x/Homekitchenfurnishing-3eda1.jpg"
                 alt=""
               />
               <span>Electronics</span>
@@ -239,7 +239,7 @@ import HomeCarousel2 from "./HomeCarousel2";
             </li>
             <li className={styles.list4} style={{ cursor: "pointer" }}>
               <img
-                src="https://n2.sdlcdn.com/imgs/d/2/c/ComputerGaming-a02cf.png"
+                src="https://i3.sdlcdn.com/img/leftnavicon09/30x30music1.png"
                 alt=""
               />
               <span>Computers & Gaming</span>
@@ -309,7 +309,7 @@ import HomeCarousel2 from "./HomeCarousel2";
             </li>
             <li className={styles.list5} style={{ cursor: "pointer" }}>
               <img
-                src="https://n2.sdlcdn.com/imgs/c/0/x/Homekitchenfurnishing-3eda1.jpg"
+                src="https://i1.sdlcdn.com/img/leftnavicon09/fashion30x30_3.png"
                 alt=""
               />
               <span>Home & Kitchen</span>
@@ -457,75 +457,75 @@ import HomeCarousel2 from "./HomeCarousel2";
             </div>
           </ul>
         </div>
-        <div className={styles.barcode}>
+        {/* <div className={styles.barcode}>
           
           <div className={styles.bartext}>
             <p>Enjoy Convenient Order Tracking</p>
             <h3>Scan to download app</h3>
           </div>
-        </div>
+        </div> */}
         <div className={styles.rightside}>
           {/* Slider starts here */}
-          {/* <Carousel>
+          <Carousel>
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="https://n4.sdlcdn.com/imgs/k/a/z/Tshirt_WEB_10dec-dce51.jpg"
+                src="https://n3.sdlcdn.com/imgs/j/8/e/Health_ID_Snapdeal_ABDM_1300X410-6c79d.jpg"
                 alt="First slide"
               />
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="https://n2.sdlcdn.com/imgs/k/a/z/Dresess_WEB_10dec-89750.jpg"
+                src="https://n4.sdlcdn.com/imgs/k/k/z/web_banner_07-092e2.jpg"
                 alt="Second slide"
               />
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="https://n3.sdlcdn.com/imgs/k/a/z/Footwear_Collection_WEB_10dec-fea6a.jpg"
+                src="https://n3.sdlcdn.com/imgs/k/f/v/12_april_WB_Breezy_Dresses_WEB-5febf.jpg"
                 alt="Third slide"
               />
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="https://n4.sdlcdn.com/imgs/k/a/z/Tshirt_WEB_10dec-dce51.jpg"
+                src="https://n1.sdlcdn.com/imgs/k/f/v/12_april_WB_Festive_kurta_sets_WEB_1-9d9b7.jpg"
                 alt="Third slide"
               />
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="https://n4.sdlcdn.com/imgs/j/t/8/Web1min-cbb30.jpg"
+                src="https://n1.sdlcdn.com/imgs/k/f/v/12_april_WB_Kitchen_Essentials_WEB-cca82.jpg"
                 alt="Third slide"
               />
             </Carousel.Item>
-          </Carousel> */}
+          </Carousel>
           {/* <!-- ---cardslider-- --> */}
           <div className={styles.Container}>
-            <h2 style={{letterSpacing:"2px",marginTop:"25px",padding:"5px"}}>RECENTLY VIEWED PRODUCTS</h2>
+            <h2 style={{letterSpacing:"2px",marginTop:"25px",padding:"5px"}}>TRENDING PRODUCTS</h2>
             <Link to={'/product'}>
             <HomeCarousel/>
             </Link>
           
-            <Link to={'/product'}>
+            {/* <Link to={'/product'}> */}
             {/* <HomeCarousel1/> */}
-            </Link>
+            {/* </Link> */}
 
-            <h2 style={{letterSpacing:"2px",marginTop:"25px",padding:"5px"}}>POPULAR PRODUCTS</h2>
+            {/* <h2 style={{letterSpacing:"2px",marginTop:"25px",padding:"5px"}}>POPULAR PRODUCTS</h2> */}
            
-            <Link to={'/product'}>
+            {/* <Link to={'/product'}> */}
             {/* <HomeCarousel2/> */}
-            </Link>
+            {/* </Link> */}
 
           </div>
         
           
         </div>
       </div>
-{/*       
+      
       <div className={styles.downloadsnap}>
         <img src="https://i1.sdlcdn.com/img/appScreenshot@1x.png" alt="" />
         <div className={styles.snapText}>
@@ -539,7 +539,7 @@ import HomeCarousel2 from "./HomeCarousel2";
           src="https://i1.sdlcdn.com/img/leaves1x.png"
           alt=""
         />
-      </div> */}
+      </div>
      
     </div>
   );

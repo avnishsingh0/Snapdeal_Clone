@@ -67,13 +67,7 @@ function HomeCarousel() {
       />
     );
   }
-//   const handleErrorImage = (data) => {
-//     setDefaultImage((prev) => ({
-//       ...prev,
-//       [data.target.alt]: data.target.alt,
-//       linkDefault: imgGirl,
-//     }));
-//   };
+  
 
   return (
     <div className="App">

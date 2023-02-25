@@ -3,6 +3,8 @@ import {
   GET_PRODUCT_REQUEST,
   GET_PRODUCT_SUCCESS,
   GET_SINGLE_PRODUCT_SUCCESS,
+  UPDATE_FILTER,
+
 } from "./actionTypes";
 import axios from "axios";
 
@@ -22,10 +24,17 @@ export const getProductErrorObj = () => {
   return { type: GET_PRODUCT_ERROR };
 };
 
-export const getProducts = (dispatch) => {
+export const updateFilter = ({ minPrice, maxPrice }) => ({
+  type: UPDATE_FILTER,
+  payload: { minPrice, maxPrice },
+});
+
+
+
+export const getProducts = (obj) => (dispatch) => {
   dispatch(getProductRequestObj());
   axios
-    .get("http://localhost:8080/products")
+    .get("http://localhost:8080/products",obj)
     .then((res) => {
       dispatch(getProductSuccessObj(res.data));
     })
