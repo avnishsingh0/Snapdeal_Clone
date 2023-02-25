@@ -6,6 +6,8 @@ import { MdSearch } from "react-icons/md";
 import "./Navbar.scss";
 import logo from "../../Assets/logo.png";
 import { Show, Hide } from '@chakra-ui/react'
+import { Link } from "react-router-dom";
+import { Cart } from "../../Pages/Cart";
 
 function Navbar() {
   const [sticky,setSticky]  = useState(false)
@@ -61,16 +63,16 @@ function Navbar() {
           <div className="nav_cart">
             <div className="cart">
                 <p>Cart</p>
-                <icon>
-                <BsCart/>
-                </icon>
+                
+                <Cart/>
+            
             </div>
 
             <div className="nav_login">
                 <p>Sign In</p>
-                <icon>
+              
                 <CgProfile/>
-                </icon>
+               
             </div>
           </div>
 

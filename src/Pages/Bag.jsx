@@ -19,6 +19,7 @@ import {
   Thead,
   Tr,
 } from "@chakra-ui/react";
+import { Link } from 'react-router-dom'
 import { useEffect, useState } from "react";
 
 import {
@@ -28,7 +29,7 @@ import {
 } from "react-icons/ai";
 import { FcDataProtection } from "react-icons/fc";
 import { useDispatch, useSelector } from "react-redux";
-import { getCart } from "../Redux/CartReducer/action";
+import {   getCart } from "../Redux/CartReducer/action";
 
 const Bag = () => {
   const { isLoading, isError, carts } = useSelector(
@@ -38,6 +39,11 @@ const Bag = () => {
   useEffect(() => {
     dispatch(getCart);
   }, []);
+  const [cartitem, setCartitem]= useState('')
+  
+  console.log(cartitem)
+  var grandtotal= 0;
+  
   return (
     <Box>
       <SimpleGrid columns={[1, 1, 1, 2]}>
@@ -54,8 +60,10 @@ const Bag = () => {
                 </Thead>
                 <Tbody>
                   {carts.length > 0 &&
-                    carts.map((product, index) => (
-                      <Tr key={index}>
+                    carts.map((product, index) =>{
+                     grandtotal+=(product.qty*product.price)
+                      return (
+                        <Tr key={index}>
                         <Td display={"flex"}>
                           <Image
                             w={70}
@@ -64,10 +72,10 @@ const Bag = () => {
                           <Box>
                             <Text ml={4}>Sport Shoese </Text>
                             <Text ml={4} mt={3}>
-                              Size: 6{" "}
+                              Size: 6
                             </Text>
                             <Box display={"flex"} cursor={"pointer"}>
-                              <Text ml={4} mt={3}>
+                              <Text ml={4} mt={3} >
                                 <AiOutlineClose />
                               </Text>
 
@@ -75,10 +83,10 @@ const Bag = () => {
                                 REMOVE
                               </Text>
                               <Text ml={2} mt={3}>
-                                <AiOutlineHeart />
+                                <AiOutlineHeart />  
                               </Text>
                               <Text ml={2} mt={2.5}>
-                                {" "}
+                               
                                 MOVE TO SHORTLIST
                               </Text>
                             </Box>
@@ -89,14 +97,14 @@ const Bag = () => {
                         </Td>
 
                         <Td>
-                          <Select w={20}>
-                            <option value={1}> 1</option>
-                            <option value={2}> 2</option>
-                            <option value={3}> 3</option>
-                          </Select>
+                          <Text ml={3} fontWeight={'bold'}>{product.qty}</Text>
                         </Td>
                       </Tr>
-                    ))}
+                      )
+                    }
+
+                     
+                    )}
                 </Tbody>
               </Table>
             </Show>
@@ -120,20 +128,20 @@ const Bag = () => {
                         </Td>
                         <Td border={"0px solid red"}>
                           <Text border={"0px solid red"}>
-                            {" "}
-                            Sports Running Shoes{" "}
+                           
+                            Sports Running Shoes
                           </Text>
                           <Text mt={2} border={"0px solid red"}>
-                            {" "}
-                            Size: 5{" "}
+                           
+                            Qty:{product.qty}
                           </Text>
                           <Text mt={2} border={"0px solid red"}>
-                            {" "}
-                            Rs. 1000{" "}
+                           
+                            Rs. {product.price}
                           </Text>
                           <Box display={"flex"} mt={3}>
                             <Text fontSize={"xl"}>
-                              <AiOutlineClose />{" "}
+                              <AiOutlineClose />
                             </Text>
                             <Text ml={3}>REMOVE</Text>
                           </Box>
@@ -168,7 +176,7 @@ const Bag = () => {
                       </Td>
                       <Td></Td>
                       <Td>
-                        <Text> Rs. {product.price}</Text>
+                        <Text> Rs. {product.qty*product.price}</Text>
                       </Td>
                     </Tr>
                   ))}
@@ -197,7 +205,7 @@ const Bag = () => {
                   <FcDataProtection />
                 </Text>
                 <Text mt={-1} ml={2}>
-                  {" "}
+                 
                   100% Payment Protection, Easy Returns Policy
                 </Text>
               </Box>
@@ -210,13 +218,18 @@ const Bag = () => {
             </Box>
           </Show>
           <Box border={"0px solid red"} m={"auto"}>
-            <Text>Rs. 1,798</Text>
+            <Text>Rs. {grandtotal}</Text>
+            
             <Text>FREE</Text>
+            
           </Box>
           <Box border={"0px solid red"} m={"auto"}>
+          <Link to={'/checkout'}>
             <Button bg={"#e40046"} color={"white"}>
-              PROCEED TO PAY Rs. 1,798
+              PROCEED TO PAY Rs. {grandtotal}
             </Button>
+            </Link>
+           
           </Box>
         </SimpleGrid>
       </Box>
