@@ -63,10 +63,33 @@
 }
 
 .sidebar{
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   padding: 10px;
 }
 
+.sidebar div{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.price_slider{
+  padding: 20px;
+  margin-top: 25px;
+}
+
+.max_min{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.max_min input{
+  width: 100px;
+  height: 60px;
+  border: 1px solid gray;
+  text-align: center;
+}
 
 /* SingleProduct */
 
@@ -149,3 +172,5 @@
   width: 300px;
   height: 300px;
 }
+
+

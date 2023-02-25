@@ -1,9 +1,20 @@
 {
   "products": [
     {
+      "image": "https://m.media-amazon.com/images/I/41lNWrEJvvS._AC_SR400,600_.jpg",
+      "brand": "dasa",
+      "price": 200,
+      "description": "3das",
+      "collection": "Women",
+      "id": 3
+    }
+  ],
+  "Cart": [
+    {
       "image": "https://m.media-amazon.com/images/I/41aTueuwrkL._AC_SR400,600_.jpg",
       "brand": "Asus",
       "price": 448,
+      "qty": 4,
       "description": "YHA - Blue Cotton Regular Fit Men's Casual Shirt",
       "collection": "Men",
       "id": 3,
@@ -17,6 +28,13 @@
       "collection": "Men",
       "id": 2,
       "qty":2
+    }
+  ],
+  "Seller": [
+    {
+      "email": "ankits745@gmail.com",
+      "password": "789456",
+      "id": 3
     }
   ]
 }
