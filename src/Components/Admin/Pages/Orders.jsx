@@ -5,7 +5,7 @@ import { orderProduct } from '../../../Redux/AdminReducer/action'
 
 export const Orders = () => {
 
-    const product=useSelector((store)=>store.AdminReducer.products
+    const product=useSelector((store)=>store.AdminReducer.cart
     )
   
  

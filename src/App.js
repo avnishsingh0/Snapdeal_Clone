@@ -2,7 +2,7 @@
 
 
 
-import { LandingPage } from "../src/Components/Curousel/LandingPage";
+import LandingPage from "../src/Components/Curousel/LandingPage";
 
 
 
@@ -23,7 +23,8 @@ function App() {
   return (
     <div>
       <Navbar/>
-      {/* <MainPage/> */}
+      <MainPage/>
+      <LandingPage/>
       <AllRoutes/>
 
 

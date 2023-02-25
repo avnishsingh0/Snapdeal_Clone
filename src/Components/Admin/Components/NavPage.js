@@ -14,6 +14,7 @@ import { AddProduct } from "../Pages/AddProduct";
 import { Dashboard } from "../Pages/Dashboard";
 import { Orders } from "../Pages/Orders";
 import { Edit } from "../Pages/Edit";
+import { Seller } from "../Pages/Seller";
 // import { Edit } from "./Edit";
 
 const NavPage = () => {
@@ -26,6 +27,7 @@ const NavPage = () => {
         <Route path="/add_products" element={<AddProduct />} />
         <Route path="/orders" element={<Orders />} />
         <Route path="/edit/:id" element={<Edit />} />
+        <Route path="/seller" element={<Seller />} />
         {/* <Route path="/php" element={<Php />} />
         <Route path="/figma" element={<Figma />} />
         <Route path="/git" element={<Git />} />
