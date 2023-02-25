@@ -20,7 +20,6 @@ export const Cart=()=> {
   
   return (
     <>
-          
         <Text
           onClick={() => handleSizeClick(size)}
           
