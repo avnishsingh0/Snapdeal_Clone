@@ -10,7 +10,12 @@ import { AiOutlineHeart } from "react-icons/ai";
 
 import "./Navbar.scss";
 import logo from "../../Assets/logo.png";
+
+import {  Hide } from '@chakra-ui/react'
+import { Link } from "react-router-dom";
+import { Cart } from "../../Pages/Cart";
 import { Show, Input, Flex } from '@chakra-ui/react'
+
 
 function Navbar() {
 //   var header = document.getElementsByClassName("mb_downNav");
@@ -71,16 +76,16 @@ function Navbar() {
           <div className="nav_cart">
             <div className="cart">
                 <p>Cart</p>
-                <icon>
-                <BsCart/>
-                </icon>
+                
+                <Cart/>
+            
             </div>
 
             <div className="nav_login">
                 <p>Sign In</p>
-                <icon>
+              
                 <CgProfile/>
-                </icon>
+               
             </div>
           </div>
 

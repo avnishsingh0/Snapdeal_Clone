@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure } from '@chakra-ui/react';
+import { Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, useDisclosure } from '@chakra-ui/react';
 
 
 import Bag from './Bag';
+import { BiCart } from 'react-icons/bi';
+import { BsCart } from 'react-icons/bs';
 
 
 
@@ -19,11 +21,11 @@ export const Cart=()=> {
   return (
     <>
           
-        <Button
+        <Text
           onClick={() => handleSizeClick(size)}
           
-          m={4}
-        >{`Open ${size} Modal`}</Button>
+        fontWeight={'bold'} mt={1}
+        ><BsCart/> </Text>
      
 
       <Modal onClose={onClose} size={size} isOpen={isOpen}>
