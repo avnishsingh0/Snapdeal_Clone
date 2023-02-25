@@ -1,6 +1,6 @@
 import { Alert, AlertIcon, Stack } from "@chakra-ui/react"
 import axios from "axios"
-import { DELETE_PRODUCT_FAILURE, DELETE_PRODUCT_REQUEST, DELETE_PRODUCT_SUCCESS, EDIT_PRODUCT_SUCCESS, GET_PRODUCT_FAILURE, GET_PRODUCT_REQUEST, GET_PRODUCT_SUCCESS, ORDER_PRODUCT_FAILURE, ORDER_PRODUCT_REQUEST, ORDER_PRODUCT_SUCCESS, POST_PRODUCT_FAILURE, POST_PRODUCT_REQUEST, POST_PRODUCT_SUCCESS } from "./actionTypes"
+import { DELETE_PRODUCT_FAILURE, DELETE_PRODUCT_REQUEST, DELETE_PRODUCT_SUCCESS, EDIT_PRODUCT_SUCCESS, GET_PRODUCT_FAILURE, GET_PRODUCT_REQUEST, GET_PRODUCT_SUCCESS, LOGIN_PRODUCT_FAILURE, LOGIN_PRODUCT_REQUEST, LOGIN_PRODUCT_SUCCESS, ORDER_PRODUCT_FAILURE, ORDER_PRODUCT_REQUEST, ORDER_PRODUCT_SUCCESS, POST_PRODUCT_FAILURE, POST_PRODUCT_REQUEST, POST_PRODUCT_SUCCESS } from "./actionTypes"
 
 export const postRequestAction=()=>{
     return {type:POST_PRODUCT_REQUEST}
@@ -47,6 +47,18 @@ const editProductSuccess = () => {
     return { type: EDIT_PRODUCT_SUCCESS };
   };
 
+export const loginRequestAction=()=>{
+    return {type:LOGIN_PRODUCT_REQUEST}
+}
+
+export const loginSuccessAction=(payload)=>{
+    return {type:LOGIN_PRODUCT_SUCCESS,payload}
+}
+
+export const loginFailureAction=()=>{
+    return {type:LOGIN_PRODUCT_FAILURE}
+}
+
 
 export const addProduct=(pay)=>(dispatch)=>{
     dispatch(postRequestAction())
@@ -67,6 +79,16 @@ export const getProduct=(dispatch)=>{
         dispatch(getSuccessAction(res.data))
     }).catch((err)=>{
         dispatch(getFailureAction())
+    })
+}
+
+export const getLogin=(dispatch)=>{
+    dispatch(loginRequestAction());
+    return axios.get("http://localhost:8080/Seller").then((res)=>{
+        // console.log("3232:",res.data)
+        dispatch(loginSuccessAction(res.data))
+    }).catch((err)=>{
+        dispatch(loginFailureAction())
     })
 }
 
