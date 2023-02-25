@@ -21,7 +21,7 @@ import HomeCarousel2 from "./HomeCarousel2";
             <div class="topCat">TOP CATEGORIES</div>
             <li className={styles.list1}>
               <img
-                src="https://n3.sdlcdn.com/imgs/d/h/3/Discount_Right_icon-f5105.png"
+                src="https://i3.sdlcdn.com/img/leftnavicon09/30x30mobile4.png"
                 alt=""
               />
               <span style={{ cursor: "pointer" }}>All Offers</span>
@@ -93,7 +93,7 @@ import HomeCarousel2 from "./HomeCarousel2";
             </li>
             <li className={styles.list2} style={{ cursor: "pointer" }}>
               <img
-                src="https://i1.sdlcdn.com/img/leftnavicon09/30x30mobile2.png"
+                src="https://i2.sdlcdn.com/img/leftnavicon09/30x30home_living2.png"
                 alt=""
               />
               <span>Mobile & Tablets</span>
@@ -168,7 +168,7 @@ import HomeCarousel2 from "./HomeCarousel2";
             </li>
             <li className={styles.list3} style={{ cursor: "pointer" }}>
               <img
-                src="https://n2.sdlcdn.com/imgs/d/2/c/Electronic-6212c.png"
+                src="https://n2.sdlcdn.com/imgs/c/0/x/Homekitchenfurnishing-3eda1.jpg"
                 alt=""
               />
               <span>Electronics</span>
@@ -239,7 +239,7 @@ import HomeCarousel2 from "./HomeCarousel2";
             </li>
             <li className={styles.list4} style={{ cursor: "pointer" }}>
               <img
-                src="https://n2.sdlcdn.com/imgs/d/2/c/ComputerGaming-a02cf.png"
+                src="https://i3.sdlcdn.com/img/leftnavicon09/30x30music1.png"
                 alt=""
               />
               <span>Computers & Gaming</span>
@@ -309,7 +309,7 @@ import HomeCarousel2 from "./HomeCarousel2";
             </li>
             <li className={styles.list5} style={{ cursor: "pointer" }}>
               <img
-                src="https://n2.sdlcdn.com/imgs/c/0/x/Homekitchenfurnishing-3eda1.jpg"
+                src="https://i1.sdlcdn.com/img/leftnavicon09/fashion30x30_3.png"
                 alt=""
               />
               <span>Home & Kitchen</span>
@@ -457,13 +457,13 @@ import HomeCarousel2 from "./HomeCarousel2";
             </div>
           </ul>
         </div>
-        <div className={styles.barcode}>
+        {/* <div className={styles.barcode}>
           
           <div className={styles.bartext}>
             <p>Enjoy Convenient Order Tracking</p>
             <h3>Scan to download app</h3>
           </div>
-        </div>
+        </div> */}
         <div className={styles.rightside}>
           {/* Slider starts here */}
           <Carousel>
@@ -505,20 +505,20 @@ import HomeCarousel2 from "./HomeCarousel2";
           </Carousel>
           {/* <!-- ---cardslider-- --> */}
           <div className={styles.Container}>
-            <h2 style={{letterSpacing:"2px",marginTop:"25px",padding:"5px"}}>RECENTLY VIEWED PRODUCTS</h2>
+            <h2 style={{letterSpacing:"2px",marginTop:"25px",padding:"5px"}}>TRENDING PRODUCTS</h2>
             <Link to={'/product'}>
             <HomeCarousel/>
             </Link>
           
-            <Link to={'/product'}>
-            <HomeCarousel1/>
-            </Link>
+            {/* <Link to={'/product'}> */}
+            {/* <HomeCarousel1/> */}
+            {/* </Link> */}
 
-            <h2 style={{letterSpacing:"2px",marginTop:"25px",padding:"5px"}}>POPULAR PRODUCTS</h2>
+            {/* <h2 style={{letterSpacing:"2px",marginTop:"25px",padding:"5px"}}>POPULAR PRODUCTS</h2> */}
            
-            <Link to={'/product'}>
+            {/* <Link to={'/product'}> */}
             {/* <HomeCarousel2/> */}
-            </Link>
+            {/* </Link> */}
 
           </div>
         
