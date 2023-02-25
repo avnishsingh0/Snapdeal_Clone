@@ -3,7 +3,7 @@ import { AiOutlineMobile } from "react-icons/ai";
 import { BsCart } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 import { MdSearch } from "react-icons/md";
-
+import { Text } from "@chakra-ui/react";
 
 import { BiHomeAlt,BiCategory,BiCart } from "react-icons/bi";
 import { AiOutlineHeart } from "react-icons/ai";
@@ -71,16 +71,16 @@ function Navbar() {
           <div className="nav_cart">
             <div className="cart">
                 <p>Cart</p>
-                <icon>
-                <BsCart/>
-                </icon>
+                <Text>
+                <BsCart className="icon"/>
+                </Text>
             </div>
 
             <div className="nav_login">
                 <p>Sign In</p>
-                <icon>
-                <CgProfile/>
-                </icon>
+                <Text>
+                <CgProfile className="icon"/>
+                </Text>
             </div>
           </div>
 
@@ -102,41 +102,41 @@ function Navbar() {
           <hr />
         <div className="mb_downNav">
           <button className="btn">
-            <icon>
+            <Text>
             <BiHomeAlt className="icon"/>
-            </icon>
+            </Text>
             <p>Home</p>
           </button>
       
       
           <button className="btn">
-            <icon>
+            <Text>
             <BiCategory className="icon"/>
-            </icon>
+            </Text>
             <p>Category</p>
           </button>
       
       
           <button className="btn">
-            <icon>
+            <Text>
             <BiCart className="icon"/>
-            </icon>
+            </Text>
             <p>Cart</p>
           </button>
       
       
           <button className="btn">
-            <icon>
+            <Text>
             <AiOutlineHeart className="icon"/>
-            </icon>
+            </Text>
             <p>Wishlist</p>
           </button>
       
       
           <button className="btn">
-            <icon>
+            <Text>
             <CgProfile className="icon"/>
-            </icon>
+            </Text>
             <p>Profile</p>
           </button>
       
