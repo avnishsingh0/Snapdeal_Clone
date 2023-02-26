@@ -1,34 +1,23 @@
 import React from "react";
 import ProductList from "../Components/Product/ProductList";
 import Sidebar from "../Components/Product/Sidebar";
-import styled from "styled-components";
+import styles from "../Components/Product/product.module.css";
 
 const ProductPage = () => {
   return (
-    <Wrapper>
-      <Filter>
+    <div className={styles.wrapper}>
+      <div className={styles.filter}>
         <Sidebar />
-      </Filter>
-      <Product>
+      </div>
+      <div className={styles.productPage}>
         <ProductList />
-      </Product>
-    </Wrapper>
+      </div>
+    </div>
   );
 };
 
 export default ProductPage;
 
-const Wrapper = styled.div`
-  display: flex;
-  box-sizing: border-box;
-  gap: 5px;
-  padding: 15px;
-`;
 
-const Filter = styled.div`
-  width: 20%;
-`;
 
-const Product = styled.div`
-  width: 80%;
-`;
+
