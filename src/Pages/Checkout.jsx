@@ -27,33 +27,32 @@ import {
     Flex,
   } from '@chakra-ui/react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getCart } from '../Redux/CartReducer/action'
+import { addCart, getCart } from '../Redux/CartReducer/action'
 import {
-  
-  
-  Hide,
   Image,
- 
   Select,
   Show,
-
-  Spacer,
   Table,
-  TableCaption,
   TableContainer,
   Tbody,
   Td,
-
-
   Th,
   Thead,
   Tr,
 } from "@chakra-ui/react";
 import {
-  AiFillSafetyCertificate,
   AiOutlineClose,
   AiOutlineHeart,
 } from "react-icons/ai";
+
+let initialStates={
+  pincode:"",
+  name:"",
+  address:"",
+  city:"",
+  state:"",
+  mobile:""
+}
 const Checkout = () => {
   const { isLoading, isError, carts } = useSelector(
     (store) => store.CartReducer
@@ -62,8 +61,23 @@ const Checkout = () => {
   useEffect(() => {
     dispatch(getCart);
   }, []);
-  const [cartitem, setCartitem]= useState('')
+  var grandtotals= 0;  
   var grandtotal= 0;  
+
+  const [order,setOrder]=useState(initialStates);
+
+  const handleChanges=(e)=>{
+    const {name,value}=e.target;
+    setOrder(prev=>{
+        return {...prev,[name]: name==="price" ? +value:value}
+    })
+}
+const handleSubmit=(e)=>{
+  e.preventDefault()
+  dispatch(addCart(carts))
+  setOrder(carts)
+  setOrder(initialStates)
+}
   return (
    <Box  >
    <SimpleGrid columns={[1, 1, 1, 2]} p={5}>
@@ -101,7 +115,7 @@ const Checkout = () => {
     <AccordionPanel pb={4}>
      <Box display={'flex'} >
      <Text mt={2} mr={20} ml={2}>Pincode</Text>
-     <Input placeholder='6 digit pincode'  />
+     <Input placeholder='6 digit pincode'  name='' value={carts.pincode} />
      </Box>
      <Box display={'flex'} mt={3} >
      <Text mt={2} mr={'6rem'} ml={2}>Name</Text>
@@ -361,19 +375,35 @@ const Checkout = () => {
   
     </Accordion>
     </Box>
+
+
+
+
+
+
+
+
+
     <Box border={'0px solid red'} p={4}  m={'auto'} mt={'0'}>
       <Box bg={'#fbf8fb '} p={4}>
         <Text>SUMMARY (2 Items)</Text>
-        <Text>ASIAN Maroon Men's Sports Running Shoes</Text>
-        <Flex mt={5}>
-          <Text>Quantity: 1</Text>
-          <Text ml={10}>Rs. 1,099</Text>
-        </Flex>
+        {carts.length > 0 && carts.map((product,index)=>{
+          grandtotals+=(product.qty*product.price)
+          return (
+            <Box>
+            <Text mt={3}>{product.brand}</Text>
+            <Flex>
+            <Text mr={"11rem"}>Quantity: {product.qty}</Text>
+            <Text>Rs. {product.price}</Text>
+             </Flex>
+            </Box>
+          )
+        })}
       </Box>
      <hr/>
      <Flex>
          <Text>Total</Text>
-         <Text ml={"10rem"}>Rs. 1,099</Text>
+         <Text ml={"10rem"}>Rs. {grandtotals}</Text>
      </Flex>
      <Flex>
          <Text>Delevery Charge</Text>
@@ -382,7 +412,7 @@ const Checkout = () => {
      <hr/>
      <Flex>
          <Text fontSize={25} fontWeight={'bold'}>You Pay:</Text>
-          <Text ml={"6rem"} fontSize={25}>Rs. 1,798</Text>
+          <Text ml={"6rem"} fontSize={25}>Rs. {grandtotals}</Text>
      </Flex>
     </Box>
    </SimpleGrid>

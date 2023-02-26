@@ -3,24 +3,20 @@ import {
   Button,
   Hide,
   Image,
-  Input,
   Select,
   Show,
   SimpleGrid,
-  Spacer,
   Table,
-  TableCaption,
   TableContainer,
   Tbody,
   Td,
   Text,
-  Tfoot,
   Th,
   Thead,
   Tr,
 } from "@chakra-ui/react";
-import { Link } from 'react-router-dom'
-import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 import {
   AiFillSafetyCertificate,
@@ -29,7 +25,7 @@ import {
 } from "react-icons/ai";
 import { FcDataProtection } from "react-icons/fc";
 import { useDispatch, useSelector } from "react-redux";
-import {   getCart } from "../Redux/CartReducer/action";
+import { deleteCart, getCart } from "../Redux/CartReducer/action";
 
 const Bag = () => {
   const { isLoading, isError, carts } = useSelector(
@@ -39,11 +35,11 @@ const Bag = () => {
   useEffect(() => {
     dispatch(getCart);
   }, []);
-  const [cartitem, setCartitem]= useState('')
-  
-  console.log(cartitem)
-  var grandtotal= 0;
-  
+  var grandtotal = 0;
+  const handleDeletes=(id)=>{
+      dispatch(deleteCart(id))  
+  }
+
   return (
     <Box>
       <SimpleGrid columns={[1, 1, 1, 2]}>
@@ -60,51 +56,46 @@ const Bag = () => {
                 </Thead>
                 <Tbody>
                   {carts.length > 0 &&
-                    carts.map((product, index) =>{
-                     grandtotal+=(product.qty*product.price)
+                    carts.map((product, index) => {
+                      grandtotal += product.qty * product.price;
                       return (
                         <Tr key={index}>
-                        <Td display={"flex"}>
-                          <Image
-                            w={70}
-                            src="https://n2.sdlcdn.com/imgs/i/5/m/130x152/ASIAN-Maroon-Running-Shoes-SDL795647420-1-018b7.jpeg"
-                          />
-                          <Box>
-                            <Text ml={4}>Sport Shoese </Text>
-                            <Text ml={4} mt={3}>
-                              Size: 6
-                            </Text>
-                            <Box display={"flex"} cursor={"pointer"}>
-                              <Text ml={4} mt={3} >
-                                <AiOutlineClose />
+                          <Td display={"flex"}>
+                            <Image w={70} src={product.image} />
+                            <Box>
+                              <Text ml={4}>{product.description} </Text>
+                              <Text ml={4} mt={3}>
+                                Size: 6
                               </Text>
+                              <Box display={"flex"} cursor={"pointer"}>
+                                <Text ml={4} mt={3}>
+                                  <AiOutlineClose />
+                                </Text>
 
-                              <Text ml={2} mt={2.5}>
-                                REMOVE
-                              </Text>
-                              <Text ml={2} mt={3}>
-                                <AiOutlineHeart />  
-                              </Text>
-                              <Text ml={2} mt={2.5}>
-                               
-                                MOVE TO SHORTLIST
-                              </Text>
+                                <Text ml={2} mt={2.5} onClick={()=>handleDeletes(product.id)}>
+                                  REMOVE
+                                </Text>
+                                <Text ml={2} mt={3}>
+                                  <AiOutlineHeart />
+                                </Text>
+                                <Text ml={2} mt={2.5}>
+                                  MOVE TO SHORTLIST
+                                </Text>
+                              </Box>
                             </Box>
-                          </Box>
-                        </Td>
-                        <Td>
-                          <Text> {product.price}</Text>
-                        </Td>
+                          </Td>
+                          <Td>
+                            <Text> {product.price}</Text>
+                          </Td>
 
-                        <Td>
-                          <Text ml={3} fontWeight={'bold'}>{product.qty}</Text>
-                        </Td>
-                      </Tr>
-                      )
-                    }
-
-                     
-                    )}
+                          <Td>
+                            <Text ml={3} fontWeight={"bold"}>
+                              {product.qty}
+                            </Text>
+                          </Td>
+                        </Tr>
+                      );
+                    })}
                 </Tbody>
               </Table>
             </Show>
@@ -128,15 +119,12 @@ const Bag = () => {
                         </Td>
                         <Td border={"0px solid red"}>
                           <Text border={"0px solid red"}>
-                           
                             Sports Running Shoes
                           </Text>
                           <Text mt={2} border={"0px solid red"}>
-                           
                             Qty:{product.qty}
                           </Text>
                           <Text mt={2} border={"0px solid red"}>
-                           
                             Rs. {product.price}
                           </Text>
                           <Box display={"flex"} mt={3}>
@@ -168,7 +156,7 @@ const Bag = () => {
                 {carts.length > 0 &&
                   carts.map((product, index) => (
                     <Tr key={index}>
-                      <Td pb={"3.6rem"}>
+                      <Td pb={"5.1rem"} pt={"1rem"}>
                         <Text>
                           Check availability and delivery charges <br />
                           for your pincode
@@ -176,7 +164,7 @@ const Bag = () => {
                       </Td>
                       <Td></Td>
                       <Td>
-                        <Text> Rs. {product.qty*product.price}</Text>
+                        <Text> Rs. {product.qty * product.price}</Text>
                       </Td>
                     </Tr>
                   ))}
@@ -205,7 +193,6 @@ const Bag = () => {
                   <FcDataProtection />
                 </Text>
                 <Text mt={-1} ml={2}>
-                 
                   100% Payment Protection, Easy Returns Policy
                 </Text>
               </Box>
@@ -219,17 +206,15 @@ const Bag = () => {
           </Show>
           <Box border={"0px solid red"} m={"auto"}>
             <Text>Rs. {grandtotal}</Text>
-            
+
             <Text>FREE</Text>
-            
           </Box>
           <Box border={"0px solid red"} m={"auto"}>
-          <Link to={'/checkout'}>
-            <Button bg={"#e40046"} color={"white"}>
-              PROCEED TO PAY Rs. {grandtotal}
-            </Button>
+            <Link to={"/checkout"}>
+              <Button bg={"#e40046"} color={"white"}>
+                PROCEED TO PAY Rs. {grandtotal}
+              </Button>
             </Link>
-           
           </Box>
         </SimpleGrid>
       </Box>
