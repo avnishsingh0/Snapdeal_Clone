@@ -38,7 +38,7 @@ function Navbar() {
 
           <div className="nav_image">
             <img src={logo} alt="" />
-            <h2>Magadeal</h2>
+            <h2>MegaDeals</h2>
           </div>
 
           <div className="nav_search">
@@ -66,9 +66,9 @@ function Navbar() {
             <div className="cart">
                 <p>Cart</p>
 
-                <Text>
+                {/* <Text>
                 <BsCart className="icon"/>
-                </Text>
+                </Text> */}
 
                 
                 <Cart/>
@@ -78,9 +78,9 @@ function Navbar() {
             <div className="nav_login">
                 <p>Sign In</p>
 
-                <Text>
+                {/* <Text>
                 <CgProfile className="icon"/>
-                </Text>
+                </Text> */}
               
                 <CgProfile/>
                

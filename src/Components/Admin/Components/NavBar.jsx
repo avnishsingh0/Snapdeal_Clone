@@ -40,11 +40,11 @@ export default function NavBar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Box bg={useColorModeValue('rgb(43,108,176)', 'blue.300')} px={4}>
+      <Box bg={useColorModeValue('rgb(43,108,176)', 'blue.300')} px={4} position={"fixed"} width={"100%"}  top={"0"} zIndex={"1"}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <Box display={"flex"}>
             <img src={logo} alt="error" width={"7%"} style={{borderRadius:"50%"}}/>
-            <Heading ml={"20px"} mt={"10px"} color={"white"}>MegaDeals Admin Page</Heading>
+            <Link top={"/"}><Heading ml={"20px"} mt={"10px"} color={"white"}>MegaDeals Admin Page</Heading></Link>
           </Box>
 
           <Flex alignItems={'center'}>
