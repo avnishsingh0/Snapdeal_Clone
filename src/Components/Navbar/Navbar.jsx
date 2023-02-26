@@ -12,6 +12,7 @@ import "./Navbar.scss";
 import logo from "../../Assets/logo.png";
 import { Cart } from "../../Pages/Cart";
 import { Show, Input } from '@chakra-ui/react'
+import Search from "../../Pages/Search";
 
 
 function Navbar() {
@@ -38,11 +39,11 @@ function Navbar() {
 
           <div className="nav_image">
             <img src={logo} alt="" />
-            <h2>Magadeal</h2>
+            <h2>MegaDeals</h2>
           </div>
 
           <div className="nav_search">
-            <div className="input-group border-0.5">
+            {/* <div className="input-group border-0.5">
               <input
                 type="text"
                 className="form-control"
@@ -59,16 +60,18 @@ function Navbar() {
                 <MdSearch/>
                 <p>Search</p>
               </button>
-            </div>
+            </div> */}
+            
+            <Search/>
           </div>
 
           <div className="nav_cart">
             <div className="cart">
                 <p>Cart</p>
 
-                <Text>
+                {/* <Text>
                 <BsCart className="icon"/>
-                </Text>
+                </Text> */}
 
                 
                 <Cart/>
@@ -78,9 +81,9 @@ function Navbar() {
             <div className="nav_login">
                 <p>Sign In</p>
 
-                <Text>
+                {/* <Text>
                 <CgProfile className="icon"/>
-                </Text>
+                </Text> */}
               
                 <CgProfile/>
                
