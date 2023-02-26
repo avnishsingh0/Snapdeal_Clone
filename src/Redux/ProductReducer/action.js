@@ -1,9 +1,10 @@
 import {
+  ADD_TO_CART,
   GET_PRODUCT_ERROR,
   GET_PRODUCT_REQUEST,
   GET_PRODUCT_SUCCESS,
   GET_SINGLE_PRODUCT_SUCCESS,
-  UPDATE_FILTER,
+
 
 } from "./actionTypes";
 import axios from "axios";
@@ -24,10 +25,11 @@ export const getProductErrorObj = () => {
   return { type: GET_PRODUCT_ERROR };
 };
 
-export const updateFilter = ({ minPrice, maxPrice }) => ({
-  type: UPDATE_FILTER,
-  payload: { minPrice, maxPrice },
-});
+export const addtoCartObj = () => {
+  return {type:ADD_TO_CART}
+}
+
+
 
 
 
@@ -54,3 +56,13 @@ export const getSingleProduct = (id) => (dispatch) => {
       dispatch(getProductErrorObj());
     });
 };
+
+
+export const addCart = (payload) => (dispatch) => {
+  dispatch(getProductRequestObj());
+  axios.post("http://localhost:8080/Cart",payload).then(()=>{
+    dispatch(addtoCartObj())
+  }).catch(()=>{
+    dispatch(getProductErrorObj())
+  })
+}

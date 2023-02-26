@@ -1,5 +1,18 @@
 
+.wrapper  {
+  display: flex;
+  box-sizing: border-box;
+  gap: 5px;
+  padding: 15px;
+}
 
+.filter{
+  width: 20%;
+}
+
+.productPage{
+  width: 80%;
+}
 
 .tag{
   font-size: 25px;
@@ -8,11 +21,41 @@
  
 }
 
+.pagination{
+   
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+
+}
+
+.pagination button{
+   width: 50px;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.page_item.active{
+  font-weight: 900;
+  border-color:  #101010; 
+  background: #ffe400;
+  color: #101010;
+}
+
+.prevbtn{
+  display: none;
+}
+
 
 #productlist {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
+  align-content: center;
+  align-items: center;
   padding: 15px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
@@ -32,7 +75,7 @@
 }
 
 .title {
-  font-size: 10px;
+  font-size: 20px;
   text-align: center;
   color: gray;
 }
@@ -46,17 +89,17 @@
 
 .old_price{
    text-decoration: line-through;
-   font-size: 8px;
+   font-size: 20px;
    color: grey;
 }
 
 .price{
     font-weight: bold;
-    font-size: 8px;
+    font-size: 20px;
 }
 
 .discount{
-    font-size: 5px;
+    font-size: 20px;
     border: 1px solid rgb(222, 218, 218);
     padding: 2px;
     color: grey;
@@ -71,6 +114,17 @@
 
 .sidebar div{
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.men h4{
+  font-size: 28px;
+  color: gray;
+  font-weight: bold;
+}
+
+.men p{
+  font-size: 25px;
+  line-height: 35px;
 }
 
 .price_slider{
@@ -173,4 +227,79 @@
   height: 300px;
 }
 
+.card_img{
+  width: 250px;
+}
 
+
+@media only screen and (max-width: 640px) {
+
+ .sidebar{
+  display: none;
+ }
+ 
+ #productlist {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+  align-items: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
+.productPage{
+  width: 100%;
+}
+
+.filter{
+  width: 0%;
+}
+
+.wrapper  {
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 150px;
+}
+
+.prevbtn{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.prevbtn button{
+   background-color: #e71a59;
+   padding:20px;
+   color: white;
+}
+
+.card_img{
+  width: 120px;
+}
+
+.title {
+  font-size: 20px;
+  text-align: center;
+  color: gray;
+}
+
+.priceclass{
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+  align-items: center;
+}
+
+.old_price{
+   text-decoration: line-through;
+   font-size: 15px;
+   color: grey;
+}
+
+.price{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+}
