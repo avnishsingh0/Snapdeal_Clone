@@ -488,7 +488,7 @@
       "description": "dsfsf",
       "collection": "Men",
      
-      "discount": "62% Off",
+      
 
       "oldprice": 1799,
       "rating": 4
@@ -687,9 +687,7 @@
     
       "description": "sfsfs",
       "collection": "Women",
-    
-      "discount": "62% Off",
-      "oldprice": 1799,
+
       "rating": 4
     },
     {
@@ -1871,7 +1869,7 @@
       "price": 649,
       "discount": "68% Off",
       "oldprice": 1999,
-      "rating": 4
+      "rating": 4,
 
       "qty": 1
 
