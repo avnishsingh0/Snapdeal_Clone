@@ -3,6 +3,10 @@ import {
   GET_CART_REQUEST,
   GET_CART_SUCCESS,
   GET_CART_ERROR,
+  DELETE_CART_SUCCESS,
+  POST_CART_REQUEST,
+  POST_CART_SUCCESS,
+  POST_CART_FAILURE,
  
 } from "./actionTypes";
 
@@ -15,6 +19,20 @@ export const getCartProducsuc = (payload) => {
 export const getCartProduerror = () => {
   return { type: GET_CART_ERROR };
 };
+export const deleteCartSuccessAction=(payload)=>{
+  return {type:DELETE_CART_SUCCESS,payload}
+}
+export const postCartRequestAction=()=>{
+  return {type:POST_CART_REQUEST}
+}
+
+export const postCartSuccessAction=(payload)=>{
+  return {type:POST_CART_SUCCESS,payload}
+}
+
+export const postCartFailureAction=()=>{
+  return {type:POST_CART_FAILURE}
+}
 
 
 
@@ -29,3 +47,18 @@ export const getCart = (dispatch) => {
       dispatch(getCartProduerror());
     });
 };
+
+export const deleteCart=(id,dispatch)=>{
+  return axios.delete(`http://localhost:8080/products/${id}`).then((res)=>{
+      dispatch(deleteCartSuccessAction(id))
+      getCart(id)
+  })
+}
+export const addCart=(pay)=>(dispatch)=>{
+  dispatch(postCartRequestAction())
+  axios.post("http://localhost:8080/products",pay).then((res)=>{
+      dispatch(postCartSuccessAction(res.data))
+  }).catch((err)=>{
+      dispatch(postCartFailureAction())
+  })
+}

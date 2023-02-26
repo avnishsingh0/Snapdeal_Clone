@@ -25,7 +25,6 @@ export const AddProduct = () => {
         setProduct(prev=>{
             return {...prev,[name]: name==="price" ? +value:value}
         })
-        // console.log(product)
     }
 
     const play=()=>{
