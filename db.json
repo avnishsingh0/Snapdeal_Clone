@@ -1,27 +1,6 @@
 {
   "products": [
     {
-
-
-      "id": 5,
-      "image": "https://n3.sdlcdn.com/imgs/k/l/k/230X258_sharpened/Dennis-Lingo-Green-100-Cotton-SDL593587737-1-616a8.jpg",
-      "title": "Dennis Lingo - Green 100% Cotton Slim Fit Men's Casual Shirt ( Pack of 1 )",
-      "price": 620,
-      "discount": "69% Off",
-      "oldprice": 1999,
-      "rating": 3
-},
-    
-    {
-      "id": 6,
-      "image": "https://n3.sdlcdn.com/imgs/k/k/x/230X258_sharpened/YHA-Sea-Green-100-Cotton-SDL008664706-1-8e2a4.jpg",
-      "title": "YHA - Sea Green 100% Cotton Regular Fit Men's Casual Shirt ( Pack of 1 )",
-      "price": 549,
-      "discount": "69% Off",
-      "oldprice": 1799,
-      "rating": 3
-    },
-    {
       "id": 7,
       "image": "https://n2.sdlcdn.com/imgs/k/l/g/230X258_sharpened/Comey-Green-Cotton-Regular-Fit-SDL223133575-1-dcddf.jpg",
       "title": "Comey - Green Cotton Regular Fit Men's Casual Shirt ( Pack of 1 )",
@@ -38,15 +17,6 @@
       "discount": "67% Off",
       "oldprice": 2499,
       "rating": 2
-    },
-    {
-      "id": 9,
-      "image": "https://n3.sdlcdn.com/imgs/k/h/j/230X258_sharpened/Solemio-Navy-Cotton-Regular-Fit-SDL340427392-1-91316.jpg",
-      "title": "Solemio - Navy Cotton Regular Fit Men's Formal Shirt ( Pack of 1 )",
-      "price": 419,
-      "discount": "69% Off",
-      "oldprice": 1345,
-      "rating": 1
     },
     {
       "id": 10,
@@ -210,8 +180,7 @@
       "oldprice": 1849,
       "rating": 4
     },
-{
-
+    {
       "id": 1,
       "image": "https://n2.sdlcdn.com/imgs/k/h/v/large/Zebu-Maroon-Sweatshirt-SDL534372374-1-052e2.jpg",
       "brand": "Pokemon",
@@ -219,12 +188,10 @@
       "description": "Nitendo Switch",
       "collection": "Men",
       "discount": "62% Off",
-
       "oldprice": 1799,
       "rating": 4
     },
     {
-
       "id": 29,
       "image": "https://n2.sdlcdn.com/imgs/k/i/l/230X258_sharpened/Wild-West-White-Cotton-Blend-SDL349797066-1-03581.jpg",
       "title": "Wild West - White Cotton Blend Regular Fit Men's Formal Shirt (Pack of 1)",
@@ -482,19 +449,13 @@
       "title": "YHA - Turquoise Cotton Regular Fit Men's Casual Shirt (Pack of 1 )",
       "price": 539,
       "discount": "70% Off",
-
       "brand": "Levis",
-   
       "description": "dsfsf",
       "collection": "Men",
-     
-      
-
       "oldprice": 1799,
       "rating": 4
     },
     {
-
       "id": 58,
       "image": "https://n4.sdlcdn.com/imgs/k/h/j/230X258_sharpened/Solemio-Pink-Cotton-Regular-Fit-SDL808470276-1-94e16.jpg",
       "title": "Solemio - Pink Cotton Regular Fit Men's Formal Shirt ( Pack of 1 )",
@@ -681,13 +642,9 @@
       "price": 399,
       "discount": "56% Off",
       "oldprice": 899,
-
-    
       "brand": "Kurti",
-    
       "description": "sfsfs",
       "collection": "Women",
-
       "rating": 4
     },
     {
@@ -699,7 +656,6 @@
       "id": 4,
       "discount": "62% Off",
       "oldprice": 1799,
-
       "rating": 4
     },
     {
@@ -827,7 +783,6 @@
       "discount": "77% Off",
       "oldprice": 1999,
       "rating": 4
-
     },
     {
       "id": 93,
@@ -900,8 +855,6 @@
       "discount": "70% Off",
       "oldprice": 1799,
       "rating": 4
-
-
     },
     {
       "id": 2,
@@ -937,15 +890,6 @@
       "price": 620,
       "discount": "69% Off",
       "oldprice": 1999,
-      "rating": 3
-    },
-    {
-      "id": 6,
-      "image": "https://n3.sdlcdn.com/imgs/k/k/x/230X258_sharpened/YHA-Sea-Green-100-Cotton-SDL008664706-1-8e2a4.jpg",
-      "title": "YHA - Sea Green 100% Cotton Regular Fit Men's Casual Shirt ( Pack of 1 )",
-      "price": 549,
-      "discount": "69% Off",
-      "oldprice": 1799,
       "rating": 3
     },
     {
@@ -1793,7 +1737,6 @@
       "discount": "70% Off",
       "oldprice": 1799,
       "rating": 4
-
     }
   ],
   "Cart": [
@@ -1859,9 +1802,7 @@
       "discount": "56% Off",
       "oldprice": 899,
       "rating": 4
-
     },
-    
     {
       "id": 5,
       "image": "https://n2.sdlcdn.com/imgs/k/l/e/230X258_sharpened/Dillinger-Olive-100-Cotton-Slim-SDL062417426-1-c365a.jpg",
@@ -1870,10 +1811,16 @@
       "discount": "68% Off",
       "oldprice": 1999,
       "rating": 4,
-
       "qty": 1
-
-
+    },
+    {
+      "id": 62,
+      "image": "https://n2.sdlcdn.com/imgs/k/k/g/230X258_sharpened/Gritstones-Olive-Cotton-Blend-Regular-SDL147932411-1-fd220.jpg",
+      "title": "Gritstones - Olive Cotton Blend Regular Fit Men's Casual Shirt ( Pack of 1 )",
+      "price": 469,
+      "discount": "77% Off",
+      "oldprice": 1999,
+      "rating": 5
     }
   ],
   "Seller": [
@@ -1883,14 +1830,14 @@
       "id": 3
     }
   ],
-  "order":[
+  "order": [
     {
       "name": "avnishsingh",
       "pincode": 843302,
       "address": "bhavdepur got",
-      "city":"Sitamarhi",
-      "state":"Bihar",
-      "mobile":8340225267
+      "city": "Sitamarhi",
+      "state": "Bihar",
+      "mobile": 8340225267
     }
   ]
 }

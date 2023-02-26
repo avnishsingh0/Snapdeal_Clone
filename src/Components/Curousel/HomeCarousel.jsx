@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import '../Curousel/HomeCarousel.css';
-// import imgGirl from './assets/images/defaultImage.jpg';
+
 import { dataDigitalBestSeller } from '../../data';
 
 function HomeCarousel() {

@@ -1,12 +1,10 @@
 import Carousel from "react-bootstrap/Carousel";
-import {HStack, Stack,Image, Text, Heading} from "@chakra-ui/react"
+
 import styles from "./Navbar.module.css";
-// import Navbar from "./Navbar";
-// import Footer from "./Footer";
+
 import { Link } from "react-router-dom";
 import HomeCarousel from "./HomeCarousel";
-import HomeCarousel1 from "./HomeCarousel1";
-import HomeCarousel2 from "./HomeCarousel2";
+
  const LandingPage = () => {
 
 
@@ -386,7 +384,7 @@ import HomeCarousel2 from "./HomeCarousel2";
             <div className={styles.moreli} style={{ cursor: "pointer" }}>
               <li>
                 <span>
-                  <Link to={"/product"}>
+                  <Link to={"/products"}>
                      Men's Fashion
                   </Link>
                   </span>
@@ -457,13 +455,7 @@ import HomeCarousel2 from "./HomeCarousel2";
             </div>
           </ul>
         </div>
-        {/* <div className={styles.barcode}>
-          
-          <div className={styles.bartext}>
-            <p>Enjoy Convenient Order Tracking</p>
-            <h3>Scan to download app</h3>
-          </div>
-        </div> */}
+       
         <div className={styles.rightside}>
           {/* Slider starts here */}
           <Carousel>
@@ -510,15 +502,7 @@ import HomeCarousel2 from "./HomeCarousel2";
             <HomeCarousel/>
             </Link>
           
-            {/* <Link to={'/product'}> */}
-            {/* <HomeCarousel1/> */}
-            {/* </Link> */}
-
-            {/* <h2 style={{letterSpacing:"2px",marginTop:"25px",padding:"5px"}}>POPULAR PRODUCTS</h2> */}
            
-            {/* <Link to={'/product'}> */}
-            {/* <HomeCarousel2/> */}
-            {/* </Link> */}
 
           </div>
         
