@@ -1,4 +1,5 @@
 import {
+  ADD_TO_CART,
   GET_PRODUCT_ERROR,
   GET_PRODUCT_REQUEST,
   GET_PRODUCT_SUCCESS,
@@ -11,10 +12,6 @@ const initialState = {
   products: [],
   isError: false,
   singleProduct: {},
-  filter: {
-    minPrice: 0,
-    maxPrice: 1000,
-  },
 };
 
 export const reducer = (state = initialState, { type, payload }) => {
@@ -30,13 +27,9 @@ export const reducer = (state = initialState, { type, payload }) => {
 
     case GET_PRODUCT_ERROR:
       return { ...state, isLoading: false, isError: true };
-
-    case UPDATE_FILTER:
-      return {
-        ...state,
-        minPrice: payload.minPrice,
-        maxPrice: payload.maxPrice,
-      };
+    
+      case ADD_TO_CART:
+        return { ...state, isLoading: false};
 
     default:
       return state;

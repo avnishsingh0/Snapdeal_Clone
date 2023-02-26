@@ -6,21 +6,20 @@ import {
   RangeSliderFilledTrack,
   RangeSliderThumb,
   Checkbox,
+  Radio,
+  RadioGroup,
 } from "@chakra-ui/react";
 import { useSearchParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { updateFilter } from "../../Redux/ProductReducer/action";
 
 const Sidebar = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const filter = useSelector(state => state.ProductReducer.filter);
+  const initalOrder = searchParams.get("order");
   const initialState = searchParams.getAll("rating");
   const [rating, setRating] = useState(initialState || []);
-  const [minPrice, setMinPrice] = useState(filter.minPrice);
-  const [maxPrice, setMaxPrice] = useState(filter.maxPrice);
+  const [order, setOrder] = useState(initalOrder || "");
 
-
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     let value = e.target.value;
@@ -36,57 +35,59 @@ const Sidebar = () => {
     setRating(newCategory);
   };
 
-  const handleSliderChange = ([newMinPrice, newMaxPrice]) => {
-    setMinPrice(newMinPrice);
-    setMaxPrice(newMaxPrice);
-    dispatch(updateFilter({ minPrice: newMinPrice, maxPrice: newMaxPrice }));
-  }
+  const handleSort = (e) => {
+    setOrder(e.target.value);
+  };
 
   useEffect(() => {
     let param = {
       rating,
     };
-    
+
+    order && (param.order = order);
+
     setSearchParams(param);
-  }, [rating,minPrice,maxPrice]);
-  
-  
-  console.log(filter)
-  
-  
+  }, [rating, order]);
 
   return (
     <div className={styles.sidebar}>
-      <div>
+      <div className={styles.men}>
         <h4>Men's Clothing</h4>
         <p>- Shirts for Men</p>
-        <p> Casual Shirts for Men</p>
-        <p> Formal Shirts for Men</p>
+        <p>-Casual Shirts for Men</p>
+        <p>-Formal Shirts for Men</p>
       </div>
       <div>
-        <h5 style={{ fontWeight: "bolder" }}>Price</h5>
+        <h5 style={{margin:"15px",fontWeight:"bolder",padding:"10px"}}>Price</h5>
         <div className={styles.price_slider}>
-          <RangeSlider
-            aria-label={["min", "max"]}
-            min={249} max={2498} step={30}
-            defaultValue={[minPrice, maxPrice]}
-            onChangeEnd={(val)=> handleSliderChange(val) }
-          >
-            <RangeSliderTrack>
-              <RangeSliderFilledTrack />
-            </RangeSliderTrack>
-            <RangeSliderThumb index={0} />
-            <RangeSliderThumb index={1} />
-          </RangeSlider>
-        </div>
+        <div>
+        <input
+         style={{fontSize:"25px"}}
+          type="radio"
+          value="asc"
+          name="order"
+          onChange={(e) => handleSort(e)}
+          defaultChecked={order === "asc"}
+        />
+        <label>  Low to High</label>
+        <br />
+        <input
+         
+          type="radio"
+          value="desc"
+          name="order"
+          onChange={(e) => handleSort(e)}
+          defaultChecked={order === "desc"}
+        />
+        <label>High to Low</label>
+      </div>
 
-        <div className={styles.max_min}>
-        
+          <br />
         </div>
       </div>
 
       <div>
-        <h5>Customer Rating</h5>
+        <h5 style={{margin:"15px",fontWeight:"bolder",padding:"10px"}} >Customer Rating</h5>
         <div style={{ paddingLeft: "10px" }}>
           <Checkbox
             value={"1"}
