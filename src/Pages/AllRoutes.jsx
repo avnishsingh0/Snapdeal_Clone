@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {Route,Routes} from 'react-router-dom'
 import Login from '../Components/auth/Login'
 import Signup from '../Components/auth/Signup'
@@ -10,8 +10,18 @@ import Checkout from './Checkout'
 import Homepage from './Homepage'
 import ProductPage from './ProductPage'
 import SingleProductPage from './SingleProductPage'
+import { auth } from '../firebase'
 
 const AllRoutes = () => {
+  const [userName, setUserName] = useState("");
+
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUserName(user.displayName);
+      } else setUserName("");
+    });
+  }, []);
   return (
     <Routes>
         <Route path='/' element={<Homepage/>}/>
