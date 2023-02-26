@@ -43,10 +43,10 @@ export const Seller = () => {
   return (
     <Box>
         <TableContainer>
-  <Table variant='striped' colorScheme='teal'>
+  <Table variant='striped' colorScheme='blue'>
     <TableCaption>Product Store</TableCaption>
     <Thead>
-      <Tr bgColor={"red.300"} >
+      <Tr bgColor={"blue.600"} >
         <Th color={"white"}>S.No</Th>
         <Th color={"white"}>Email</Th>
         <Th color={"white"}>Password</Th>
@@ -59,12 +59,12 @@ export const Seller = () => {
       {product.length>0 && product.reverse().map((el)=>{
         var newId=el.id+Date.now()
         return <Tr key={el.id}>
-        <Td>{newId}</Td>
-        <Td>{el.email}</Td>
-        <Td>{el.password}***</Td>
-        <Td>Operation Team</Td>
-        <Td>Masai_{Math.random().toFixed(3)*1000}</Td>
-        <Td><DeleteIcon color={"red"} onClick={()=>handleDelete(el.id)}/></Td>
+        <Td color={"black"}>{newId}</Td>
+        <Td color={"black"}>{el.email}</Td>
+        <Td color={"black"}>{el.password}***</Td>
+        <Td color={"black"}>Operation Team</Td>
+        <Td color={"black"}>Masai_{Math.random().toFixed(3)*1000}</Td>
+        <Td color={"black"}><DeleteIcon color={"red"} onClick={()=>handleDelete(el.id)}/></Td>
       </Tr>
       })}
       
@@ -76,4 +76,4 @@ export const Seller = () => {
   )
 }
 
-// onClick={()=>handleEdit(el.id)}
+
