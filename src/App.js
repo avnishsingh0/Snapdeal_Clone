@@ -22,7 +22,7 @@ function App() {
     <div>
 
      
-      <Navbar name={userName}/>
+      {/* <Navbar name={userName}/> */}
     
       <AllRoutes/>
 

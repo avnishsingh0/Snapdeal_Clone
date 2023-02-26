@@ -4,13 +4,16 @@ import styles from "./Navbar.module.css";
 
 import { Link } from "react-router-dom";
 import HomeCarousel from "./HomeCarousel";
+import Navbar from "../Navbar/Navbar";
 
  const LandingPage = () => {
 
 
 
   return (
+    
     <div>
+    <Navbar/>
       {/* <!-- ------mainbody------- --> */}
       
       <div className={styles.container}>

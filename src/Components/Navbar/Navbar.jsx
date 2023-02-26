@@ -3,54 +3,56 @@ import { AiOutlineMobile } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { Text } from "@chakra-ui/react";
 
-import { BiHomeAlt,BiCategory,BiCart } from "react-icons/bi";
+import { BiHomeAlt, BiCategory, BiCart } from "react-icons/bi";
 import { AiOutlineHeart } from "react-icons/ai";
 
 import "./Navbar.scss";
 import logo from "../../Assets/logo.png";
 import { Cart } from "../../Pages/Cart";
-import { Show, Input } from '@chakra-ui/react'
+import { Show, Input } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { getAuth,signOut } from "firebase/auth";
+import { getAuth, signOut } from "firebase/auth";
 import Search from "../../Pages/Search";
+import { MdSearch } from "react-icons/md";
 
-function Navbar({name}) {
-const logOut = () => {
-  const auth = getAuth();
-  signOut(auth).then(()=>{
-   alert("Log Out Seccussfull")
-  }).catch((err)=>{
-   alert("Log Out Error")
-  })
-}
+function Navbar({ name }) {
+  const logOut = () => {
+    const auth = getAuth();
+    signOut(auth)
+      .then(() => {
+        alert("Log Out Seccussfull");
+      })
+      .catch((err) => {
+        alert("Log Out Error");
+      });
+  };
 
   return (
     <div className="nav_primary">
-      <Show breakpoint='(min-width: 1186px)'>
-      <div className="nav_top">
-        <div>
-          <p>Brand Waali Quality, Bazaar Waali Deal!</p>
-        </div>
-        <div>
-          <a href="/">Impact@Snapdeal</a>
-          <a href="/">Gift Cards</a>
-          <a href="/">Help Center</a>
-          <a href="/">Sell On Snapdeal</a>
-          <a href="/">
-            <AiOutlineMobile /> Download Now
-          </a>
-        </div>
-      </div>
-      <div className="nav">
-        <div className="nav_inner">
-
-          <div className="nav_image">
-            <img src={logo} alt="" />
-            <h2>MegaDeals</h2>
+      <Show breakpoint="(min-width: 1186px)">
+        <div className="nav_top">
+          <div>
+            <p>Brand Waali Quality, Bazaar Waali Deal!</p>
           </div>
+          <div>
+            <a href="/">Impact@Snapdeal</a>
+            <a href="/">Gift Cards</a>
+            <a href="/">Help Center</a>
+            <a href="/">Sell On Snapdeal</a>
+            <a href="/">
+              <AiOutlineMobile /> Download Now
+            </a>
+          </div>
+        </div>
+        <div className="nav">
+          <div className="nav_inner">
+            <div className="nav_image">
+              <img src={logo} alt="" />
+              <h2>MegaDeals</h2>
+            </div>
 
-          <div className="nav_search">
-            {/* <div className="input-group border-0.5">
+            <div className="nav_search">
+              <div className="input-group border-0.5">
               <input
                 type="text"
                 className="form-control"
@@ -67,83 +69,84 @@ const logOut = () => {
                 <MdSearch/>
                 <p>Search</p>
               </button>
-            </div> */}
-            
-            <Search/>
-          </div>
+            </div>
 
-          <div className="nav_cart">
-            <div className="cart">
+              {/* <Search /> */}
+            </div>
+
+            <div className="nav_cart">
+              <div className="cart">
                 <p>Cart</p>
                 {/* <BsCart className="icon"/> */}
-                <Cart/>
+                <Cart />
+              </div>
+              <h3>
+                {name ? (
+                  <>
+                    Welcom -{name} <button onClick={logOut}>LogOut</button>
+                  </>
+                ) : (
+                  <Link to={"/login"}>
+                    <div className="nav_login">
+                      <p>Log IN</p>
+                      <CgProfile className="icon" />
+                      
+                    </div>
+                  </Link>
+                )}
+              </h3>
             </div>
-            <h3>{name ? <>Welcom -{name} <button onClick={logOut}>LogOut</button></> : <Link to={"/login"}>
-            <div className="nav_login">
-                <p>Log IN</p>
-                <CgProfile className="icon"/>
-
-                <p>Sign In</p>            </div>
-            </Link>}</h3>
           </div>
         </div>
-      </div>
       </Show>
 
-      <Show breakpoint='(max-width: 1186px)'>
+      <Show breakpoint="(max-width: 1186px)">
         <div className="mb_nav">
           <div>
             <img src={logo} alt="logo" />
             <p>Magadeal</p>
           </div>
-          <div><Input focusBorderColor='none'  placeholder="Search for"/></div>
+          <div>
+            <Input focusBorderColor="none" placeholder="Search for" />
+          </div>
         </div>
-        
 
-          <hr />
+        <hr />
         <div className="mb_downNav">
           <button className="btn">
             <Text>
-            <BiHomeAlt className="icon"/>
+              <BiHomeAlt className="icon" />
             </Text>
             <p>Home</p>
           </button>
-      
-      
+
           <button className="btn">
             <Text>
-            <BiCategory className="icon"/>
+              <BiCategory className="icon" />
             </Text>
             <p>Category</p>
           </button>
-      
-      
+
           <button className="btn">
             <Text>
-            <BiCart className="icon"/>
+              <BiCart className="icon" />
             </Text>
             <p>Cart</p>
           </button>
-      
-      
+
           <button className="btn">
             <Text>
-            <AiOutlineHeart className="icon"/>
+              <AiOutlineHeart className="icon" />
             </Text>
             <p>Wishlist</p>
           </button>
-      
-      
+
           <button className="btn">
             <Text>
-            <CgProfile className="icon"/>
+              <CgProfile className="icon" />
             </Text>
             <p>Profile</p>
           </button>
-      
-      
-      
-
         </div>
       </Show>
     </div>
