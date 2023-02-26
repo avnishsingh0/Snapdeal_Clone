@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
 import Search from "../../Pages/Search";
 import { MdSearch } from "react-icons/md";
+import { capitalize } from "lodash";
 
 function Navbar({ name }) {
   const logOut = () => {
@@ -30,7 +31,7 @@ function Navbar({ name }) {
   return (
     <div className="nav_primary">
       <Show breakpoint="(min-width: 1186px)">
-        <div className="nav_top">
+        {/* <div className="nav_top">
           <div>
             <p>Brand Waali Quality, Bazaar Waali Deal!</p>
           </div>
@@ -43,7 +44,7 @@ function Navbar({ name }) {
               <AiOutlineMobile /> Download Now
             </a>
           </div>
-        </div>
+        </div> */}
         <div className="nav">
           <div className="nav_inner">
             <div className="nav_image">
@@ -82,13 +83,13 @@ function Navbar({ name }) {
               </div>
               <h3>
                 {name ? (
-                  <>
-                    Welcom -{name} <button onClick={logOut}>LogOut</button>
-                  </>
+                  <div className="logout_btn">
+                    Welcom -{capitalize(name)} <button onClick={logOut}>LogOut</button>
+                  </div>
                 ) : (
                   <Link to={"/login"}>
                     <div className="nav_login">
-                      <p>Log IN</p>
+                      <p>Log In</p>
                       <CgProfile className="icon" />
                       
                     </div>
@@ -140,12 +141,13 @@ function Navbar({ name }) {
             </Text>
             <p>Wishlist</p>
           </button>
-
           <button className="btn">
+          <Link to={"/login"}>
             <Text>
               <CgProfile className="icon" />
             </Text>
             <p>Profile</p>
+          </Link>
           </button>
         </div>
       </Show>

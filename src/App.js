@@ -7,15 +7,7 @@ import { auth } from "./firebase";
 
 
 function App() {
-  const [userName, setUserName] = useState("");
-
-  useEffect(() => {
-    auth.onAuthStateChanged((user) => {
-      if (user) {
-        setUserName(user.displayName);
-      } else setUserName("");
-    });
-  }, []);
+ 
 
 
   return (
