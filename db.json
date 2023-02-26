@@ -1,11 +1,6 @@
 {
   "products": [
-    
-    
     {
-
-
-
       "id": 5,
       "image": "https://n3.sdlcdn.com/imgs/k/l/k/230X258_sharpened/Dennis-Lingo-Green-100-Cotton-SDL593587737-1-616a8.jpg",
       "title": "Dennis Lingo - Green 100% Cotton Slim Fit Men's Casual Shirt ( Pack of 1 )",
@@ -13,8 +8,7 @@
       "discount": "69% Off",
       "oldprice": 1999,
       "rating": 3
-},
-    
+    },
     {
       "id": 6,
       "image": "https://n3.sdlcdn.com/imgs/k/k/x/230X258_sharpened/YHA-Sea-Green-100-Cotton-SDL008664706-1-8e2a4.jpg",
@@ -213,9 +207,7 @@
       "oldprice": 1849,
       "rating": 4
     },
-{
-
-
+    {
       "id": 1,
       "image": "https://n2.sdlcdn.com/imgs/k/h/v/large/Zebu-Maroon-Sweatshirt-SDL534372374-1-052e2.jpg",
       "brand": "Pokemon",
@@ -223,13 +215,10 @@
       "description": "Nitendo Switch",
       "collection": "Men",
       "discount": "62% Off",
-
       "oldprice": 1799,
       "rating": 4
     },
-
     {
-
       "id": 29,
       "image": "https://n2.sdlcdn.com/imgs/k/i/l/230X258_sharpened/Wild-West-White-Cotton-Blend-SDL349797066-1-03581.jpg",
       "title": "Wild West - White Cotton Blend Regular Fit Men's Formal Shirt (Pack of 1)",
@@ -487,19 +476,13 @@
       "title": "YHA - Turquoise Cotton Regular Fit Men's Casual Shirt (Pack of 1 )",
       "price": 539,
       "discount": "70% Off",
-
       "brand": "Levis",
-   
       "description": "dsfsf",
       "collection": "Men",
-     
-      
-
       "oldprice": 1799,
       "rating": 4
     },
     {
-
       "id": 58,
       "image": "https://n4.sdlcdn.com/imgs/k/h/j/230X258_sharpened/Solemio-Pink-Cotton-Regular-Fit-SDL808470276-1-94e16.jpg",
       "title": "Solemio - Pink Cotton Regular Fit Men's Formal Shirt ( Pack of 1 )",
@@ -686,28 +669,11 @@
       "price": 399,
       "discount": "56% Off",
       "oldprice": 899,
-
-    
       "brand": "Kurti",
-    
       "description": "sfsfs",
       "collection": "Women",
-
       "rating": 4
     },
-    {
-      "image": "https://m.media-amazon.com/images/I/51eNzVRDfLL._AC_UL400_.jpg",
-      "brand": "dress",
-      "price": 123,
-      "description": "sdfdxcgvd",
-      "collection": "Kids",
-      "id": 4,
-      "discount": "62% Off",
-      "oldprice": 1799,
-
-      "rating": 4
-    },
-
     {
       "id": 79,
       "image": "https://n3.sdlcdn.com/imgs/k/k/n/230X258_sharpened/UrbanMark-Beige-Cotton-Regular-Fit-SDL099471191-1-83637.jpg",
@@ -833,7 +799,6 @@
       "discount": "77% Off",
       "oldprice": 1999,
       "rating": 4
-
     },
     {
       "id": 93,
@@ -906,8 +871,6 @@
       "discount": "70% Off",
       "oldprice": 1799,
       "rating": 4
-
-
     },
     {
       "id": 2,
@@ -1799,7 +1762,6 @@
       "discount": "70% Off",
       "oldprice": 1799,
       "rating": 4
-
     }
   ],
   "Cart": [
@@ -1866,10 +1828,6 @@
       "oldprice": 899,
       "rating": 4
     },
-   
-
-    
-
     {
       "id": 5,
       "image": "https://n2.sdlcdn.com/imgs/k/l/e/230X258_sharpened/Dillinger-Olive-100-Cotton-Slim-SDL062417426-1-c365a.jpg",
@@ -1879,6 +1837,15 @@
       "oldprice": 1999,
       "rating": 4,
       "qty": 1
+    },
+    {
+      "id": 83,
+      "image": "https://n3.sdlcdn.com/imgs/k/l/j/230X258_sharpened/Dennis-Lingo-Orange-Cotton-Blend-SDL132172535-1-09d79.jpg",
+      "title": "Dennis Lingo - Orange Cotton Blend Slim Fit Men's Casual Shirt ( Pack of 1 )",
+      "price": 790,
+      "discount": "67% Off",
+      "oldprice": 2399,
+      "rating": 3
     }
   ],
   "Seller": [
@@ -1888,14 +1855,14 @@
       "id": 3
     }
   ],
-  "order":[
+  "order": [
     {
       "name": "avnishsingh",
       "pincode": 843302,
       "address": "bhavdepur got",
-      "city":"Sitamarhi",
-      "state":"Bihar",
-      "mobile":8340225267
+      "city": "Sitamarhi",
+      "state": "Bihar",
+      "mobile": 8340225267
     }
   ]
 }

@@ -16,7 +16,7 @@ function App() {
 
       <Navbar/>
 
-      <MainPage/>
+      {/* <MainPage/> */}
      <AllRoutes/>
 
       {/* <Login/> */}
@@ -25,7 +25,7 @@ function App() {
       {/* <MainPage/> */}
       {/* <MainPage/>
       <LandingPage/> */}
-      <AllRoutes/>
+      {/* <AllRoutes/> */}
 
     </div>
   );
