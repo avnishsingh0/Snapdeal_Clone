@@ -20,7 +20,7 @@ function App() {
 
       <Navbar/>
       <MainPage/>
-      <LandingPage/>
+      {/* <LandingPage/> */}
 
 
       <AllRoutes/>

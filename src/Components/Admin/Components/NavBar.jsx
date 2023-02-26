@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import logo from '../../../Assets/logo.png'
+import logo from '../../../Assets/logo1.png'
 import {
   Box,
   Flex,
@@ -19,6 +19,7 @@ import {
   Heading,
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+// import logo from '../../../Assets/logo1.png'
 
 // const NavLink = ({ children }: { children: ReactNode }) => (
 //   <Link
@@ -39,11 +40,11 @@ export default function NavBar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Box bg={useColorModeValue('red.100', 'pink.900')} px={4}>
+      <Box bg={useColorModeValue('rgb(43,108,176)', 'blue.300')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <Box display={"flex"}>
             <img src={logo} alt="error" width={"7%"} style={{borderRadius:"50%"}}/>
-            <Heading ml={"20px"} mt={"10px"}>MegaDeals Admin Page</Heading>
+            <Heading ml={"20px"} mt={"10px"} color={"white"}>MegaDeals Admin Page</Heading>
           </Box>
 
           <Flex alignItems={'center'}>
