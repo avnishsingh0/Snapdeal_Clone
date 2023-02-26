@@ -125,8 +125,10 @@
       "brand": "Pokemon",
       "price": 59,
       "description": "Nitendo Switch",
-      "collection": "Men"
-      
+      "collection": "Men",
+      "discount": "62% Off",
+      "oldprice": 1799,
+      "rating": 4
     },
     {
       "image": "https://m.media-amazon.com/images/I/51inUyV2tdL._AC._SR360,460.jpg",
@@ -134,7 +136,10 @@
       "price": 789,
       "description": "dsfsf",
       "collection": "Men",
-      "id": 2
+      "id": 2,
+      "discount": "62% Off",
+      "oldprice": 1799,
+      "rating": 4
     },
     {
       "image": "https://m.media-amazon.com/images/I/61KvJpF7f9L._AC_UL400_.jpg",
@@ -142,7 +147,10 @@
       "price": 456,
       "description": "sfsfs",
       "collection": "Women",
-      "id": 3
+      "id": 3,
+      "discount": "62% Off",
+      "oldprice": 1799,
+      "rating": 4
     },
     {
       "image": "https://m.media-amazon.com/images/I/51eNzVRDfLL._AC_UL400_.jpg",
@@ -150,7 +158,10 @@
       "price": 123,
       "description": "sdfdxcgvd",
       "collection": "Kids",
-      "id": 4
+      "id": 4,
+      "discount": "62% Off",
+      "oldprice": 1799,
+      "rating": 4
     },
     {
       "id": 5,
@@ -160,7 +171,6 @@
       "discount": "68% Off",
       "oldprice": 1999,
       "rating": 4
-
     },
     {
       "id": 2,
@@ -1092,7 +1102,7 @@
       "oldprice": 899,
       "rating": 4
     },
-    { 
+    {
       "image": "https://m.media-amazon.com/images/I/41aTueuwrkL._AC_SR400,600_.jpg",
       "brand": "Asus",
       "price": 448,
@@ -1119,7 +1129,6 @@
       "collection": "Kids",
       "id": 2
 
-
     },
     {
       "image": "https://m.media-amazon.com/images/I/41aTueuwrkL._AC_SR400,600_.jpg",
@@ -1128,7 +1137,19 @@
       "description": "YHA - Blue Cotton Regular Fit Men's Casual Shirt",
       "collection": "Men",
       "id": 2,
+      "qty": 2
+    },
+    {
+      "id": 5,
+      "image": "https://n2.sdlcdn.com/imgs/k/l/e/230X258_sharpened/Dillinger-Olive-100-Cotton-Slim-SDL062417426-1-c365a.jpg",
+      "title": "Dillinger - Olive 100% Cotton Slim Fit Men's Casual Shirt ( Pack of 1 )",
+      "price": 649,
+      "discount": "68% Off",
+      "oldprice": 1999,
+      "rating": 4
+
       "qty": 1
+
     }
   ],
   "Seller": [

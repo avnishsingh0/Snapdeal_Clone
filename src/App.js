@@ -19,8 +19,8 @@ function App() {
       {/* <Signup/> */}
       {/* <AuthDetails/> */}
       {/* <MainPage/> */}
-      <MainPage/>
-      <LandingPage/>
+      {/* <MainPage/>
+      <LandingPage/> */}
       <AllRoutes/>
     </div>
   );
