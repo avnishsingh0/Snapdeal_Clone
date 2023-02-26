@@ -65,7 +65,7 @@ export const AddProduct = () => {
         </Select>
 
         <Stack direction='row' spacing={4} align='center' mt={"20px"}>
-            <Button colorScheme='teal' variant='solid' ml={"40%"} type="submit">
+            <Button colorScheme='pink' variant='solid' ml={"40%"} type="submit">
                 Button
             </Button>
   
@@ -82,7 +82,7 @@ const Wrapper=styled.div`
     background-color: palegreen;
 }
 
-border:2px solid teal;
+border:2px solid pink;
 width:40%;
 margin:auto;
 border-Radius:14px;

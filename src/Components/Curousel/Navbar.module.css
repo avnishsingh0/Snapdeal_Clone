@@ -197,18 +197,23 @@
   }
   
 .container {
-    margin-top: 20px;
-    width: 99%;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-areas: "l l r r r r r r r r";
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-areas: "l l r r r r r r r r";
+  margin: auto;
+  margin-top: 20px;
+  /* border: 1px solid rgb(203, 201, 201); */
   }
   
   .leftside {
     grid-area: l;
     background-color: white;
     margin: 0 24px 0 42px;
-    height: 60%;
+    height: 100%;
+    width: 65%;
+    border: 1px solid rgb(203, 201, 201);
+    padding: 10px;
   }
   
   .topCat {
