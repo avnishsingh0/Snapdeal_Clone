@@ -1,10 +1,10 @@
 import React from 'react'
 import Chart1 from '../Components/Chart1'
 import Chart2 from '../Components/Chart2'
-
+import { SimpleGrid } from '@chakra-ui/react'
 export const Dashboard = () => {
   return (
-    <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",marginBottom:"40px"}} >
+    <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",marginBottom:"40px"}}>
       <div style={{height:"auto",textAlign:"center"}}><h1>Product Data In Line Chart</h1>
       <Chart1/>
       </div>

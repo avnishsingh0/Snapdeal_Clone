@@ -1,8 +1,6 @@
 import React from "react";
 import { AiOutlineMobile } from "react-icons/ai";
-import { BsCart } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
-import { MdSearch } from "react-icons/md";
 import { Text } from "@chakra-ui/react";
 
 import { BiHomeAlt,BiCategory,BiCart } from "react-icons/bi";
@@ -14,7 +12,7 @@ import { Cart } from "../../Pages/Cart";
 import { Show, Input } from '@chakra-ui/react'
 import { Link } from "react-router-dom";
 import { getAuth,signOut } from "firebase/auth";
-import { auth } from "../../firebase";
+import Search from "../../Pages/Search";
 
 function Navbar({name}) {
 const logOut = () => {
@@ -48,11 +46,11 @@ const logOut = () => {
 
           <div className="nav_image">
             <img src={logo} alt="" />
-            <h2>Magadeal</h2>
+            <h2>MegaDeals</h2>
           </div>
 
           <div className="nav_search">
-            <div className="input-group border-0.5">
+            {/* <div className="input-group border-0.5">
               <input
                 type="text"
                 className="form-control"
@@ -69,7 +67,9 @@ const logOut = () => {
                 <MdSearch/>
                 <p>Search</p>
               </button>
-            </div>
+            </div> */}
+            
+            <Search/>
           </div>
 
           <div className="nav_cart">
@@ -82,7 +82,8 @@ const logOut = () => {
             <div className="nav_login">
                 <p>Log IN</p>
                 <CgProfile className="icon"/>
-            </div>
+
+                <p>Sign In</p>            </div>
             </Link>}</h3>
           </div>
         </div>

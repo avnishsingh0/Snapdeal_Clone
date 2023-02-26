@@ -1,14 +1,17 @@
 .Side1{
     /* border: 2px solid red; */
     width: 15%;
-    background-color:   #FED7D7;
-    color: red;
+    background-color:   #2B6CB0;
+    color: white;
     font-size: larger;
     
 }
 
+
+
 .Side2{
     /* border: 2px solid red; */
+    
     margin-top: 40px;
     width: 100%;
     margin-left: 50px;

@@ -1,7 +1,8 @@
-import { Box, Table, TableCaption, TableContainer, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react'
+import { Box} from '@chakra-ui/react'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { orderProduct } from '../../../Redux/AdminReducer/action'
+import { OrderCard } from './OrderCard'
 
 export const Orders = () => {
 
@@ -17,7 +18,18 @@ export const Orders = () => {
     }, [])
   return (
     <Box>
-        <TableContainer>
+        {product.length>0 && product.map((el)=>{
+
+          return <OrderCard key={el.id} {...el}/>
+        })}
+    </Box>
+  )
+}
+
+/*
+
+/* 
+<TableContainer>
   <Table variant='striped' colorScheme='teal'>
     <TableCaption>Product Store</TableCaption>
     <Thead>
@@ -26,28 +38,27 @@ export const Orders = () => {
         <Th color={"white"}>Brand Name</Th>
         <Th color={"white"}>Price</Th>
         <Th color={"white"}>Collection</Th>
-        {/* {/* <Th color={"white"}>Edit</Th> */}
-        <Th color={"white"}>Quantity</Th>
-      </Tr>
-    </Thead>
-    <Tbody>
-      {product.length>0 && product.reverse().map((el)=>{
-        var newId=el.id+Date.now()
-        return <Tr key={el.id}>
-        <Td>{newId}</Td>
-        <Td>{el.brand}</Td>
-        <Td>Rs.{el.price}</Td>
-        <Td>{el.collection}</Td>
-        <Td>{el.qty}</Td>
-        {/* <Td><EditIco onClick={()=>handleEdit(el.id)}/></Td>
-        <Td><DeleteIcon color={"red"} onClick={()=>handleDelete(el.id)}/></Td> */}
-      </Tr>
-      })}
+        {/* {/* <Th color={"white"}>Edit</Th> */
+    //     <Th color={"white"}>Quantity</Th>
+    //   </Tr>
+    // </Thead>
+    // <Tbody>
+    //   {product.length>0 && product.reverse().map((el)=>{
+    //     var newId=el.id+Date.now()
+    //     return <Tr key={el.id}>
+    //     <Td>{newId}</Td>
+    //     <Td>{el.brand}</Td>
+    //     <Td>Rs.{el.price}</Td>
+    //     <Td>{el.collection}</Td>
+    //     <Td>{el.qty}</Td>
+//         {/* <Td><EditIco onClick={()=>handleEdit(el.id)}/></Td>
+//         <Td><DeleteIcon color={"red"} onClick={()=>handleDelete(el.id)}/></Td> */}
+//       {/* </Tr>
+//       })}
       
-    </Tbody>
+//     </Tbody>
     
-  </Table>
-</TableContainer>
-    </Box>
-  )
-}
+//   </Table>
+// </TableContainer> */}
+
+
