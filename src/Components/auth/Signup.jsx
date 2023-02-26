@@ -1,19 +1,45 @@
 import React, { useState } from "react";
 import Logo from "../../Assets/logo.png"
-import "./Login.scss"
+import "./Signup.scss"
 import { auth } from "../../firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { Link, useNavigate } from "react-router-dom";
+// import { async } from "@firebase/util";
 
 function Signup() {
-  const [email,setEmail] = useState("")
-  const [password,setPassword] = useState("")
-  const SingUp = (e) => {
+
+  const navigate = useNavigate();
+
+  const [value,setValue] = useState({
+    name: "",
+    email: "",
+    pass: ""
+  })
+
+  const [errorMsg,setErrorMsg] = useState("")
+  const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
+
+  const handelSubmission = (e) => {
     e.preventDefault();
-    createUserWithEmailAndPassword(auth,email,password)
-    .then((user) => {
-      console.log(user)
+    if(!value.name || !value.email || !value.pass)
+    {
+      setErrorMsg("Fill all fields")
+      return
+    }
+    setErrorMsg("")
+    setSubmitButtonDisabled(true)
+    createUserWithEmailAndPassword(auth,value.email,value.pass)
+    .then( async (res) => {
+      setSubmitButtonDisabled(false);
+      const user = res.user
+      await updateProfile(user,{
+        displayName : value.name
+      })
+      navigate("/login")
+      console.log(res.user)
     }).catch((error)=>{
-      console.log(error)
+      setSubmitButtonDisabled(false)
+      setErrorMsg(error.message);
     })
   }
 
@@ -37,9 +63,22 @@ function Signup() {
         </div>
 
 
-      <form className="container" onSubmit={SingUp}>
+      <form className="container">
         <h1>Create a account</h1>
     
+        <div className="mb-3">
+          <label htmlFor="exampleInputEmail1" className="form-label">
+            Full Name
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            required
+            onChange={(e)=> setValue((prev)=> ({...prev,name:e.target.value}))}
+          />
+        </div>
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">
             Email address
@@ -49,8 +88,8 @@ function Signup() {
             className="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
-            value={email}
-            onChange={(e)=> setEmail(e.target.value)}
+            required
+            onChange={(e)=> setValue((prev)=> ({...prev,email:e.target.value}))}
           />
           <div id="emailHelp" className="form-text">
             We'll never share your email with anyone else.
@@ -64,13 +103,15 @@ function Signup() {
             type="password"
             className="form-control"
             id="exampleInputPassword1"
-            value={password}
-            onChange={(e)=> setPassword(e.target.value)}
+            required
+            onChange={(e)=> setValue((prev)=> ({...prev,pass:e.target.value}))}
           />
         </div>
-        <button type="submit" className="btn">
+        <b>{errorMsg}</b>
+        <button onClick={handelSubmission} className="btn" disabled={submitButtonDisabled}>
          SingUp
         </button>
+        <Link className="register_now" to={"/login"}>Login Now?</Link>
       </form>
     </div>
   );

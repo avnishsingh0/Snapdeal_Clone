@@ -1,8 +1,6 @@
 import React from "react";
 import { AiOutlineMobile } from "react-icons/ai";
-import { BsCart } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
-import { MdSearch } from "react-icons/md";
 import { Text } from "@chakra-ui/react";
 
 import { BiHomeAlt,BiCategory,BiCart } from "react-icons/bi";
@@ -12,10 +10,19 @@ import "./Navbar.scss";
 import logo from "../../Assets/logo.png";
 import { Cart } from "../../Pages/Cart";
 import { Show, Input } from '@chakra-ui/react'
+import { Link } from "react-router-dom";
+import { getAuth,signOut } from "firebase/auth";
 import Search from "../../Pages/Search";
 
-
-function Navbar() {
+function Navbar({name}) {
+const logOut = () => {
+  const auth = getAuth();
+  signOut(auth).then(()=>{
+   alert("Log Out Seccussfull")
+  }).catch((err)=>{
+   alert("Log Out Error")
+  })
+}
 
   return (
     <div className="nav_primary">
@@ -68,29 +75,17 @@ function Navbar() {
           <div className="nav_cart">
             <div className="cart">
                 <p>Cart</p>
-
-                {/* <Text>
-                <BsCart className="icon"/>
-                </Text> */}
-
-                
+                {/* <BsCart className="icon"/> */}
                 <Cart/>
-            
             </div>
-
+            <h3>{name ? <>Welcom -{name} <button onClick={logOut}>LogOut</button></> : <Link to={"/login"}>
             <div className="nav_login">
-                <p>Sign In</p>
-
-                {/* <Text>
+                <p>Log IN</p>
                 <CgProfile className="icon"/>
-                </Text> */}
-              
-                <CgProfile/>
-               
-            </div>
+
+                <p>Sign In</p>            </div>
+            </Link>}</h3>
           </div>
-
-
         </div>
       </div>
       </Show>

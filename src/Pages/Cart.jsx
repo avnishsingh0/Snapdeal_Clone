@@ -3,9 +3,7 @@ import { Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, 
 
 
 import Bag from './Bag';
-import { BiCart } from 'react-icons/bi';
 import { BsCart } from 'react-icons/bs';
-
 
 
 
