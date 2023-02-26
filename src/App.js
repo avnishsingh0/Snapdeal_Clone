@@ -15,18 +15,7 @@ function App() {
     <div>
 
       <Navbar/>
-
-      {/* <MainPage/> */}
      <AllRoutes/>
-
-      {/* <Login/> */}
-      {/* <Signup/> */}
-      {/* <AuthDetails/> */}
-      {/* <MainPage/> */}
-      {/* <MainPage/>
-      <LandingPage/> */}
-      {/* <AllRoutes/> */}
-
     </div>
   );
 }

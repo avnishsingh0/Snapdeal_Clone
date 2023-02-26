@@ -774,13 +774,14 @@
       "rating": 2
     },
     {
-      "id": 90,
-      "image": "https://n2.sdlcdn.com/imgs/k/l/j/large/Dennis-Lingo-Black-Cotton-Blend-SDL094836478-1-c1deb.webp",
-      "title": "Dennis Lingo - Peach 100% Cotton Slim Fit Men's Casual Shirt ( Pack of 1 )",
-      "price": 699,
-      "discount": "62% Off",
-      "oldprice": 1849,
-      "rating": 2
+      "image": "https://m.media-amazon.com/images/I/41lNWrEJvvS._AC_SR400,600_.jpg",
+      "brand": "Adidash",
+      "price": 200,
+      "description": "3das",
+      "collection": "men",
+      "id": 7,
+      "qty": 4,
+      "url":"https://www.snapdeal.com/products/mens-cricket-shoes?sort=plrty#bcrumbLabelId:255"
     },
     {
       "id": 91,
@@ -1762,17 +1763,37 @@
       "discount": "70% Off",
       "oldprice": 1799,
       "rating": 4
+
     }
   ],
   "Cart": [
     {
-      "id": 5,
-      "image": "https://n3.sdlcdn.com/imgs/k/l/k/230X258_sharpened/Dennis-Lingo-Green-100-Cotton-SDL593587737-1-616a8.jpg",
-      "title": "Dennis Lingo - Green 100% Cotton Slim Fit Men's Casual Shirt ( Pack of 1 )",
-      "price": 620,
-      "discount": "69% Off",
-      "oldprice": 1999,
-      "rating": 3
+
+      "image": "https://m.media-amazon.com/images/I/41aTueuwrkL._AC_SR400,600_.jpg",
+      "brand": "Asus",
+      "price": 448,
+      "qty": 4,
+      "description": "YHA - Blue Cotton Regular Fit Men's Casual Shirt",
+      "collection": "Men",
+      "id": 3
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/41aTueuwrkL._AC_SR400,600_.jpg",
+      "brand": "Asus",
+      "price": 548,
+      "description": "YHA - Blue Cotton Regular Fit Men's Casual Shirt",
+      "collection": "Men",
+      "id": 2,
+      "qty": 2
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/41aTueuwrkL._AC_SR400,600_.jpg",
+      "brand": "Asus",
+      "price": 548,
+      "description": "YHA - Blue Cotton Regular Fit Men's Casual Shirt",
+      "collection": "Men",
+      "id": 2,
+      "qty": 1
     },
     {
       "id": 6,
