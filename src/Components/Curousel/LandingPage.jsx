@@ -22,8 +22,9 @@ import HomeCarousel from "./HomeCarousel";
                 src="https://i3.sdlcdn.com/img/leftnavicon09/30x30mobile4.png"
                 alt=""
               />
+              <Link to={"/products"}>
               <span style={{ cursor: "pointer" }}>All Offers</span>
-
+              </Link>
               <div className={styles.sublists}>
                 <div className={styles.listitems}>
                   {/* <!-- 1st row --> */}
@@ -94,7 +95,9 @@ import HomeCarousel from "./HomeCarousel";
                 src="https://i2.sdlcdn.com/img/leftnavicon09/30x30home_living2.png"
                 alt=""
               />
+              <Link to={"/products"}>
               <span>Mobile & Tablets</span>
+              </Link>
               <div className={styles.sublists}>
                 <div className={styles.listitems}>
                   {/* <!-- 1st row --> */}
@@ -169,7 +172,9 @@ import HomeCarousel from "./HomeCarousel";
                 src="https://n2.sdlcdn.com/imgs/c/0/x/Homekitchenfurnishing-3eda1.jpg"
                 alt=""
               />
+              <Link to={"/products"}>
               <span>Electronics</span>
+              </Link>
               <div className={styles.sublists}>
                 <div className={styles.listitems}>
                   {/* <!-- 1st row --> */}
@@ -240,7 +245,8 @@ import HomeCarousel from "./HomeCarousel";
                 src="https://i3.sdlcdn.com/img/leftnavicon09/30x30music1.png"
                 alt=""
               />
-              <span>Computers & Gaming</span>
+              <Link to={"/products"}>
+              <span>Computers & Gaming</span></Link>
               <div className={styles.sublists}>
                 <div className={styles.listitems}>
                   {/* <!-- 1st row --> */}
@@ -310,7 +316,8 @@ import HomeCarousel from "./HomeCarousel";
                 src="https://i1.sdlcdn.com/img/leftnavicon09/fashion30x30_3.png"
                 alt=""
               />
-              <span>Home & Kitchen</span>
+              <Link to={"/products"}>
+              <span>Home & Kitchen</span></Link>
 
               <div className={styles.sublists}>
                 <div className={styles.listitems}>

@@ -16,7 +16,7 @@ import {
   Tr,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import {
   AiFillSafetyCertificate,
@@ -28,6 +28,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { deleteCart, getCart } from "../Redux/CartReducer/action";
 
 const Bag = () => {
+  const [deletes,setDelete]= useState(false);
   const { isLoading, isError, carts } = useSelector(
     (store) => store.CartReducer
   );
@@ -37,8 +38,11 @@ const Bag = () => {
   }, []);
   var grandtotal = 0;
   const handleDeletes=(id)=>{
-      dispatch(deleteCart(id))  
+      dispatch(deleteCart(id)).then(()=>{
+        dispatch(getCart)
+      }) 
   }
+  
 
   return (
     <Box>
@@ -57,7 +61,7 @@ const Bag = () => {
                 <Tbody>
                   {carts.length > 0 &&
                     carts.map((product, index) => {
-                      grandtotal += product.qty * product.price;
+                      grandtotal += 1 * product.price;
                       return (
                         <Tr key={index}>
                           <Td display={"flex"}>
@@ -90,7 +94,7 @@ const Bag = () => {
 
                           <Td>
                             <Text ml={3} fontWeight={"bold"}>
-                              {product.qty}
+                              1
                             </Text>
                           </Td>
                         </Tr>
@@ -164,7 +168,7 @@ const Bag = () => {
                       </Td>
                       <Td></Td>
                       <Td>
-                        <Text> Rs. {product.qty * product.price}</Text>
+                        <Text> Rs. {product.price}</Text>
                       </Td>
                     </Tr>
                   ))}

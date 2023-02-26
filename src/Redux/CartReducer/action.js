@@ -39,7 +39,7 @@ export const postCartFailureAction=()=>{
 export const getCart = (dispatch) => {
   dispatch(getCartProducreq());
   return axios
-    .get("http://localhost:8080/products")
+    .get("https://snapdeal.onrender.com/Cart")
     .then((res) => {
       dispatch(getCartProducsuc(res.data));
     })
@@ -49,14 +49,14 @@ export const getCart = (dispatch) => {
 };
 
 export const deleteCart=(id,dispatch)=>{
-  return axios.delete(`http://localhost:8080/products/${id}`).then((res)=>{
+  return axios.delete(`https://snapdeal.onrender.com/Cart/${id}`).then((res)=>{
       dispatch(deleteCartSuccessAction(id))
       getCart(id)
   })
 }
 export const addCart=(pay)=>(dispatch)=>{
   dispatch(postCartRequestAction())
-  axios.post("http://localhost:8080/products",pay).then((res)=>{
+  axios.post("https://snapdeal.onrender.com/order",pay).then((res)=>{
       dispatch(postCartSuccessAction(res.data))
   }).catch((err)=>{
       dispatch(postCartFailureAction())

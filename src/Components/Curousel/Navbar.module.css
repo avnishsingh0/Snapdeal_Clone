@@ -197,7 +197,7 @@
   }
   
 .container {
-  width: 80%;
+  width: 90%;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-areas: "l l r r r r r r r r";
@@ -211,7 +211,7 @@
     background-color: white;
     margin: 0 24px 0 42px;
     height: 100%;
-    width: 65%;
+    width: 80%;
     border: 1px solid rgb(203, 201, 201);
     padding: 10px;
   }

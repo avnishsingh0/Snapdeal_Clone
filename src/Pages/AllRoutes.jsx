@@ -14,8 +14,7 @@ import SingleProductPage from './SingleProductPage'
 const AllRoutes = () => {
   return (
     <Routes>
-        <Route path='/' element={<Homepage/>}/>
-        <Route path='/landingpage' element={<LandingPage/>}/>
+        <Route path='/' element={<LandingPage/>}/>
         <Route path='/products' element={<ProductPage/>}  />
         <Route path='/products/:id' element={<SingleProductPage/>} />
         <Route path='checkout' element={<Checkout/>}/>
