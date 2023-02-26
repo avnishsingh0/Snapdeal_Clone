@@ -46,7 +46,7 @@ const ProductList = () => {
 
   useEffect(() => {
     dispatch(getProducts(obj));
-  }, [location.search, currentPage]);
+  }, [location.search]);
 
   return (
     <>

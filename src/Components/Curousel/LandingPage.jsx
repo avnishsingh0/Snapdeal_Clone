@@ -506,7 +506,7 @@ import HomeCarousel2 from "./HomeCarousel2";
           {/* <!-- ---cardslider-- --> */}
           <div className={styles.Container}>
             <h2 style={{letterSpacing:"2px",marginTop:"25px",padding:"5px"}}>TRENDING PRODUCTS</h2>
-            <Link to={'/product'}>
+            <Link to={'/products'}>
             <HomeCarousel/>
             </Link>
           
@@ -529,7 +529,7 @@ import HomeCarousel2 from "./HomeCarousel2";
       <div className={styles.downloadsnap}>
         <img src="https://i1.sdlcdn.com/img/appScreenshot@1x.png" alt="" />
         <div className={styles.snapText}>
-          <h5>Download Snapdeal App Now</h5>
+          <h5>Download Magadeal App Now</h5>
           <p>Fast, Simple & Delightful.</p>
           <h4>All it takes is 30 seconds to Download.</h4>
          

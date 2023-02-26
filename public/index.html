@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAB3CAMAAAAO5y+4AAAAkFBMVEXlAEf////8///mAD//7/XmHFj00tnnAEbiIUrnAEPpRW7jAET2u8njAELkAEDiAEblADnmC0//+PzoXIL3y9Trepj3wM/1lrLwhaPpTnnsAE3kLmH50Nz5zNvoV33rVX/85e7zs8X0nrbrkKj63ebydprqZonti6TwpLjnOWv1rcLfQWv61+PpRGjoZXv2pr/cZUHFAAADqUlEQVRoge2Z23LaMBCGZcmua4QOtsMphsZJDASHlPd/uwrSkoIEXh060wt9F51eZPTzy7urXQmhSCQSiUQikUgk8g9gnAzACc/D69bfBnmYoODC+TQBMJMsnCQt1D9kjodlcbIIp8seG6L8lt8ghpdEiFC6q+oHF4g/QXTxRIZRFcUC45UykbNnwE4nbRlop/lRbsLVf5oK4viFBNloelJrmwIJPoMYrpoQhgV5Pa12YLna6xZieMoD6NKyO66FqwUXgqwxxHHN/XeabJJPqQe1WCFXkCTuMuptF52V1ioz2Qiy0cmWeNtdnGO4K6lA8gWim+58d5q/nXcPz6RALIOEFu49c4k16ddq1Y6p0JqAcqkmXgcT3/6lgqfqC9MSElrJEhUesjnaX6xWq+3jNahqzX12mteXi3UFzRF7uzJs8o/bzMMwH1+7kDmibDK+YGrYAIx793OJ765XTE+1l8iLtkr2JsvVzrlcyhdtPVOCXAT9l+Op6xcWpWG9J90FlVtjiG8cqxZZG1wsH/XEpOVe/8tjB+CUw0IuDTbwxPDZ+Maki2fE4Xy4cQbgttEXy5GpycWVU5mWN9qpA0faakyL/BNjhxzOs9SsWy30QM0NoX+kts8lsjWqHhOE6g0ULU2/Ei9La92yu1n/14YEIRPjb5zbGjaH6CddaQgXYvydqW1zSe+NYa9Sz0y2UEVZp7eLaPZ+57RTCaIHqmo2TeVya+eXm+PzD2Op2RCCN+8jDbuBmGbtXV280ONFiMKAXalUXdT9bmZPafjRXiXRYBM154wCsBuGST3cu702GQS9pt4mp8+DsglOIbQ2lZJ9mDLCID2I3cjCf0JaZBDT0uIIZh9VGGE1GVr1OrQPoourd7sWizWgwX5IFq8tW0oBuiQb1D1w27usotx7C+MVt2/rOKByDMi2jcPAQDnoGvQeT07zgj4b2blNZm5zmeDm4QNKz4XbeUVFa5xsYXaXpfP4Szbusqn7EKo+8cpZ19TpwnVHrqHlNJCdEbIHXUdqjMvc5/pK8Ax2Dl/RZb63dU5lGo+8X5EoMo3eA6wDPDBcX2AB3B6k9yWwgtl2AA80SFvNd6lNTOM2C/SacnP8NspWtWFSdIJmnYXwPNCjFbIKLfyMQsTUb4op9AMvbZrlQdgOqJuOQjwcfUF62C5vwjzQnaGm+1Ed/8ebKwQHdAC4D/BIdkXO5u3QwDkTPg8Ztyi+D8HC1EeN/D4hEygSiUQikUgkEvlf+QVHJz2ssT/ALgAAAABJRU5ErkJggg==" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -10,6 +10,7 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!-- <link rel="favicon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAB3CAMAAAAO5y+4AAAAkFBMVEXlAEf////8///mAD//7/XmHFj00tnnAEbiIUrnAEPpRW7jAET2u8njAELkAEDiAEblADnmC0//+PzoXIL3y9Trepj3wM/1lrLwhaPpTnnsAE3kLmH50Nz5zNvoV33rVX/85e7zs8X0nrbrkKj63ebydprqZonti6TwpLjnOWv1rcLfQWv61+PpRGjoZXv2pr/cZUHFAAADqUlEQVRoge2Z23LaMBCGZcmua4QOtsMphsZJDASHlPd/uwrSkoIEXh060wt9F51eZPTzy7urXQmhSCQSiUQikUgk8g9gnAzACc/D69bfBnmYoODC+TQBMJMsnCQt1D9kjodlcbIIp8seG6L8lt8ghpdEiFC6q+oHF4g/QXTxRIZRFcUC45UykbNnwE4nbRlop/lRbsLVf5oK4viFBNloelJrmwIJPoMYrpoQhgV5Pa12YLna6xZieMoD6NKyO66FqwUXgqwxxHHN/XeabJJPqQe1WCFXkCTuMuptF52V1ioz2Qiy0cmWeNtdnGO4K6lA8gWim+58d5q/nXcPz6RALIOEFu49c4k16ddq1Y6p0JqAcqkmXgcT3/6lgqfqC9MSElrJEhUesjnaX6xWq+3jNahqzX12mteXi3UFzRF7uzJs8o/bzMMwH1+7kDmibDK+YGrYAIx793OJ765XTE+1l8iLtkr2JsvVzrlcyhdtPVOCXAT9l+Op6xcWpWG9J90FlVtjiG8cqxZZG1wsH/XEpOVe/8tjB+CUw0IuDTbwxPDZ+Maki2fE4Xy4cQbgttEXy5GpycWVU5mWN9qpA0faakyL/BNjhxzOs9SsWy30QM0NoX+kts8lsjWqHhOE6g0ULU2/Ei9La92yu1n/14YEIRPjb5zbGjaH6CddaQgXYvydqW1zSe+NYa9Sz0y2UEVZp7eLaPZ+57RTCaIHqmo2TeVya+eXm+PzD2Op2RCCN+8jDbuBmGbtXV280ONFiMKAXalUXdT9bmZPafjRXiXRYBM154wCsBuGST3cu702GQS9pt4mp8+DsglOIbQ2lZJ9mDLCID2I3cjCf0JaZBDT0uIIZh9VGGE1GVr1OrQPoourd7sWizWgwX5IFq8tW0oBuiQb1D1w27usotx7C+MVt2/rOKByDMi2jcPAQDnoGvQeT07zgj4b2blNZm5zmeDm4QNKz4XbeUVFa5xsYXaXpfP4Szbusqn7EKo+8cpZ19TpwnVHrqHlNJCdEbIHXUdqjMvc5/pK8Ax2Dl/RZb63dU5lGo+8X5EoMo3eA6wDPDBcX2AB3B6k9yWwgtl2AA80SFvNd6lNTOM2C/SacnP8NspWtWFSdIJmnYXwPNCjFbIKLfyMQsTUb4op9AMvbZrlQdgOqJuOQjwcfUF62C5vwjzQnaGm+1Ed/8ebKwQHdAC4D/BIdkXO5u3QwDkTPg8Ztyi+D8HC1EeN/D4hEygSiUQikUgkEvlf+QVHJz2ssT/ALgAAAABJRU5ErkJggg=="> -->
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -25,7 +26,7 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <title>React App</title>
+    <title>MegaDeals</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

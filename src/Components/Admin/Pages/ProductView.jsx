@@ -3,9 +3,11 @@ import {  Box, Table, TableCaption, TableContainer, Tbody, Td, Tfoot, Th, Thead,
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { deleteProduct, getProduct } from '../../../Redux/AdminReducer/action'
-import pop from '../../../Assets/pop.wav'
+
 
 import { Link, useNavigate } from 'react-router-dom'
+
+import { ProductViewCard } from './ProductViewCard'
 
 
 
@@ -36,23 +38,34 @@ export const ProductView = () => {
 
    
 
-    const play=()=>{
-      new Audio(pop).play()
-  }
+  //   const play=()=>{
+  //     new Audio(pop).play()
+  // }
 
 
 
-    const handleDelete=(id)=>{
+  //   const handleDelete=(id)=>{
         
-      play()
+  //     play()
       
-        dispatch(deleteProduct(id))
+  //       dispatch(deleteProduct(id))
         
-    }
+  //   }
 
     
   return (
-    <Box>
+    <Box display={"grid"} gridTemplateColumns={"repeat(2,1fr)"}>
+      {product.length>0 && product.map((el)=>{
+      return <ProductViewCard key={el.id} {...el}/>
+    })}
+    </Box>
+  )
+}
+
+// onClick={()=>handleEdit(el.id)}
+
+/*
+<Box>
         <TableContainer>
   <Table variant='striped' colorScheme='teal'>
     <TableCaption>Product Store</TableCaption>
@@ -74,7 +87,7 @@ export const ProductView = () => {
         <Td>{el.brand}</Td>
         <Td>Rs.{el.price}</Td>
         <Td>{el.collection}</Td>
-        <Link to={`/edit/${el.id}`}><Td><EditIcon/></Td></Link>
+        <Td><EditIcon/></Td>
         <Td><DeleteIcon color={"red"} onClick={()=>handleDelete(el.id)}/></Td>
       </Tr>
       })}
@@ -84,7 +97,4 @@ export const ProductView = () => {
   </Table>
 </TableContainer>
     </Box>
-  )
-}
-
-// onClick={()=>handleEdit(el.id)}
+*/

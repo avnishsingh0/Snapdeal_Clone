@@ -1,4 +1,5 @@
 import { ChevronRightIcon } from "@chakra-ui/icons";
+import { useToast } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import ReactImageMagnify from "react-image-magnify";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,12 +14,18 @@ const SingleProductPage = () => {
   const dispatch = useDispatch();
   const magImg = product.image;
   
+  const toast = useToast();
+  const toastIdRef = React.useRef();
+
+  function AddtoCartToast() {
+    toastIdRef.current = toast({ description: "Product Added Successfully !" });
+  }
 
 
   const handletoCart = () => {
-    dispatch(addCart(product)).then(()=>{
+    dispatch(addCart(product))
+      AddtoCartToast()
     
-    })
      
     
       
@@ -31,7 +38,7 @@ const SingleProductPage = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{padding:"50px"}}>
       <div>
         <p className={styles.tag}>
           Home
@@ -131,8 +138,8 @@ const SingleProductPage = () => {
             </div>
           </div>
           <div className={styles.buy_button}>
-            <button style={{ backgroundColor: "black" }} onClick={handletoCart} >ADD TO CART <Cart/></button>
-            <button style={{ backgroundColor: "#e40046" }}>BUY NOW</button>
+            <button style={{ backgroundColor: "black",borderRadius:"10px",width:"250px",display:"flex",gap:"10px",justifyContent:"center" }} onClick={handletoCart} >ADD TO CART <Cart/></button>
+            <button style={{ backgroundColor: "#e40046",borderRadius:"10px" }}>BUY NOW</button>
           </div>
           <p style={{ color: "gray", textAlign: "center", marginTop: "15px" }}>
             Generally delivered in 5 - 9 days
