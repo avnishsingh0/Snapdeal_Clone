@@ -2,12 +2,46 @@
   "products": [
     {
       "id": 1,
+      "image": "https://n2.sdlcdn.com/imgs/k/h/v/large/Zebu-Maroon-Sweatshirt-SDL534372374-1-052e2.jpg",
+      "brand": "Pokemon",
+      "price": 59,
+      "description": "Nitendo Switch",
+      "collection": "Men"
+      
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/51inUyV2tdL._AC._SR360,460.jpg",
+      "brand": "Levis",
+      "price": 789,
+      "description": "dsfsf",
+      "collection": "Men",
+      "id": 2
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/61KvJpF7f9L._AC_UL400_.jpg",
+      "brand": "Kurti",
+      "price": 456,
+      "description": "sfsfs",
+      "collection": "Women",
+      "id": 3
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/51eNzVRDfLL._AC_UL400_.jpg",
+      "brand": "dress",
+      "price": 123,
+      "description": "sdfdxcgvd",
+      "collection": "Kids",
+      "id": 4
+    },
+    {
+      "id": 5,
       "image": "https://n2.sdlcdn.com/imgs/k/l/e/230X258_sharpened/Dillinger-Olive-100-Cotton-Slim-SDL062417426-1-c365a.jpg",
       "title": "Dillinger - Olive 100% Cotton Slim Fit Men's Casual Shirt ( Pack of 1 )",
       "price": 649,
       "discount": "68% Off",
       "oldprice": 1999,
       "rating": 4
+
     },
     {
       "id": 2,
@@ -937,6 +971,34 @@
       "discount": "56% Off",
       "oldprice": 899,
       "rating": 4
+    },
+    { 
+      "image": "https://m.media-amazon.com/images/I/41aTueuwrkL._AC_SR400,600_.jpg",
+      "brand": "Asus",
+      "price": 448,
+      "qty": 4,
+      "description": "YHA - Blue Cotton Regular Fit Men's Casual Shirt",
+      "collection": "Men",
+      "id": 1
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/51eNzVRDfLL._AC_UL400_.jpg",
+      "brand": "dress",
+      "price": 123,
+      "qty": 14,
+      "description": "sdfdxcgvd",
+      "collection": "Kids",
+      "id": 2
+
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/41aTueuwrkL._AC_SR400,600_.jpg",
+      "brand": "Asus",
+      "price": 548,
+      "description": "YHA - Blue Cotton Regular Fit Men's Casual Shirt",
+      "collection": "Men",
+      "id": 2,
+      "qty":2
     }
   ],
   "Seller": [
