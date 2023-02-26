@@ -4,7 +4,6 @@ import {
   GET_PRODUCT_REQUEST,
   GET_PRODUCT_SUCCESS,
   GET_SINGLE_PRODUCT_SUCCESS,
-  UPDATE_FILTER,
 } from "./actionTypes";
 
 const initialState = {

@@ -1,18 +1,29 @@
 import Carousel from "react-bootstrap/Carousel";
-import {HStack, Stack,Image, Text, Heading} from "@chakra-ui/react"
+
 import styles from "./Navbar.module.css";
-// import Navbar from "./Navbar";
-// import Footer from "./Footer";
+
 import { Link } from "react-router-dom";
 import HomeCarousel from "./HomeCarousel";
-import HomeCarousel1 from "./HomeCarousel1";
-import HomeCarousel2 from "./HomeCarousel2";
- const LandingPage = () => {
+import Navbar from "../Navbar/Navbar";
+import { useEffect, useState } from "react";
+import { auth } from "../../firebase";
 
+ const LandingPage = () => {
+  const [userName, setUserName] = useState("");
+
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUserName(user.displayName);
+      } else setUserName("");
+    });
+  }, []);
 
 
   return (
+    
     <div>
+    <Navbar name={userName}/>
       {/* <!-- ------mainbody------- --> */}
       
       <div className={styles.container}>
@@ -24,8 +35,9 @@ import HomeCarousel2 from "./HomeCarousel2";
                 src="https://i3.sdlcdn.com/img/leftnavicon09/30x30mobile4.png"
                 alt=""
               />
+              <Link to={"/products"}>
               <span style={{ cursor: "pointer" }}>All Offers</span>
-
+              </Link>
               <div className={styles.sublists}>
                 <div className={styles.listitems}>
                   {/* <!-- 1st row --> */}
@@ -96,7 +108,9 @@ import HomeCarousel2 from "./HomeCarousel2";
                 src="https://i2.sdlcdn.com/img/leftnavicon09/30x30home_living2.png"
                 alt=""
               />
+              <Link to={"/products"}>
               <span>Mobile & Tablets</span>
+              </Link>
               <div className={styles.sublists}>
                 <div className={styles.listitems}>
                   {/* <!-- 1st row --> */}
@@ -171,7 +185,9 @@ import HomeCarousel2 from "./HomeCarousel2";
                 src="https://n2.sdlcdn.com/imgs/c/0/x/Homekitchenfurnishing-3eda1.jpg"
                 alt=""
               />
+              <Link to={"/products"}>
               <span>Electronics</span>
+              </Link>
               <div className={styles.sublists}>
                 <div className={styles.listitems}>
                   {/* <!-- 1st row --> */}
@@ -242,7 +258,8 @@ import HomeCarousel2 from "./HomeCarousel2";
                 src="https://i3.sdlcdn.com/img/leftnavicon09/30x30music1.png"
                 alt=""
               />
-              <span>Computers & Gaming</span>
+              <Link to={"/products"}>
+              <span>Computers & Gaming</span></Link>
               <div className={styles.sublists}>
                 <div className={styles.listitems}>
                   {/* <!-- 1st row --> */}
@@ -312,7 +329,8 @@ import HomeCarousel2 from "./HomeCarousel2";
                 src="https://i1.sdlcdn.com/img/leftnavicon09/fashion30x30_3.png"
                 alt=""
               />
-              <span>Home & Kitchen</span>
+              <Link to={"/products"}>
+              <span>Home & Kitchen</span></Link>
 
               <div className={styles.sublists}>
                 <div className={styles.listitems}>
@@ -386,7 +404,7 @@ import HomeCarousel2 from "./HomeCarousel2";
             <div className={styles.moreli} style={{ cursor: "pointer" }}>
               <li>
                 <span>
-                  <Link to={"/product"}>
+                  <Link to={"/products"}>
                      Men's Fashion
                   </Link>
                   </span>
@@ -457,13 +475,7 @@ import HomeCarousel2 from "./HomeCarousel2";
             </div>
           </ul>
         </div>
-        {/* <div className={styles.barcode}>
-          
-          <div className={styles.bartext}>
-            <p>Enjoy Convenient Order Tracking</p>
-            <h3>Scan to download app</h3>
-          </div>
-        </div> */}
+       
         <div className={styles.rightside}>
           {/* Slider starts here */}
           <Carousel>
@@ -510,15 +522,7 @@ import HomeCarousel2 from "./HomeCarousel2";
             <HomeCarousel/>
             </Link>
           
-            {/* <Link to={'/product'}> */}
-            {/* <HomeCarousel1/> */}
-            {/* </Link> */}
-
-            {/* <h2 style={{letterSpacing:"2px",marginTop:"25px",padding:"5px"}}>POPULAR PRODUCTS</h2> */}
            
-            {/* <Link to={'/product'}> */}
-            {/* <HomeCarousel2/> */}
-            {/* </Link> */}
 
           </div>
         

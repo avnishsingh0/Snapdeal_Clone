@@ -163,7 +163,7 @@ const handleSubmit=(e)=>{
   </Checkbox>
      </Center>
      <Center>
-     <Button bg={'#dc3545 '} color={'white'} m={'auto'} borderRadius={'0px'} w={'55%'} mt={5} >SAVE & CONTINUE</Button>  
+     <Button bg={'#dc3545 '} color={'white'} m={'auto'} borderRadius={'0px'} w={'55%'} mt={5} onClick={handleSubmit} >SAVE & CONTINUE</Button>  
      </Center>
     </AccordionPanel>
   </AccordionItem>
@@ -196,16 +196,16 @@ const handleSubmit=(e)=>{
                 <Tbody>
                   {carts.length > 0 &&
                     carts.map((product, index) =>{
-                     grandtotal+=(product.qty*product.price)
+                     grandtotal+=(1*product.price)
                       return (
                         <Tr key={index}>
                         <Td display={"flex"}>
                           <Image
                             w={70}
-                            src="https://n2.sdlcdn.com/imgs/i/5/m/130x152/ASIAN-Maroon-Running-Shoes-SDL795647420-1-018b7.jpeg"
+                            src={product.image}
                           />
                           <Box>
-                            <Text ml={4}>Sport Shoese </Text>
+                            <Text ml={4}>{product.title}</Text>
                             <Text ml={4} mt={3}>
                               Size: 6
                             </Text>
@@ -232,7 +232,7 @@ const handleSubmit=(e)=>{
                         </Td>
 
                         <Td>
-                          <Text ml={3} fontWeight={'bold'}>{product.qty}</Text>
+                          <Text ml={3} fontWeight={'bold'}>1</Text>
                         </Td>
                       </Tr>
                       )
@@ -388,12 +388,12 @@ const handleSubmit=(e)=>{
       <Box bg={'#fbf8fb '} p={4}>
         <Text>SUMMARY (2 Items)</Text>
         {carts.length > 0 && carts.map((product,index)=>{
-          grandtotals+=(product.qty*product.price)
+          grandtotals+=(1*product.price)
           return (
             <Box>
             <Text mt={3}>{product.brand}</Text>
             <Flex>
-            <Text mr={"11rem"}>Quantity: {product.qty}</Text>
+            <Text mr={"11rem"}>Quantity: 1</Text>
             <Text>Rs. {product.price}</Text>
              </Flex>
             </Box>

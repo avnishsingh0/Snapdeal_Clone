@@ -18,7 +18,7 @@ const Search = () => {
       };
       useEffect(() => {
         if (search !== "") {
-          fetch(` http://localhost:8080/products?q=${search}`)
+          fetch(` https://snapdeal.onrender.com/products?q=${search}`)
             .then((res) => res.json())
             .then((data) => setSearchData(data));
         }

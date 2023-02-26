@@ -36,7 +36,7 @@ export const addtoCartObj = () => {
 export const getProducts = (obj) => (dispatch) => {
   dispatch(getProductRequestObj());
   axios
-    .get("http://localhost:8080/products",obj)
+    .get("https://snapdeal.onrender.com/products",obj)
     .then((res) => {
       dispatch(getProductSuccessObj(res.data));
     })
@@ -48,7 +48,7 @@ export const getProducts = (obj) => (dispatch) => {
 export const getSingleProduct = (id) => (dispatch) => {
   dispatch(getProductRequestObj());
   axios
-    .get(`http://localhost:8080/products/${id}`)
+    .get(`https://snapdeal.onrender.com/products/${id}`)
     .then((res) => {
       dispatch(getSingleProductSuccessObj(res.data));
     })
@@ -60,7 +60,7 @@ export const getSingleProduct = (id) => (dispatch) => {
 
 export const addCart = (payload) => (dispatch) => {
   dispatch(getProductRequestObj());
-  axios.post("http://localhost:8080/Cart",payload).then(()=>{
+  axios.post("https://snapdeal.onrender.com/Cart",payload).then(()=>{
     dispatch(addtoCartObj())
   }).catch(()=>{
     dispatch(getProductErrorObj())

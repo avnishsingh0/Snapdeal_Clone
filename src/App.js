@@ -1,21 +1,25 @@
-
-import LandingPage from "../src/Components/Curousel/LandingPage";
-import { MainPage } from "./Components/Admin/Components/MainPage";
-import { Edit } from "./Components/Admin/Pages/Edit";
-
 import Navbar from "./Components/Navbar/Navbar";
 import AllRoutes from "./Pages/AllRoutes";
 import Login from "./Components/auth/Login";
 import Signup from "./Components/auth/Signup";
-import AuthDetails from "./Components/auth/AuthDetails";
+import { useEffect, useState } from "react";
+import { auth } from "./firebase";
 
 
 function App() {
+ 
+
+
   return (
     <div>
 
-      <Navbar/>
-     <AllRoutes/>
+     
+      {/* <Navbar name={userName}/> */}
+    
+      <AllRoutes/>
+
+  
+
     </div>
   );
 }

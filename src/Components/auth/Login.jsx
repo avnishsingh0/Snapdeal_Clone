@@ -3,20 +3,36 @@ import Logo from "../../Assets/logo.png"
 import "./Login.scss"
 import { auth } from "../../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { Link, useNavigate } from "react-router-dom";
+import { flatten, useToast } from "@chakra-ui/react";
 
 function Login() {
-  const [email,setEmail] = useState("")
-  const [password,setPassword] = useState("")
-  
-  const Login = (e) => {
-    e.preventDefault();
-    signInWithEmailAndPassword(auth,email,password)
-    .then((user) => {
-      console.log(user)
+  const navigate = useNavigate();
+  const [value,setValue] = useState({
+    email : "",
+    pass : ""
+  })
+  const [errorMsg,setErrorMsg] = useState("")
+  const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
+  const handelLogin = (e) => {
+    // e.preventDefault();
+    if(!value.email || !value.pass)
+    {
+      setErrorMsg("Fill all fileds")
+      return;
+    }
+    setErrorMsg("")
+    setSubmitButtonDisabled(true)
+    signInWithEmailAndPassword(auth,value.email,value.pass)
+    .then(async (res) => {
+      setSubmitButtonDisabled(false)
+      navigate("/")
     }).catch((error)=>{
-      alert("User Not Found")
+      setSubmitButtonDisabled(false)
+      setErrorMsg(error.message)
     })
   }
+
 
   return (
     <div>
@@ -37,8 +53,7 @@ function Login() {
             </div>
         </div>
 
-
-      <form className="container" onSubmit={Login}>
+      <form className="container">
         <h1>Log In to Your account</h1>
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">
@@ -49,8 +64,8 @@ function Login() {
             className="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
-            value={email}
-            onChange={(e)=> setEmail(e.target.value)}
+            required
+            onChange={(e)=> setValue((prev) => ({...prev,email : e.target.value}))}
           />
           <div id="emailHelp" className="form-text">
             We'll never share your email with anyone else.
@@ -64,13 +79,18 @@ function Login() {
             type="password"
             className="form-control"
             id="exampleInputPassword1"
-            value={password}
-            onChange={(e)=> setPassword(e.target.value)}
+            required
+            onChange={(e)=> setValue((prev) => ({...prev,pass:e.target.value}))}
           />
         </div>
-        <button type="submit" className="btn">
+        <b>{errorMsg}</b>
+        <button type="submit" className="btn" 
+        onClick={handelLogin}
+        disabled={submitButtonDisabled}
+        >
           Log In
         </button>
+        <Link className="register_now" to={"/signup"}>Register Now?</Link>
       </form>
     </div>
   );
