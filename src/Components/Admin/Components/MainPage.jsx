@@ -3,10 +3,11 @@ import styled from 'styled-components'
 import { Sidebar } from '../Pages/Sidebar'
 import style from './Main.css'
 import NavBar from './NavBar'
+// import NavBar from './NavBar'
 import NavPage from './NavPage'
 export const MainPage = () => {
   return (
-    <div>
+    <div className='side0'>
         {/* <Nav>
             <h1 style={{textAlign:"center",padding:"20px",fontWeight:"bolder",color:"GrayText"}}>MegaDeals Admin Panel</h1>
         </Nav> */}

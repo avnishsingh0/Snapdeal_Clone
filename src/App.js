@@ -15,6 +15,10 @@ function App() {
     <div>
 
       <Navbar/>
+
+      <MainPage/>
+     <AllRoutes/>
+
       {/* <Login/> */}
       {/* <Signup/> */}
       {/* <AuthDetails/> */}
@@ -22,6 +26,7 @@ function App() {
       {/* <MainPage/>
       <LandingPage/> */}
       <AllRoutes/>
+
     </div>
   );
 }

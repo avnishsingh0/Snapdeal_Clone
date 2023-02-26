@@ -31,12 +31,12 @@ export default function Chart2() {
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="brand" />
+          <XAxis dataKey="id" />
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="qty" fill="#8884d8" />
-          <Bar dataKey="price" fill="#82ca9d" />
+          <Bar dataKey="oldprice" fill="red" />
+          <Bar dataKey="price" fill="#2B6CB0" />
         </BarChart>
       </ResponsiveContainer>
     );
