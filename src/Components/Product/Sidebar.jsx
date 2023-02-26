@@ -58,18 +58,18 @@ const Sidebar = () => {
         <p>-Formal Shirts for Men</p>
       </div>
       <div>
-        <h5 style={{margin:"15px",fontWeight:"bolder",padding:"10px"}}>Price</h5>
+        <h5 style={{margin:"15px",fontWeight:"bolder",padding:"10px",fontSize:"30px"}}>Price</h5>
         <div className={styles.price_slider}>
         <div>
         <input
-         style={{fontSize:"25px"}}
+         
           type="radio"
           value="asc"
           name="order"
           onChange={(e) => handleSort(e)}
           defaultChecked={order === "asc"}
         />
-        <label>  Low to High</label>
+        <label style={{fontSize:"25px",marginLeft:"15px"}}>  Low to High</label>
         <br />
         <input
          
@@ -79,7 +79,7 @@ const Sidebar = () => {
           onChange={(e) => handleSort(e)}
           defaultChecked={order === "desc"}
         />
-        <label>High to Low</label>
+        <label style={{fontSize:"25px",marginLeft:"15px"}}>High to Low</label>
       </div>
 
           <br />
@@ -87,7 +87,7 @@ const Sidebar = () => {
       </div>
 
       <div>
-        <h5 style={{margin:"15px",fontWeight:"bolder",padding:"10px"}} >Customer Rating</h5>
+        <h5 style={{margin:"15px",fontWeight:"bolder",padding:"10px",fontSize:"25px"}} >Customer Rating</h5>
         <div style={{ paddingLeft: "10px" }}>
           <Checkbox
             value={"1"}
