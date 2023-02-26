@@ -8,10 +8,7 @@ const initialState={
 }
 
 export const reducer=(state=initialState,{type,payload})=>{
-    // console.log("payload1:",payload)
-    // console.log("state:",state)
     switch(type){
-        
         case POST_PRODUCT_REQUEST:
             return {...state,isLoading:true}
         case POST_PRODUCT_SUCCESS:

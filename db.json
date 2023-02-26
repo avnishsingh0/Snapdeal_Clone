@@ -2,11 +2,123 @@
   "products": [
     {
       "image": "https://m.media-amazon.com/images/I/41lNWrEJvvS._AC_SR400,600_.jpg",
-      "brand": "dasa",
+      "brand": "Puma",
       "price": 200,
       "description": "3das",
       "collection": "Women",
-      "id": 3
+      "id": 3,
+      "qty": 4,
+      "url":"https://www.snapdeal.com/products/mens-footwear-sports-shoes?sort=plrty"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/41lNWrEJvvS._AC_SR400,600_.jpg",
+      "brand": "Adidash",
+      "price": 200,
+      "description": "3das",
+      "collection": "men",
+      "id": 2,
+      "qty": 4,
+      "url":"https://www.snapdeal.com/products/mens-cricket-shoes?sort=plrty#bcrumbLabelId:255"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/41lNWrEJvvS._AC_SR400,600_.jpg",
+      "brand": "Adidash",
+      "price": 200,
+      "description": "3das",
+      "collection": "men",
+      "id": 4,
+      "qty": 4,
+      "url":"https://www.snapdeal.com/products/mens-cricket-shoes?sort=plrty#bcrumbLabelId:255"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/41lNWrEJvvS._AC_SR400,600_.jpg",
+      "brand": "Adidash",
+      "price": 200,
+      "description": "3das",
+      "collection": "men",
+      "id": 5,
+      "qty": 4,
+      "url":"https://www.snapdeal.com/products/mens-cricket-shoes?sort=plrty#bcrumbLabelId:255"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/41lNWrEJvvS._AC_SR400,600_.jpg",
+      "brand": "Adidash",
+      "price": 200,
+      "description": "3das",
+      "collection": "men",
+      "id": 6,
+      "qty": 4,
+      "url":"https://www.snapdeal.com/products/mens-cricket-shoes?sort=plrty#bcrumbLabelId:255"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/41lNWrEJvvS._AC_SR400,600_.jpg",
+      "brand": "Adidash",
+      "price": 200,
+      "description": "3das",
+      "collection": "men",
+      "id": 7,
+      "qty": 4,
+      "url":"https://www.snapdeal.com/products/mens-cricket-shoes?sort=plrty#bcrumbLabelId:255"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/41lNWrEJvvS._AC_SR400,600_.jpg",
+      "brand": "Adidash",
+      "price": 200,
+      "description": "3das",
+      "collection": "men",
+      "id": 7,
+      "qty": 4,
+      "url":"https://www.snapdeal.com/products/mens-cricket-shoes?sort=plrty#bcrumbLabelId:255"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/41lNWrEJvvS._AC_SR400,600_.jpg",
+      "brand": "Adidash",
+      "price": 200,
+      "description": "3das",
+      "collection": "men",
+      "id": 7,
+      "qty": 4,
+      "url":"https://www.snapdeal.com/products/mens-cricket-shoes?sort=plrty#bcrumbLabelId:255"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/41lNWrEJvvS._AC_SR400,600_.jpg",
+      "brand": "Adidash",
+      "price": 200,
+      "description": "3das",
+      "collection": "men",
+      "id": 7,
+      "qty": 4,
+      "url":"https://www.snapdeal.com/products/mens-cricket-shoes?sort=plrty#bcrumbLabelId:255"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/41lNWrEJvvS._AC_SR400,600_.jpg",
+      "brand": "Adidash",
+      "price": 200,
+      "description": "3das",
+      "collection": "men",
+      "id": 7,
+      "qty": 4,
+      "url":"https://www.snapdeal.com/products/mens-cricket-shoes?sort=plrty#bcrumbLabelId:255"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/41lNWrEJvvS._AC_SR400,600_.jpg",
+      "brand": "Adidash",
+      "price": 200,
+      "description": "3das",
+      "collection": "men",
+      "id": 7,
+      "qty": 4,
+      "url":"https://www.snapdeal.com/products/mens-cricket-shoes?sort=plrty#bcrumbLabelId:255"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/41lNWrEJvvS._AC_SR400,600_.jpg",
+      "brand": "Adidash",
+      "price": 200,
+      "description": "3das",
+      "collection": "men",
+      "id": 7,
+      "qty": 4,
+      "url":"https://www.snapdeal.com/products/mens-cricket-shoes?sort=plrty#bcrumbLabelId:255"
     }
   ],
   "Cart": [
@@ -17,8 +129,7 @@
       "qty": 4,
       "description": "YHA - Blue Cotton Regular Fit Men's Casual Shirt",
       "collection": "Men",
-      "id": 3,
-      "qty":4
+      "id": 3
     },
     {
       "image": "https://m.media-amazon.com/images/I/41aTueuwrkL._AC_SR400,600_.jpg",
@@ -27,7 +138,16 @@
       "description": "YHA - Blue Cotton Regular Fit Men's Casual Shirt",
       "collection": "Men",
       "id": 2,
-      "qty":2
+      "qty": 2
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/41aTueuwrkL._AC_SR400,600_.jpg",
+      "brand": "Asus",
+      "price": 548,
+      "description": "YHA - Blue Cotton Regular Fit Men's Casual Shirt",
+      "collection": "Men",
+      "id": 2,
+      "qty": 1
     }
   ],
   "Seller": [
@@ -35,6 +155,16 @@
       "email": "ankits745@gmail.com",
       "password": "789456",
       "id": 3
+    }
+  ],
+  "order":[
+    {
+      "name": "avnishsingh",
+      "pincode": 843302,
+      "address": "bhavdepur got",
+      "city":"Sitamarhi",
+      "state":"Bihar",
+      "mobile":8340225267
     }
   ]
 }
