@@ -1,6 +1,6 @@
 # Snapdeal.com
 
-Clone of Snapdeal a shopping website for Medicine where you can find all latest arrivals in fashionable product, health products and all kind of accessories
+Clone of Snapdeal a ecommerce website for daily products where you can find all latest arrivals in fashionable product, health products and all kind of accessories
 
 Deployed Link -> https://megadeal.vercel.app/
 
