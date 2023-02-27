@@ -33,8 +33,6 @@ Tech stack used in the Project:
 ![e58987e9-2bac-4b3e-83c1-1752a27bd906](https://user-images.githubusercontent.com/112858493/221488677-fe2de888-6851-4672-8a18-67717c4dc837.jpg)
 
 
-# Login Section
-![Screenshot (16)](https://user-images.githubusercontent.com/112858493/213980231-210cb82c-33fc-4343-a4ce-42bfeb409446.png)
 
 # Admin-Add Product Page
 ![62aa1360-0d03-4785-b3d0-d33adb830f0b](https://user-images.githubusercontent.com/112858493/221488696-99c4726d-929c-4c37-973a-45d4d3cd2975.jpg)
