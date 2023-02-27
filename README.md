@@ -12,13 +12,14 @@ Deployed Link -> https://megadeal.vercel.app/
 5.Niraj Gope
 
 Tech stack used in the Project:
-React JS
-Chakra UI
-JavaScript
-CSS
-Axios
-Vercel
-Render
+1.React JS
+2.Chakra UI
+3.JavaScript
+4.CSS
+5.Axios
+6.Vercel
+7.Render
+8.Redux
 
 
 
