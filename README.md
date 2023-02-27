@@ -19,10 +19,11 @@ This is a collaborative Project from Masai School in the Construct Week develope
 About Snapdeal :-Snapdeal is an Indian e-commerce website founded in 2010. It offers a wide range of products across various categories such as electronics, fashion, home, and more. Snapdeal has a large customer base and offers competitive pricing, discounts, and deals. The platform also offers seller services, logistics, and payment solutions.
 
 Deployed Link -> https://megadeal.vercel.app/
+![f21d447a-e75c-434d-a533-161e006cb33d](https://user-images.githubusercontent.com/112858493/221496599-c6745f9f-8267-4da2-b6ff-8852616![7cbd42eb-da06-4305-9a60-e236ced25fe1](https://user-images.githubusercontent.com/112858493/221496611-56926ebe-ae2c-4a81-bf2b-aa9fdaa14ecf.jpg)
+020f3.jpg)
 
-<img src="https://user-images.githubusercontent.com/112858493/221488581-c2a9c53f-1ef9-4ada-9477-68792bf63f4a.jpg"/>
-<img src"https://user-images.githubusercontent.com/112858493/221488677-fe2de888-6851-4672-8a18-67717c4dc837.jpg"/>
-<img src"https://user-images.githubusercontent.com/112858493/221488696-99c4726d-929c-4c37-973a-45d4d3cd2975.jpg"/>
+![1c023637-8255-4a4e-a95a-b9a813530dd1](https://user-images.githubusercontent.com/112858493/221496591-7d559d1e-81c9-4b7c-87ab-d59f79a2aa81.jpg)
+
 
 💫Tech & Tools Used :
 ---
