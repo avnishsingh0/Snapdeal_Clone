@@ -20,7 +20,7 @@ About Snapdeal :-Snapdeal is an Indian e-commerce website founded in 2010. It of
 
 Deployed Link -> https://megadeal.vercel.app/
 
-<img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2Fa7bfdf05-ad0e-4c24-ab48-7ff64e9115b8.jpg&w=1920&q=75"/>
+<img src="https://user-images.githubusercontent.com/112858493/221488581-c2a9c53f-1ef9-4ada-9477-68792bf63f4a.jpg"/>
 <img src"https://user-images.githubusercontent.com/112858493/221488677-fe2de888-6851-4672-8a18-67717c4dc837.jpg"/>
 <img src"https://user-images.githubusercontent.com/112858493/221488696-99c4726d-929c-4c37-973a-45d4d3cd2975.jpg"/>
 
