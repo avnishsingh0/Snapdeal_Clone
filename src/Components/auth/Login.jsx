@@ -44,7 +44,7 @@ function Login() {
 
             <div className="second_child">
                 <div>
-                    <h3>Login/Singup</h3>
+                    <h3>Login/Signup</h3>
                     <p>Manage Orders I Access Wishlist I Unlock Offers</p>
                 </div>
                 <div>
@@ -90,7 +90,7 @@ function Login() {
         >
           Log In
         </button>
-        <Link className="register_now" to={"/signup"}>Register Now?</Link>
+        <Link className="register_now" to={"/signup"}>Create an account ?</Link>
       </form>
     </div>
   );

@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import ReactImageMagnify from "react-image-magnify";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useParams } from "react-router-dom";
+import Navbar from "../Components/Navbar/Navbar";
 import styles from "../Components/Product/product.module.css";
 import { addCart, getSingleProduct } from "../Redux/ProductReducer/action";
 import { Cart } from "./Cart";
@@ -38,6 +39,8 @@ const SingleProductPage = () => {
   }, []);
 
   return (
+    <>
+    <Navbar/>
     <div style={{padding:"50px"}}>
       <div>
         <p className={styles.tag}>
@@ -147,6 +150,7 @@ const SingleProductPage = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -44,6 +44,7 @@ import {
   AiOutlineClose,
   AiOutlineHeart,
 } from "react-icons/ai";
+import Navbar from '../Components/Navbar/Navbar'
 
 let initialStates={
   pincode:"",
@@ -79,7 +80,10 @@ const handleSubmit=(e)=>{
   setOrder(initialStates)
 }
   return (
-   <Box  >
+    <>
+    <Navbar/>
+   <Box mt={"4rem"}  >
+
    <SimpleGrid columns={[1, 1, 1, 2]} p={5}>
     <Box border={'0px solid red'}>
     <Accordion defaultIndex={[1]} >
@@ -417,6 +421,7 @@ const handleSubmit=(e)=>{
     </Box>
    </SimpleGrid>
    </Box>
+   </>
   )
 }
 

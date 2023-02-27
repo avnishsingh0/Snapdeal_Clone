@@ -22,14 +22,14 @@ import { auth } from "../../firebase";
 
   return (
     
-    <div>
+    <div style={{marginTop:"6rem"}}>
     <Navbar name={userName}/>
       {/* <!-- ------mainbody------- --> */}
       
       <div className={styles.container}>
         <div className={styles.leftside}   >
           <ul>
-            <div class="topCat">TOP CATEGORIES</div>
+            <div className="topCat">TOP CATEGORIES</div>
             <li className={styles.list1}>
               <img
                 src="https://i3.sdlcdn.com/img/leftnavicon09/30x30mobile4.png"
@@ -445,31 +445,31 @@ import { auth } from "../../firebase";
               <li>
                 <span>
                   {" "}
-                  <i class="fas fa-search"></i> Hair Straightener
+                  <i className="fas fa-search"></i> Hair Straightener
                 </span>
               </li>
               <li>
                 <span>
                   {" "}
-                  <i class="fas fa-search"></i> Makeup Kit
+                  <i className="fas fa-search"></i> Makeup Kit
                 </span>
               </li>
               <li>
                 <span>
                   {" "}
-                  <i class="fas fa-search"></i> Hookah
+                  <i className="fas fa-search"></i> Hookah
                 </span>
               </li>
               <li>
                 <span>
                   {" "}
-                  <i class="fas fa-search"></i> Sling Bag
+                  <i className="fas fa-search"></i> Sling Bag
                 </span>
               </li>
               <li>
                 <span> 
                   {" "}
-                  <i class="fas fa-search"></i> Bluetooth Speaker
+                  <i className="fas fa-search"></i> Bluetooth Speaker
                 </span>
               </li>
             </div>

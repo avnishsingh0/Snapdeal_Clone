@@ -53,7 +53,7 @@ function Signup() {
 
             <div className="second_child">
                 <div>
-                    <h3>Login/Singup</h3>
+                    <h3>Login/Signup</h3>
                     <p>Manage Orders I Access Wishlist I Unlock Offers</p>
                 </div>
                 <div>
@@ -109,9 +109,9 @@ function Signup() {
         </div>
         <b>{errorMsg}</b>
         <button onClick={handelSubmission} className="btn" disabled={submitButtonDisabled}>
-         SingUp
+         SignUp
         </button>
-        <Link className="register_now" to={"/login"}>Login Now?</Link>
+        <Link className="register_now" to={"/login"}>Allready account</Link>
       </form>
     </div>
   );
