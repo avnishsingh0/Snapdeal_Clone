@@ -5,10 +5,11 @@ Clone of Snapdeal a shopping website for Medicine where you can find all latest 
 Deployed Link -> https://megadeal.vercel.app/
 
 # Team Members
-1.Rahul Deb 
+1.Avnish Kumar
 2.Rohit Rajput
-3.Ranjan Kumar
-4.Sai Kiran
+3.Ankit Sharma
+4.Shoieb Akhthar
+5.Niraj Gope
 
 Tech stack used in the Project:
 React JS
