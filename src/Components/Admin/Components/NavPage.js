@@ -22,18 +22,12 @@ const NavPage = () => {
     <React.Fragment>
       <section>
         <Routes>
-        <Route path="/" element={<Dashboard/>} />
-        <Route path="/admin_products" element={<ProductView/>} />
-        <Route path="/add_products" element={<AddProduct />} />
-        <Route path="/orders" element={<Orders />} />
-        <Route path="/edit/:id" element={<Edit />} />
-        <Route path="/seller" element={<Seller />} />
-        {/* <Route path="/php" element={<Php />} />
-        <Route path="/figma" element={<Figma />} />
-        <Route path="/git" element={<Git />} />
-        <Route path="/node" element={<Node />} />
-        <Route path="/react" element={<PageReact />} />
-        <Route path="/angular" element={<Angular />} /> */}
+        <Route path="/admin" element={<Dashboard/>} />
+        <Route path="/admin/admin_products" element={<ProductView/>} />
+        <Route path="/admin/add_products" element={<AddProduct />} />
+        <Route path="/admin/orders" element={<Orders />} />
+        <Route path="/admin/edit/:id" element={<Edit />} />
+        <Route path="/admin/seller" element={<Seller />} />
         </Routes>
       </section>
     </React.Fragment>

@@ -6,6 +6,10 @@ import { deleteProduct, getLogin, getProduct } from '../../../Redux/AdminReducer
 import pop from '../../../Assets/pop.wav'
 
 import { Link, useNavigate } from 'react-router-dom'
+import { Sidebar } from './Sidebar'
+import NavPage from '../Components/NavPage'
+import NavBar from '../Components/NavBar'
+import styled from 'styled-components'
 
 
 export const Seller = () => {
@@ -41,7 +45,13 @@ export const Seller = () => {
 
     
   return (
-    <Box>
+
+<div className='side0'>
+<NavBar/>
+<Side>
+<div className='Side1'><Sidebar/></div>
+<div className='Side2'>
+<Box w={'60rem'}>
         <TableContainer>
   <Table variant='striped' colorScheme='blue'>
     <TableCaption>Product Store</TableCaption>
@@ -73,7 +83,15 @@ export const Seller = () => {
   </Table>
 </TableContainer>
     </Box>
+</div>
+</Side>
+</div>
   )
 }
+const Side=styled.div`
+    display:flex;
+    flex-direction: row;
+    height: auto;
+`
 
 

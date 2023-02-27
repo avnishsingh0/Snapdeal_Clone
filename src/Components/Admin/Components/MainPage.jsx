@@ -8,11 +8,8 @@ import NavPage from './NavPage'
 export const MainPage = () => {
   return (
     <div className='side0'>
-        {/* <Nav>
-            <h1 style={{textAlign:"center",padding:"20px",fontWeight:"bolder",color:"GrayText"}}>MegaDeals Admin Panel</h1>
-        </Nav> */}
         <NavBar/>
-        <Side >
+        <Side>
         <div className='Side1'><Sidebar/></div>
         <div className='Side2'><NavPage/></div>
         </Side>
@@ -21,12 +18,9 @@ export const MainPage = () => {
 }
 
 const Side=styled.div`
-
     display:flex;
     flex-direction: row;
-    /* border: 2px solid black; */
     height: auto;
-
 `
 
 

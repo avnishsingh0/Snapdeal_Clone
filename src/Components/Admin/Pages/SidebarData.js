@@ -6,42 +6,29 @@ import { MdProductionQuantityLimits } from "react-icons/md";
 export const SidebarData=[
     {
         title: "Dashboard",
-        path: "/",
+        path: "/admin/dashboard",
         icon: <FaIcons.FaHome />,
       },
       {
         title: "Products",
-        path: "/admin_products",
+        path: "/admin/admin_products",
         icon: <MdProductionQuantityLimits />,
       },
       {
         title: "Add Products",
-        path: "/add_products",
+        path: "/admin/add_products",
         icon: <BiMessageAltAdd />,
       },
       {
         title: "Orders",
-        path: "/orders",
+        path: "/admin/orders",
         icon: <BiMessageAltAdd />,
       },
      
-      {
-        title: "Users",
-        path: "/users",
-        icon: <AiOutlineUserSwitch />,
-      },
+      
       {
         title: "Sellers",
-        path: "/seller",
+        path: "/admin/seller",
         icon: <FaIcons.FaSellcast />,
       }
 ]
-
-/*
-,
-      {
-        title: "Categories",
-        path: "/categories",
-        icon: <FaIcons.FaPhp />,
-      }
-*/

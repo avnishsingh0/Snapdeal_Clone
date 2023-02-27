@@ -62,7 +62,7 @@ export const loginFailureAction=()=>{
 
 export const addProduct=(pay)=>(dispatch)=>{
     dispatch(postRequestAction())
-    axios.post("http://localhost:8080/products",pay).then((res)=>{
+    axios.post("https://snapdeal.onrender.com/products",pay).then((res)=>{
         // console.log("res:",res)
         dispatch(postSuccessAction(res.data))
     }).catch((err)=>{
@@ -74,7 +74,7 @@ export const addProduct=(pay)=>(dispatch)=>{
 
 export const getProduct=(dispatch)=>{
     dispatch(getRequestAction());
-    return axios.get("http://localhost:8080/products").then((res)=>{
+    return axios.get("https://snapdeal.onrender.com/products").then((res)=>{
         // console.log("3232:",res.data)
         dispatch(getSuccessAction(res.data))
     }).catch((err)=>{
@@ -84,7 +84,7 @@ export const getProduct=(dispatch)=>{
 
 export const getLogin=(dispatch)=>{
     dispatch(loginRequestAction());
-    return axios.get("http://localhost:8080/Seller").then((res)=>{
+    return axios.get("https://snapdeal.onrender.com/Seller").then((res)=>{
         // console.log("3232:",res.data)
         dispatch(loginSuccessAction(res.data))
     }).catch((err)=>{
@@ -94,7 +94,7 @@ export const getLogin=(dispatch)=>{
 
 export const deleteProduct=(id,dispatch)=>{
     
-    return axios.delete(`http://localhost:8080/products/${id}`).then((res)=>{
+    return axios.delete(`https://snapdeal.onrender.com/products/${id}`).then((res)=>{
         // console.log("3232ID:",id)
         
             
@@ -105,7 +105,7 @@ export const deleteProduct=(id,dispatch)=>{
 
 export const orderProduct=(dispatch)=>{
     dispatch(orderRequestAction());
-    return axios.get("http://localhost:8080/Cart").then((res)=>{
+    return axios.get("https://snapdeal.onrender.com/Cart").then((res)=>{
         // console.log("3232:",res.data)
         dispatch(orderSuccessAction(res.data))
     }).catch((err)=>{

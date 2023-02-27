@@ -1,8 +1,12 @@
 import { Box} from '@chakra-ui/react'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import styled from 'styled-components'
 import { orderProduct } from '../../../Redux/AdminReducer/action'
+import NavBar from '../Components/NavBar'
+import NavPage from '../Components/NavPage'
 import { OrderCard } from './OrderCard'
+import { Sidebar } from './Sidebar'
 
 export const Orders = () => {
 
@@ -17,48 +21,28 @@ export const Orders = () => {
         
     }, [])
   return (
-    <Box>
+    
+    <div className='side0'>
+        <NavBar/>
+        <Side>
+        <div className='Side1'><Sidebar/></div>
+        <div className='Side2'>
+        <Box>
         {product.length>0 && product.map((el)=>{
 
           return <OrderCard key={el.id} {...el}/>
         })}
     </Box>
+        </div>
+        </Side>
+    </div>
   )
 }
 
-/*
 
-/* 
-<TableContainer>
-  <Table variant='striped' colorScheme='teal'>
-    <TableCaption>Product Store</TableCaption>
-    <Thead>
-      <Tr bgColor={"red.300"} >
-        <Th color={"white"}>S.No</Th>
-        <Th color={"white"}>Brand Name</Th>
-        <Th color={"white"}>Price</Th>
-        <Th color={"white"}>Collection</Th>
-        {/* {/* <Th color={"white"}>Edit</Th> */
-    //     <Th color={"white"}>Quantity</Th>
-    //   </Tr>
-    // </Thead>
-    // <Tbody>
-    //   {product.length>0 && product.reverse().map((el)=>{
-    //     var newId=el.id+Date.now()
-    //     return <Tr key={el.id}>
-    //     <Td>{newId}</Td>
-    //     <Td>{el.brand}</Td>
-    //     <Td>Rs.{el.price}</Td>
-    //     <Td>{el.collection}</Td>
-    //     <Td>{el.qty}</Td>
-//         {/* <Td><EditIco onClick={()=>handleEdit(el.id)}/></Td>
-//         <Td><DeleteIcon color={"red"} onClick={()=>handleDelete(el.id)}/></Td> */}
-//       {/* </Tr>
-//       })}
-      
-//     </Tbody>
-    
-//   </Table>
-// </TableContainer> */}
-
+const Side=styled.div`
+    display:flex;
+    flex-direction: row;
+    height: auto;
+`
 

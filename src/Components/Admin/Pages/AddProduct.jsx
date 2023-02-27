@@ -4,6 +4,10 @@ import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import { addProduct } from '../../../Redux/AdminReducer/action';
 import sound from '../../../Assets/sound.wav'
+import NavBar from '../Components/NavBar';
+import { Sidebar } from './Sidebar';
+import NavPage from '../Components/NavPage';
+
 
 let initialState={
     image:"",
@@ -42,7 +46,13 @@ export const AddProduct = () => {
    
 
    
-    <Wrapper className='back'>
+    
+    <div className='side'>
+        <NavBar/>
+        <Side>
+        <div className='Side1'><Sidebar/></div>
+        <div className='Side2'>
+        <Wrapper className='back'>
         <h1>MegaDeals Admin Panel</h1>
         <form onSubmit={handleSubmit}>
         <FormLabel>Image Url</FormLabel>
@@ -72,10 +82,17 @@ export const AddProduct = () => {
         </Stack>
         </form>
     </Wrapper>
+        </div>
+        </Side>
+    </div>
     
   )
 }
-
+const Side=styled.div`
+    display:flex;
+    flex-direction: row;
+    height: auto;
+`
 const Wrapper=styled.div`
 
 .back{
@@ -83,7 +100,7 @@ const Wrapper=styled.div`
 }
 
 border:2px solid #2B6CB0;
-width:40%;
+width:60rem;
 margin:auto;
 border-Radius:14px;
 padding:10px 20px
