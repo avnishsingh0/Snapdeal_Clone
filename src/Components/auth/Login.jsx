@@ -4,7 +4,7 @@ import "./Login.scss"
 import { auth } from "../../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
-import { flatten } from "@chakra-ui/react";
+import { flatten, useToast } from "@chakra-ui/react";
 
 function Login() {
   const navigate = useNavigate();
@@ -32,6 +32,7 @@ function Login() {
       setErrorMsg(error.message)
     })
   }
+
 
   return (
     <div>

@@ -14,8 +14,10 @@ $font-color:#fff;
     height: 30px;
     opacity: 0.9;
     width: 100%;
-    // position: fixed;
+    position: fixed;
     // top: 0;
+    z-index: 5000;
+  
     div{
         display: flex;
         margin: 0 100px;
@@ -37,8 +39,9 @@ $font-color:#fff;
     background: $primary-color;
     height: 70px;
     color: $font-color;
-    position: sticky;
+    position: fixed;
     top: 0;
+    z-index: 5000;
     align-items: center;
     .nav_inner{
         width: 80%;
@@ -83,8 +86,16 @@ $font-color:#fff;
         .nav_cart{
             display: flex;
             width: 20%;
-            border: 1px solid black;
+            // border: 1px solid black;
             justify-content: space-between;
+            .logout_btn{
+                text-align: center;
+                button {
+                    background-color: #333;
+                    padding: 10px;
+                    margin-top: 5px;
+                }
+            }
             .cart{
                 width: 100px;
                 // border: 1px solid wheat;

@@ -5,15 +5,25 @@ import styles from "./Navbar.module.css";
 import { Link } from "react-router-dom";
 import HomeCarousel from "./HomeCarousel";
 import Navbar from "../Navbar/Navbar";
+import { useEffect, useState } from "react";
+import { auth } from "../../firebase";
 
  const LandingPage = () => {
+  const [userName, setUserName] = useState("");
 
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUserName(user.displayName);
+      } else setUserName("");
+    });
+  }, []);
 
 
   return (
     
     <div>
-    <Navbar/>
+    <Navbar name={userName}/>
       {/* <!-- ------mainbody------- --> */}
       
       <div className={styles.container}>

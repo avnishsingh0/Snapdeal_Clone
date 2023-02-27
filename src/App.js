@@ -8,15 +8,7 @@ import { MainPage } from "./Components/Admin/Components/MainPage";
 
 
 function App() {
-  const [userName, setUserName] = useState("");
-
-  useEffect(() => {
-    auth.onAuthStateChanged((user) => {
-      if (user) {
-        setUserName(user.displayName);
-      } else setUserName("");
-    });
-  }, []);
+ 
 
 
   return (
