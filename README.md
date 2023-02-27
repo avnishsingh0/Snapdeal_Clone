@@ -25,6 +25,9 @@ Deployed Link -> https://megadeal.vercel.app/
 
 ![7cbd42eb-da06-4305-9a60-e236ced25fe1](https://user-images.githubusercontent.com/112858493/221496734-18d2bba4-3654-4817-bca8-8787ff2c14e3.jpg)
 
+![f21d447a-e75c-434d-a533-161e006cb33d](https://user-images.githubusercontent.com/112858493/221496918-95f91b98-9acf-49f6-aadb-a871cd30d854.jpg)
+
+
 
 
 
