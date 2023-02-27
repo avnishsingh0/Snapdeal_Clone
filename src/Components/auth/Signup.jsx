@@ -111,7 +111,7 @@ function Signup() {
         <button onClick={handelSubmission} className="btn" disabled={submitButtonDisabled}>
          SignUp
         </button>
-        <Link className="register_now" to={"/login"}>Allready account</Link>
+        <Link className="register_now" to={"/login"}>Already have an account ?</Link>
       </form>
     </div>
   );
