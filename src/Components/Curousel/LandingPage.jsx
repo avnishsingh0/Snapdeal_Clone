@@ -8,7 +8,7 @@ import Navbar from "../Navbar/Navbar";
 import { useEffect, useState } from "react";
 import { auth } from "../../firebase";
 
- const LandingPage = () => {
+const LandingPage = () => {
   const [userName, setUserName] = useState("");
 
   useEffect(() => {
@@ -19,15 +19,13 @@ import { auth } from "../../firebase";
     });
   }, []);
 
-
   return (
-    
-    <div style={{marginTop:"6rem"}}>
-    <Navbar name={userName}/>
+    <div style={{ marginTop: "6rem" }}>
+      <Navbar name={userName} />
       {/* <!-- ------mainbody------- --> */}
-      
+
       <div className={styles.container}>
-        <div className={styles.leftside}   >
+        <div className={styles.leftside}>
           <ul>
             <div className="topCat">TOP CATEGORIES</div>
             <li className={styles.list1}>
@@ -36,7 +34,7 @@ import { auth } from "../../firebase";
                 alt=""
               />
               <Link to={"/products"}>
-              <span style={{ cursor: "pointer" }}>All Offers</span>
+                <span style={{ cursor: "pointer" }}>All Offers</span>
               </Link>
               <div className={styles.sublists}>
                 <div className={styles.listitems}>
@@ -96,7 +94,7 @@ import { auth } from "../../firebase";
 
                   {/* <!-- ---4th row --> */}
 
-                  <img 
+                  <img
                     src="https://n4.sdlcdn.com/imgs/i/f/f/BlockbusterDeals-cb277.jpg"
                     alt=""
                   />
@@ -109,7 +107,7 @@ import { auth } from "../../firebase";
                 alt=""
               />
               <Link to={"/products"}>
-              <span>Mobile & Tablets</span>
+                <span>Mobile & Tablets</span>
               </Link>
               <div className={styles.sublists}>
                 <div className={styles.listitems}>
@@ -186,7 +184,7 @@ import { auth } from "../../firebase";
                 alt=""
               />
               <Link to={"/products"}>
-              <span>Electronics</span>
+                <span>Electronics</span>
               </Link>
               <div className={styles.sublists}>
                 <div className={styles.listitems}>
@@ -259,7 +257,8 @@ import { auth } from "../../firebase";
                 alt=""
               />
               <Link to={"/products"}>
-              <span>Computers & Gaming</span></Link>
+                <span>Computers & Gaming</span>
+              </Link>
               <div className={styles.sublists}>
                 <div className={styles.listitems}>
                   {/* <!-- 1st row --> */}
@@ -330,7 +329,8 @@ import { auth } from "../../firebase";
                 alt=""
               />
               <Link to={"/products"}>
-              <span>Home & Kitchen</span></Link>
+                <span>Home & Kitchen</span>
+              </Link>
 
               <div className={styles.sublists}>
                 <div className={styles.listitems}>
@@ -404,17 +404,13 @@ import { auth } from "../../firebase";
             <div className={styles.moreli} style={{ cursor: "pointer" }}>
               <li>
                 <span>
-                  <Link to={"/products"}>
-                     Men's Fashion
-                  </Link>
-                  </span>
+                  <Link to={"/products"}>Men's Fashion</Link>
+                </span>
               </li>
               <li>
                 <span>
-                  <Link to={"/products"}>
-                  Beauty and Health
-                  </Link>           
-                  </span>
+                  <Link to={"/products"}>Beauty and Health</Link>
+                </span>
               </li>
               <li>
                 <span>Toys,kids Fashion & More</span>
@@ -467,7 +463,7 @@ import { auth } from "../../firebase";
                 </span>
               </li>
               <li>
-                <span> 
+                <span>
                   {" "}
                   <i className="fas fa-search"></i> Bluetooth Speaker
                 </span>
@@ -475,7 +471,7 @@ import { auth } from "../../firebase";
             </div>
           </ul>
         </div>
-       
+
         <div className={styles.rightside}>
           {/* Slider starts here */}
           <Carousel>
@@ -517,26 +513,28 @@ import { auth } from "../../firebase";
           </Carousel>
           {/* <!-- ---cardslider-- --> */}
           <div className={styles.Container}>
-            <h2 style={{letterSpacing:"2px",marginTop:"25px",padding:"5px"}}>TRENDING PRODUCTS</h2>
-            <Link to={'/products'}>
-            <HomeCarousel/>
+            <h2
+              style={{
+                letterSpacing: "2px",
+                marginTop: "25px",
+                padding: "5px",
+              }}
+            >
+              TRENDING PRODUCTS
+            </h2>
+            <Link to={"/products"}>
+              <HomeCarousel />
             </Link>
-          
-           
-
           </div>
-        
-          
         </div>
       </div>
-      
+
       <div className={styles.downloadsnap}>
         <img src="https://i1.sdlcdn.com/img/appScreenshot@1x.png" alt="" />
         <div className={styles.snapText}>
           <h5>Download Magadeal App Now</h5>
           <p>Fast, Simple & Delightful.</p>
           <h4>All it takes is 30 seconds to Download.</h4>
-         
         </div>
         <img
           className={styles.leaves}
@@ -544,7 +542,6 @@ import { auth } from "../../firebase";
           alt=""
         />
       </div>
-     
     </div>
   );
 };

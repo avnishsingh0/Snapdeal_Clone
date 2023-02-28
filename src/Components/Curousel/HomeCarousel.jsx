@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import React, { useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-import '../Curousel/HomeCarousel.css';
+import "../Curousel/HomeCarousel.css";
 
-import { dataDigitalBestSeller } from '../../data';
+import { dataDigitalBestSeller } from "../../data";
 
 function HomeCarousel() {
   const [defaultImage, setDefaultImage] = useState({});
@@ -56,7 +56,7 @@ function HomeCarousel() {
       />
     );
   }
-  
+
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -67,7 +67,6 @@ function HomeCarousel() {
       />
     );
   }
-  
 
   return (
     <div className="App">

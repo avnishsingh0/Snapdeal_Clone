@@ -28,7 +28,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { deleteCart, getCart } from "../Redux/CartReducer/action";
 
 const Bag = () => {
-  const [deletes,setDelete]= useState(false);
+  const [deletes, setDelete] = useState(false);
   const { isLoading, isError, carts } = useSelector(
     (store) => store.CartReducer
   );
@@ -37,12 +37,11 @@ const Bag = () => {
     dispatch(getCart);
   }, []);
   var grandtotal = 0;
-  const handleDeletes=(id)=>{
-      dispatch(deleteCart(id)).then(()=>{
-        dispatch(getCart)
-      }) 
-  }
-  
+  const handleDeletes = (id) => {
+    dispatch(deleteCart(id)).then(() => {
+      dispatch(getCart);
+    });
+  };
 
   return (
     <Box>
@@ -76,7 +75,11 @@ const Bag = () => {
                                   <AiOutlineClose />
                                 </Text>
 
-                                <Text ml={2} mt={2.5} onClick={()=>handleDeletes(product.id)}>
+                                <Text
+                                  ml={2}
+                                  mt={2.5}
+                                  onClick={() => handleDeletes(product.id)}
+                                >
                                   REMOVE
                                 </Text>
                                 <Text ml={2} mt={3}>
