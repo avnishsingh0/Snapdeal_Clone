@@ -1,48 +1,55 @@
-# Snapdeal.com
+✨Snapdeal - Clone✨
+---
+This is a collaborative Project from Masai School in the Construct Week developed in 5 days. We are a team of 5 members:
 
-Clone of Snapdeal a ecommerce website for daily products where you can find all latest arrivals in fashionable product, health products and all kind of accessories
+
+1. Ankit Sharma :- https://github.com/ankits-svg , https://www.linkedin.com/in/ankit-sharma-b324a8107/
+
+2. Avnish Kumar :- https://github.com/avnishsingh0  ,https://www.linkedin.com/in/avnish-kumar-a9347b239/
+
+3. Rohit Rajput :- https://github.com/rsrajput03 , https://www.linkedin.com/in/rajputrohit9560/
+
+4. Soaib Akhtar :-https://github.com/soaibakhtar , https://www.linkedin.com/in/soaib-akhtar-/
+
+5. Niraj Gope   :- https://github.com/Niraggope , https://www.linkedin.com/in/devendrakumar9161/
+
+💻Project Unique Name :- MegaDeals ✈️
+---
+
+About Snapdeal :-Snapdeal is an Indian e-commerce website founded in 2010. It offers a wide range of products across various categories such as electronics, fashion, home, and more. Snapdeal has a large customer base and offers competitive pricing, discounts, and deals. The platform also offers seller services, logistics, and payment solutions.
 
 Deployed Link -> https://megadeal.vercel.app/
 
-# Team Members
-1.Avnish Kumar
-2.Rohit Rajput
-3.Ankit Sharma
-4.Shoieb Akhthar
-5.Niraj Gope
 
-Tech stack used in the Project:
-1.React JS
-2.Chakra UI
-3.JavaScript
-4.CSS
-5.Axios
-6.Vercel
-7.Render
-8.Redux
+![1c023637-8255-4a4e-a95a-b9a813530dd1](https://user-images.githubusercontent.com/112858493/221496591-7d559d1e-81c9-4b7c-87ab-d59f79a2aa81.jpg)
+
+![7cbd42eb-da06-4305-9a60-e236ced25fe1](https://user-images.githubusercontent.com/112858493/221496734-18d2bba4-3654-4817-bca8-8787ff2c14e3.jpg)
+
+![f21d447a-e75c-434d-a533-161e006cb33d](https://user-images.githubusercontent.com/112858493/221496918-95f91b98-9acf-49f6-aadb-a871cd30d854.jpg)
 
 
 
-# Some Snippets of the Project
-
-# Home Page
-![716ac9b1-9a2d-4e66-9b52-091394002f9f](https://user-images.githubusercontent.com/112858493/221488581-c2a9c53f-1ef9-4ada-9477-68792bf63f4a.jpg)
 
 
-# Product Page
-![e58987e9-2bac-4b3e-83c1-1752a27bd906](https://user-images.githubusercontent.com/112858493/221488677-fe2de888-6851-4672-8a18-67717c4dc837.jpg)
+💫Tech & Tools Used :
+---
+For Frontend : HTML5, CSS3, Javascript, JS6, ReactJS Redux.
 
+For database: Json Server (cyclic).
 
+Chakra UI (UI Styling Library) Styled-Components.
 
-# Admin-Add Product Page
-![62aa1360-0d03-4785-b3d0-d33adb830f0b](https://user-images.githubusercontent.com/112858493/221488696-99c4726d-929c-4c37-973a-45d4d3cd2975.jpg)
+For authentication: Google firebase authentication.
 
+---
 
-# Admin All Product
+Steps to run the project locally:-
+1. Clone the code from github
+2. Run 'npm install' /'npm install -f'
+3. Run 'npm start'
+4. Enjoy! 
 
-![6e282f64-044b-425d-8e88-1836df079de4](https://user-images.githubusercontent.com/112858493/221488735-583bc8da-bbe7-40b6-b153-0b5cb379b8ff.jpg)
+---
+Deployed Link : https://megadeal.vercel.app/
 
-
-# Checkout Page
-![501c89a7-261d-4afd-81d1-f2b66e6bdbe1](https://user-images.githubusercontent.com/112858493/221488777-4cea875d-06fd-43d8-971f-c97db476fffe.jpg)
 
