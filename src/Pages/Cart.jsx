@@ -1,43 +1,31 @@
-import React, { useState } from 'react';
-import { Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, useDisclosure } from '@chakra-ui/react';
+import React from "react";
+import { useSelector } from "react-redux";
+import CartItem from "../Components/Cart/CartItem";
 
 
-import Bag from './Bag';
-import { BsCart } from 'react-icons/bs';
-
-
-
-export const Cart=()=> {
-    const { isOpen, onOpen, onClose } = useDisclosure()
-  const [size, setSize] = React.useState('full')
-
-  const handleSizeClick = (newSize) => {
-    setSize(newSize)
-    onOpen()
-  }
+const Cart = () => {
+  const cart = useSelector((store) => store.cartReducer.cart);
+  console.log(cart)
   
   return (
-    <>
-        <Text
-          onClick={() => handleSizeClick(size)}
-          
-        fontWeight={'bold'} mt={1}
-        ><BsCart/> </Text>
-     
+    <div>
+      <h3>Shopping Cart</h3>
+      {cart?.map((item) => (
+        <CartItem
+          key={item.id}
+          id={item.id}
+          image={item.image}
+          title={item.title}
+          price={item.price}
+          quantity={item.quantity}
+          discount={item.discount}
+        />
+      ))}
+    </div>
+  );
+};
 
-      <Modal onClose={onClose} size={size} isOpen={isOpen}>
-        <ModalOverlay />
-        <ModalContent p={0}>
-          <ModalHeader>Shopping Cart  (2 Items)</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            <Bag/>
-          </ModalBody>
-          <ModalFooter>
-            <Button onClick={onClose}>Close</Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
-    </>
-  )
-}
+
+
+
+export default Cart;

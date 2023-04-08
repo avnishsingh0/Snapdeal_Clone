@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.about {
+  padding-bottom: 30px;
+  background-color: #f7f7f7;
+}
+
+.about-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: justify;
+}
+
+.footertext {
+  font-size: 12px;
+  color: #777;
+  margin-top: 0px;
+}

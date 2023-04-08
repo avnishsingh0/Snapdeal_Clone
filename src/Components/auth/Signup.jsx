@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../../Assets/logo.png";
+import Logo from "../../assets/logo.png";
 import "./Signup.scss";
 import { auth } from "../../firebase";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";

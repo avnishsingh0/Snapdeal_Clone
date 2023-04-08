@@ -4,6 +4,7 @@ import Sidebar from "../Components/Product/Sidebar";
 import styles from "../Components/Product/product.module.css";
 import Navbar from "../Components/Navbar/Navbar";
 
+
 const ProductPage = () => {
   return (
     <>
@@ -21,6 +22,8 @@ const ProductPage = () => {
 };
 
 export default ProductPage;
+
+
 
 
 

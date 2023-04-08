@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import { addProduct } from '../../../Redux/AdminReducer/action';
-import sound from '../../../Assets/sound.wav'
+import sound from '../../../assets/sound.wav'
 import NavBar from '../Components/NavBar';
 import { Sidebar } from './Sidebar';
 import NavPage from '../Components/NavPage';

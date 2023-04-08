@@ -4,8 +4,6 @@ import {
   GET_PRODUCT_REQUEST,
   GET_PRODUCT_SUCCESS,
   GET_SINGLE_PRODUCT_SUCCESS,
-
-
 } from "./actionTypes";
 import axios from "axios";
 
@@ -25,10 +23,6 @@ export const getProductErrorObj = () => {
   return { type: GET_PRODUCT_ERROR };
 };
 
-export const addtoCartObj = () => {
-  return {type:ADD_TO_CART}
-}
-
 
 
 
@@ -36,7 +30,7 @@ export const addtoCartObj = () => {
 export const getProducts = (obj) => (dispatch) => {
   dispatch(getProductRequestObj());
   axios
-    .get("https://snapdeal.onrender.com/products",obj)
+    .get("https://snapdeal.onrender.com/products", obj)
     .then((res) => {
       dispatch(getProductSuccessObj(res.data));
     })
@@ -57,12 +51,8 @@ export const getSingleProduct = (id) => (dispatch) => {
     });
 };
 
+export const FetchProduct = (query) => {
+  return axios.get(`https://snapdeal.onrender.com/products?q=${query}`);
+};
 
-export const addCart = (payload) => (dispatch) => {
-  dispatch(getProductRequestObj());
-  axios.post("https://snapdeal.onrender.com/Cart",payload).then(()=>{
-    dispatch(addtoCartObj())
-  }).catch(()=>{
-    dispatch(getProductErrorObj())
-  })
-}
+
