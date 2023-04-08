@@ -6,6 +6,7 @@ import Navbar from "../Components/Navbar/Navbar";
 import { Box, Hide } from "@chakra-ui/react";
 import Footer from '../Components/Curousel/Footer'
 
+
 const ProductPage = () => {
   return (
     <>
@@ -26,6 +27,8 @@ const ProductPage = () => {
 };
 
 export default ProductPage;
+
+
 
 
 

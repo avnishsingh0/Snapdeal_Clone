@@ -7,14 +7,14 @@ import { BiHomeAlt, BiCategory, BiCart } from "react-icons/bi";
 import { AiOutlineHeart } from "react-icons/ai";
 
 import "./Navbar.scss";
-import logo from "../../Assets/logo.png";
-import { Cart } from "../../Pages/Cart";
+import logo from "../../assets/logo.png";
 import { Show, Input } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
-import Search from "../../Pages/Search";
+
 import { MdSearch } from "react-icons/md";
 import { capitalize } from "lodash";
+
 
 function Navbar({ name }) {
   const logOut = () => {
@@ -70,9 +70,12 @@ function Navbar({ name }) {
                 type="button"
                 id="button-addon2"
               >
+
                 <MdSearch/>
-                {/* <p>Search</p> */}
+                
               </Button>
+
+          
             </div>
 
               {/* <Search /> */}
@@ -82,7 +85,11 @@ function Navbar({ name }) {
               <div className="cart">
                 {/* <p>Cart</p> */}
                 {/* <BsCart className="icon"/> */}
+
                 <AiOutlineShoppingCart className="icon" cursor='pointer'/>
+
+               
+
               </div>
               <h3>
                 {name ? (

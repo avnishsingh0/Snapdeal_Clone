@@ -3,7 +3,7 @@ import {  Box, Table, TableCaption, TableContainer, Tbody, Td, Tfoot, Th, Thead,
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { deleteProduct, getLogin, getProduct } from '../../../Redux/AdminReducer/action'
-import pop from '../../../Assets/pop.wav'
+import pop from '../../../assets/pop.wav'
 
 import { Link, useNavigate } from 'react-router-dom'
 import { Sidebar } from './Sidebar'
