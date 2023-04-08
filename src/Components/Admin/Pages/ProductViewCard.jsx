@@ -6,7 +6,7 @@ import { Heading, Stack, Text } from '@chakra-ui/layout'
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { deleteProduct } from '../../../Redux/AdminReducer/action'
-import pop from '../../../Assets/pop.wav'
+import pop from '../../../assets/pop.wav'
 /*
 {
       "id": 4,

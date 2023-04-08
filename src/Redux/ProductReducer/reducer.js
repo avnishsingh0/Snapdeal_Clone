@@ -30,6 +30,8 @@ export const reducer = (state = initialState, { type, payload }) => {
       case ADD_TO_CART:
         return { ...state, isLoading: false};
 
+
+
     default:
       return state;
   }

@@ -4,7 +4,6 @@ import { getProducts } from "../../Redux/ProductReducer/action";
 import ProductCard from "./ProductCard";
 import styles from "./product.module.css";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
-import Pagination from "./Pagination";
 import Page from "./Page";
 import { Img } from "@chakra-ui/react";
 import Navbar from "../Navbar/Navbar";
@@ -18,6 +17,9 @@ const ProductList = () => {
       isError: store.ProductReducer.isError,
     };
   });
+
+  
+
   const dispatch = useDispatch();
   const [searchParams] = useSearchParams();
   const location = useLocation();
@@ -31,8 +33,10 @@ const ProductList = () => {
   let obj = {
     params: {
       rating: searchParams.getAll("rating"),
+      
       _sort: searchParams.get("order") && "price",
       _order: searchParams.get("order"),
+
     },
   };
 
@@ -53,16 +57,8 @@ const ProductList = () => {
 
   return (
     <>
-    
-    {isLoading &&  <Loading/> }
-     <div className={styles.page} >
-     <Page
-        currentPage={currentPage}
-        totalPages={Math.ceil(products.length / postPerPage)}
-        onPageChange={handlePageChange}
-      />
-     </div>
-   
+      {isLoading && <Loading />}
+
       <div id={styles.productlist}>
         {products.length > 0 &&
           currentPost.map((el) => {
@@ -102,14 +98,13 @@ const ProductList = () => {
             );
           })}
       </div>
-      <div>
-    <Pagination
-        totalPost={products.length}
-        postPerPage={postPerPage}
-        setCurrentPage={setCurrentPage}
-        currentPage={currentPage}
-      />
-    </div>
+      <div className={styles.page}>
+        <Page
+          currentPage={currentPage}
+          totalPages={Math.ceil(products.length / postPerPage)}
+          onPageChange={handlePageChange}
+        />
+      </div>
     </>
   );
 };

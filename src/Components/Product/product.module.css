@@ -23,21 +23,29 @@
 }
 
 .pagination{
-   
+  border: 1px solid purple;
   display: flex;
   gap: 2px;
-  justify-content: center;
   align-items: center;
   margin-bottom: 10px;
   box-sizing: border-box;
+}
+
+.page{
+  margin: auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 
 }
 
-.pagination button{
+
+/* .pagination button{
    width: 50px;
   padding: 5px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
+} */
 
 .page_item.active{
   font-weight: 900;
@@ -46,9 +54,7 @@
   color: #101010;
 }
 
-.prevbtn{
-  display: none;
-}
+
 
 
 #productlist {

@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import logo from '../../../Assets/logo1.png'
+import logo from '../../../assets/logo1.png'
 import {
   Box,
   Flex,
