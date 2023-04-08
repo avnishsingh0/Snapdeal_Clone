@@ -4,9 +4,12 @@ import styles from "./Navbar.module.css";
 
 import { Link } from "react-router-dom";
 import HomeCarousel from "./HomeCarousel";
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../Navbar/Navbar.jsx";
 import { useEffect, useState } from "react";
 import { auth } from "../../firebase";
+import Footer from "./Footer";
+import { Hide } from "@chakra-ui/react";
+// import {Nav} from "../Navbar/Nav.jsx";
 
 const LandingPage = () => {
   const [userName, setUserName] = useState("");
@@ -22,9 +25,11 @@ const LandingPage = () => {
   return (
     <div style={{ marginTop: "6rem" }}>
       <Navbar name={userName} />
+      {/* <Nav/> */}
       {/* <!-- ------mainbody------- --> */}
 
       <div className={styles.container}>
+        <Hide breakpoint='(max-width: 900px)'>
         <div className={styles.leftside}>
           <ul>
             <div className="topCat">TOP CATEGORIES</div>
@@ -471,6 +476,7 @@ const LandingPage = () => {
             </div>
           </ul>
         </div>
+        </Hide>
 
         <div className={styles.rightside}>
           {/* Slider starts here */}
@@ -542,6 +548,10 @@ const LandingPage = () => {
           alt=""
         />
       </div>
+      <div className={styles.last}>
+        <img src="https://user-images.githubusercontent.com/103572350/230485256-e88e9214-f849-4e3a-b8e2-f1a991758064.PNG" alt="error" />
+      </div>
+      <Footer/>
     </div>
   );
 };

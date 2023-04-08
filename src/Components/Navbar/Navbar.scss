@@ -37,7 +37,7 @@ $font-color:#fff;
 .nav{
     width: 100%;
     background: $primary-color;
-    height: 70px;
+    height: 100px;
     color: $font-color;
     position: fixed;
     top: 0;
@@ -97,7 +97,7 @@ $font-color:#fff;
                 }
             }
             .cart{
-                width: 100px;
+                width: 120px;
                 // border: 1px solid wheat;
                 display: flex;
                 justify-content: center;
@@ -105,7 +105,7 @@ $font-color:#fff;
                 gap: 5px;
                 padding-top: 12px;
                 padding-bottom: 18px;
-                border-radius: 3px 3px 0 0;
+                border-radius:14px;
                 .icon{
                     font-size: 35px;
                 }
@@ -125,9 +125,9 @@ $font-color:#fff;
                 padding-left: 3px;
                 padding-top: 12px;
                 padding-bottom: 18px;
-                border-radius: 3px 3px 0 0;
+                border-radius:14px;
                 .icon{
-                    font-size: 35px;
+                    font-size: 36px;
                 }
             }
 
