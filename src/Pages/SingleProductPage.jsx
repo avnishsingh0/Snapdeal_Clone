@@ -1,5 +1,5 @@
 import { ChevronRightIcon } from "@chakra-ui/icons";
-import { Badge, useToast } from "@chakra-ui/react";
+import { Badge, useDisclosure, useToast } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import ReactImageMagnify from "react-image-magnify";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,6 +8,7 @@ import Navbar from "../Components/Navbar/Navbar";
 import styles from "../Components/Product/product.module.css";
 import { addCart, getSingleProduct } from "../Redux/ProductReducer/action";
 import { Cart } from "./Cart";
+import { NewCartPage } from "./NewCartPage";
 
 const SingleProductPage = () => {
   const product = useSelector((store) => store.ProductReducer.singleProduct);
@@ -15,7 +16,7 @@ const SingleProductPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const magImg = product.image;
-  
+  const { isOpen, onOpen, onClose } = useDisclosure()
   const toast = useToast();
   const toastIdRef = React.useRef();
 
@@ -25,6 +26,7 @@ const SingleProductPage = () => {
 
 
   const handletoCart = () => {
+
     dispatch(addCart(product))
       AddtoCartToast()
     
@@ -143,7 +145,10 @@ const SingleProductPage = () => {
             </div>
           </div>
           <div className={styles.buy_button}>
-            <button style={{ backgroundColor: "black",borderRadius:"10px",width:"250px",display:"flex",gap:"10px",justifyContent:"center" }} onClick={handletoCart} >ADD TO CART <Cart/></button>
+            <button style={{ backgroundColor: "black",borderRadius:"10px",width:"250px",display:"flex",gap:"10px",justifyContent:"center" }} onClick={
+              handletoCart
+            } >ADD TO CART <Cart/></button>
+            
             <button style={{ backgroundColor: "#e40046",borderRadius:"10px" }}>BUY NOW</button>
           </div>
           <p style={{ color: "gray", textAlign: "center", marginTop: "15px" }}>

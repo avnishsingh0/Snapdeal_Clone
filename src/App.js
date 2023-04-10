@@ -19,7 +19,7 @@ function App() {
     
       <AllRoutes/>
       {/* <MainPage/> */}
-  
+  {/* <NewCartPage/> */}
 
     </div>
   );

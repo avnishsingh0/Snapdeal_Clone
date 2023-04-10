@@ -87,7 +87,7 @@ function Navbar({ name }) {
               <h3>
                 {name ? (
                   <div className="logout_btn">
-                    Welcom -{capitalize(name)} <button onClick={logOut}>LogOut</button>
+                   <span> Welcome -{capitalize(name)}</span> <button onClick={logOut}>LogOut</button>
                   </div>
                 ) : (
                   <Link to={"/login"}>

@@ -23,7 +23,7 @@ export const reducer = (state = initialState, { type, payload }) => {
     case GET_CART_ERROR:
       return { ...state, isLoading: false, isError: true };
     case DELETE_CART_SUCCESS:
-      return { ...state, carts: state.carts.filter((el) => el.id !== payload) };
+      return { ...state, carts: state.carts.filter((el) => el.id !== payload.id) };
     case POST_CART_REQUEST:
         return {...state,isLoading:true}
     case POST_CART_SUCCESS:
