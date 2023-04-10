@@ -49,7 +49,7 @@ function Navbar({ name }) {
           <div className="nav_inner">
             <div className="nav_image">
               <img src={logo} alt="" />
-              <h2>MegaDeals</h2>
+              <Link to={"/"} > <h2>MegaDeals</h2> </Link>
             </div>
 
             <div className="nav_search">

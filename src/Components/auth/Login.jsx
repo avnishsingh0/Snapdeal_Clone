@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../../assets/logo.png";
 import "./Login.scss";
-import { auth } from "../../firebase";
+import { auth } from "../../library/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
 import { flatten, useToast } from "@chakra-ui/react";

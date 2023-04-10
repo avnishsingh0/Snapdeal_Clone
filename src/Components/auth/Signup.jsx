@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../../assets/logo.png";
 import "./Signup.scss";
-import { auth } from "../../firebase";
+import { auth } from "../../library/firebase";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
 // import { async } from "@firebase/util";
@@ -18,12 +18,13 @@ function Signup() {
   const [errorMsg, setErrorMsg] = useState("");
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
+  //handlesubmission
   const handelSubmission = (e) => {
     e.preventDefault();
-    if (!value.name || !value.email || !value.pass) {
-      setErrorMsg("Fill all fields");
-      return;
-    }
+        if (!value.name || !value.email || !value.pass) {
+          setErrorMsg("Fill all fields");
+          return;
+        }
     setErrorMsg("");
     setSubmitButtonDisabled(true);
     createUserWithEmailAndPassword(auth, value.email, value.pass)
@@ -45,10 +46,12 @@ function Signup() {
   return (
     <div>
       <div className="Login_top">
+        <Link to="/">
         <div className="first_child">
           <img src={Logo} alt="" />
-          <h3>Magedeal</h3>
+          <h3>Megadeals</h3>
         </div>
+        </Link>
 
         <div className="second_child">
           <div>
