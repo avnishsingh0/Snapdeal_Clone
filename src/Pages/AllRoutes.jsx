@@ -15,7 +15,10 @@ import { Dashboard } from "../Components/Admin/Pages/Dashboard";
 import { AddProduct } from "../Components/Admin/Pages/AddProduct";
 import { Orders } from "../Components/Admin/Pages/Orders";
 import { Seller } from "../Components/Admin/Pages/Seller";
-import Cart from "./Cart";
+
+import { NewCartPage } from "./NewCartPage";
+
+
 
 const AllRoutes = () => {
   const [userName, setUserName] = useState("");
@@ -32,12 +35,17 @@ const AllRoutes = () => {
       <Route path="/" element={<LandingPage />} />
       <Route path="/products" element={<ProductPage />} />
       <Route path="/products/:id" element={<SingleProductPage />} />
+
+      <Route path="checkout" element={<Checkout />} />
+      <Route path="/cart" element={<NewCartPage />} />
+
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/admin" element={<MainPage />} />
       <Route path="/admin/dashboard" element={<Dashboard />} />
       <Route path="/admin/admin_products" element={<ProductView />} />
       <Route path="/admin/add_products" element={<AddProduct />} />
+      {/* <Route path="/cart" element={<AddProduct />} /> */}
       <Route path="/admin/orders" element={<Orders />} />
       <Route path="/admin/edit/:id" element={<Edit />} />
       <Route path="/admin/seller" element={<Seller />} />

@@ -1,6 +1,28 @@
 
 import { createSlice } from '@reduxjs/toolkit';
 
+
+export const reducer = (state = initialState, { type, payload }) => {
+  switch (type) {
+    case GET_CART_REQUEST:
+      return { ...state, isLoading: true };
+    case GET_CART_SUCCESS:
+      return { ...state, isLoading: false, carts: payload };
+    case GET_CART_ERROR:
+      return { ...state, isLoading: false, isError: true };
+    case DELETE_CART_SUCCESS:
+      return { ...state, carts: state.carts.filter((el) => el.id !== payload.id) };
+    case POST_CART_REQUEST:
+        return {...state,isLoading:true}
+    case POST_CART_SUCCESS:
+        return {...state,isLoading:false,isError:false}
+    case POST_CART_FAILURE:
+        return {...state,isLoading:false,isError:true}
+    default:
+      return state;
+  }
+};
+
 const cartSlice = createSlice({
   name: 'cart',
   initialState: {
@@ -41,3 +63,4 @@ export const {
   decrementQuantity,
   removeItem,
 } = cartSlice.actions;
+

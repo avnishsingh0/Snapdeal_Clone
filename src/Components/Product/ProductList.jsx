@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../Redux/ProductReducer/action";
-import ProductCard from "./ProductCard";
+import {ProductCard} from "./ProductCard";
 import styles from "./product.module.css";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
 import Page from "./Page";
@@ -28,8 +28,11 @@ const ProductList = () => {
 
   const lastPostIndex = currentPage * postPerPage;
   const firstPostIndex = lastPostIndex - postPerPage;
-  const currentPost = products.slice(firstPostIndex, lastPostIndex);
+  let currentPost = products.slice(firstPostIndex, lastPostIndex);
 
+  // currentPost =currentPost.title.toLowerCase().includes("Shirt")
+  
+  console.log("currentPost: ",currentPost)
   let obj = {
     params: {
       rating: searchParams.getAll("rating"),

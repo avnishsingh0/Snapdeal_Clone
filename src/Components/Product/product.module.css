@@ -1,5 +1,8 @@
 
 .wrapper  {
+  /* border: 1px solid red; */
+  width: 70%;
+  margin: auto;
   display: flex;
   box-sizing: border-box;
   gap: 5px;
@@ -8,15 +11,17 @@
 }
 
 .filter{
-  width: 20%;
+  /* border: 1px solid red; */
+  width: 40%;
 }
 
 .productPage{
-  width: 80%;
+  margin-left: 30px;
+  width: 70%;
 }
 
 .tag{
-  font-size: 25px;
+  font-size: 15px;
   margin: 15px;
   padding: 15px;
  
@@ -58,9 +63,11 @@
 
 
 #productlist {
+  margin-top: 40px;
+  width: 70%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
   align-content: center;
   align-items: center;
   padding: 15px;
@@ -72,7 +79,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 90%;
   padding: 10px;
 }
 
@@ -113,6 +120,7 @@
 }
 
 .sidebar{
+  width: 70%;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -155,7 +163,10 @@
 /* SingleProduct */
 
 #singleproduct{
-  margin-top: 25px;
+  border: 1px solid black;
+  width: 80%;
+  margin:auto;
+  margin-top: 95px;
   display: flex;
   gap: 10px;
   justify-content: space-between;
@@ -186,13 +197,18 @@
 }
 
 .dis{
-  margin-top: 15px;
+  margin-top: 8px;
   display: flex;
   justify-content: flex-start;
-  gap: 30px;
+  gap: 10px;
   
   
   
+}
+.count{
+  margin-top: -20px;
+  border-radius: 10px;
+  height: 10%;
 }
 
 .offers{
@@ -237,7 +253,7 @@
   width: 250px;
 }
 
-
+/* 
 @media only screen and (max-width: 640px) {
 
  .sidebar{
@@ -308,4 +324,14 @@
 }
 
 
+} */
+@media screen and(max-width:900px) {
+  #productlist {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  
+  }
 }

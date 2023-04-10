@@ -1,7 +1,7 @@
 import React from "react";
-import { AiOutlineMobile } from "react-icons/ai";
+import { AiOutlineMobile, AiOutlineShoppingCart } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
-import { Text } from "@chakra-ui/react";
+import { Button, ButtonGroup, Text } from "@chakra-ui/react";
 
 import { BiHomeAlt, BiCategory, BiCart } from "react-icons/bi";
 import { AiOutlineHeart } from "react-icons/ai";
@@ -47,29 +47,38 @@ function Navbar({ name }) {
         </div> */}
         <div className="nav">
           <div className="nav_inner">
+            <Link to="/">
             <div className="nav_image">
               <img src={logo} alt="" />
               <h2>MegaDeals</h2>
             </div>
+            </Link>
 
             <div className="nav_search">
               <div className="input-group border-0.5">
-              <input
+              <Input
                 type="text"
                 className="form-control"
-                
+                background={'white'}
+                width={[20,50,100]}
                 placeholder="Search product & brand"
                 aria-label="Recipient's username"
                 aria-describedby="button-addon2"
               />
-              <button
+              <Button
                 className="btn btn-outline-secondary d-flex center"
                 type="button"
                 id="button-addon2"
               >
+
+                <MdSearch/>
+                {/* <p>Search</p> */}
+              </Button>
+
           
                 <p>Search</p>
               </button>
+
             </div>
 
               {/* <Search /> */}
@@ -77,19 +86,19 @@ function Navbar({ name }) {
 
             <div className="nav_cart">
               <div className="cart">
-                <p>Cart</p>
-                {/* <BsCart className="icon"/> */}
-               
+
+                <AiOutlineShoppingCart className="icon" cursor='pointer'/>
+
               </div>
               <h3>
                 {name ? (
                   <div className="logout_btn">
-                    Welcom -{capitalize(name)} <button onClick={logOut}>LogOut</button>
+                   <span> Welcome -{capitalize(name)}</span> <button onClick={logOut}>LogOut</button>
                   </div>
                 ) : (
                   <Link to={"/login"}>
                     <div className="nav_login">
-                      <p>Log In</p>
+                      {/* <p>Log In</p> */}
                       <CgProfile className="icon" />
                       
                     </div>

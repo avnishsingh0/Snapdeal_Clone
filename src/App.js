@@ -10,13 +10,9 @@ import { About } from "./Components/Footer/About";
 function App() {
   return (
     <div>
-      <Navbar />
-      <AllRoutes />
-      <TopFooter />
-      <MidFooter />
-      <BottomFooter />
-      <About />
-      <Footer />
+
+      <AllRoutes/>
+
     </div>
   );
 }
