@@ -18,8 +18,11 @@ const Sidebar = () => {
   const initialState = searchParams.getAll("rating");
   const [rating, setRating] = useState(initialState || []);
   const [order, setOrder] = useState(initalOrder || "");
+  const [filter, setFilter] = useState([]);
 
   const dispatch = useDispatch();
+
+ 
 
   const handleChange = (e) => {
     let value = e.target.value;
@@ -39,55 +42,79 @@ const Sidebar = () => {
     setOrder(e.target.value);
   };
 
+  function clearSearchParams() {
+    setSearchParams({
+      rating: "",
+      order: "",
+    });
+  }
+
   useEffect(() => {
     let param = {
       rating,
     };
-
     order && (param.order = order);
 
     setSearchParams(param);
-  }, [rating, order]);
+  }, [rating, order,clearSearchParams]);
 
   return (
     <div className={styles.sidebar}>
-      <div className={styles.men}>
-        <h4>Men's Clothing</h4>
-        <p>- Shirts for Men</p>
-        <p>-Casual Shirts for Men</p>
-        <p>-Formal Shirts for Men</p>
+      <div>
+      <button onClick={clearSearchParams}>Clear Filter</button>
       </div>
       <div>
-        <h5 style={{margin:"15px",fontWeight:"bolder",padding:"10px",fontSize:"30px"}}>Price</h5>
+        <h5
+          style={{
+            margin: "15px",
+            fontWeight: "bolder",
+            padding: "10px",
+            fontSize: "30px",
+          }}
+        >
+          Price
+        </h5>
         <div className={styles.price_slider}>
-        <div>
-        <input
-         
-          type="radio"
-          value="asc"
-          name="order"
-          onChange={(e) => handleSort(e)}
-          defaultChecked={order === "asc"}
-        />
-        <label style={{fontSize:"25px",marginLeft:"15px"}}>  Low to High</label>
-        <br />
-        <input
-         
-          type="radio"
-          value="desc"
-          name="order"
-          onChange={(e) => handleSort(e)}
-          defaultChecked={order === "desc"}
-        />
-        <label style={{fontSize:"25px",marginLeft:"15px"}}>High to Low</label>
-      </div>
+          <div>
+            <input
+              type="radio"
+              value="asc"
+              name="order"
+              onChange={(e) => handleSort(e)}
+              defaultChecked={order === "asc"}
+            />
+            <label style={{ fontSize: "25px", marginLeft: "15px" }}>
+              {" "}
+              Low to High
+            </label>
+            <br />
+            <input
+              type="radio"
+              value="desc"
+              name="order"
+              onChange={(e) => handleSort(e)}
+              defaultChecked={order === "desc"}
+            />
+            <label style={{ fontSize: "25px", marginLeft: "15px" }}>
+              High to Low
+            </label>
+          </div>
 
           <br />
         </div>
       </div>
 
       <div>
-        <h5 style={{margin:"15px",fontWeight:"bolder",padding:"10px",fontSize:"25px"}} >Customer Rating</h5>
+        <h5
+          style={{
+            margin: "15px",
+            fontWeight: "bolder",
+            padding: "10px",
+            fontSize: "25px",
+          }}
+        >
+          Customer Rating
+        </h5>
         <div style={{ paddingLeft: "10px" }}>
           <Checkbox
             value={"1"}

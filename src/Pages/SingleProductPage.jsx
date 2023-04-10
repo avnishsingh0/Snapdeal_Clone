@@ -3,12 +3,18 @@ import { Badge, useDisclosure, useToast } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import ReactImageMagnify from "react-image-magnify";
 import { useDispatch, useSelector } from "react-redux";
-import { Navigate, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import Navbar from "../Components/Navbar/Navbar";
 import styles from "../Components/Product/product.module.css";
+
 import { addCart, getSingleProduct } from "../Redux/ProductReducer/action";
-import { Cart } from "./Cart";
+
 import { NewCartPage } from "./NewCartPage";
+
+import {  getSingleProduct } from "../Redux/ProductReducer/action";
+import { addToCart } from "../Redux/CartReducer/reducer";
+
+
 
 const SingleProductPage = () => {
   const product = useSelector((store) => store.ProductReducer.singleProduct);
@@ -25,20 +31,22 @@ const SingleProductPage = () => {
   }
 
 
+
   const handletoCart = () => {
 
     dispatch(addCart(product))
+
+  const handletoCart = (id,title,image,price) => {
+
       AddtoCartToast()
-    
-     
-    
+       
+        
       
     
   }
 
   useEffect(() => {
     dispatch(getSingleProduct(id));
-    
   }, []);
 
   return (
@@ -145,10 +153,13 @@ const SingleProductPage = () => {
             </div>
           </div>
           <div className={styles.buy_button}>
+
             <button style={{ backgroundColor: "black",borderRadius:"10px",width:"250px",display:"flex",gap:"10px",justifyContent:"center" }} onClick={
               handletoCart
             } >ADD TO CART <Cart/></button>
-            
+
+            <button style={{ backgroundColor: "black",borderRadius:"10px",width:"250px",display:"flex",gap:"10px",justifyContent:"center" }}  >ADD TO CART</button>
+
             <button style={{ backgroundColor: "#e40046",borderRadius:"10px" }}>BUY NOW</button>
           </div>
           <p style={{ color: "gray", textAlign: "center", marginTop: "15px" }}>
