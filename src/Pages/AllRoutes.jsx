@@ -14,8 +14,11 @@ import { Orders } from "../Components/Admin/Pages/Orders";
 import { Seller } from "../Components/Admin/Pages/Seller";
 
 
+
 import Products from "./Products/Products";
 import SingleProduct from "./SingleProductPage/SingleProduct";
+import { NewCartPage } from "./NewCartPage";
+
 
 
 const AllRoutes = () => {
@@ -23,16 +26,21 @@ const AllRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
+
       <Route path="/product/:products" element={<Products />}></Route>
       <Route path="/product/:products/:id" element={<SingleProduct /> }></Route>
+      <Route path="/products" element={<ProductPage />} />
+      <Route path="/products/:id" element={<SingleProductPage />} />
+      <Route path="checkout" element={<Checkout />} />
+      <Route path="/cart" element={<NewCartPage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
 
-      {/* Admin */}
       <Route path="/admin" element={<MainPage />} />
       <Route path="/admin/dashboard" element={<Dashboard />} />
       <Route path="/admin/admin_products" element={<ProductView />} />
       <Route path="/admin/add_products" element={<AddProduct />} />
+      {/* <Route path="/cart" element={<AddProduct />} /> */}
       <Route path="/admin/orders" element={<Orders />} />
       <Route path="/admin/edit/:id" element={<Edit />} />
       <Route path="/admin/seller" element={<Seller />} />
