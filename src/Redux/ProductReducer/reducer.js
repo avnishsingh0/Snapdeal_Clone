@@ -1,38 +1,28 @@
-import {
-  ADD_TO_CART,
-  GET_PRODUCT_ERROR,
-  GET_PRODUCT_REQUEST,
-  GET_PRODUCT_SUCCESS,
-  GET_SINGLE_PRODUCT_SUCCESS,
-} from "./actionTypes";
-
+import * as types from "./products.types";
 const initialState = {
-  isLoading: false,
   products: [],
+  isLoading: false,
   isError: false,
-  singleProduct: {},
+  totalCount: 0,
 };
+const reducer = (state = initialState, action) => {
+  const { type, payload } = action;
 
-export const reducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case GET_PRODUCT_REQUEST:
+    case types.PRODUCT_REQUEST:
       return { ...state, isLoading: true };
-
-    case GET_PRODUCT_SUCCESS:
-      return { ...state, isLoading: false, products: payload };
-
-    case GET_SINGLE_PRODUCT_SUCCESS:
-      return { ...state, isLoading: false, singleProduct: payload };
-
-    case GET_PRODUCT_ERROR:
+    case types.PRODUCT_ERROR:
       return { ...state, isLoading: false, isError: true };
-    
-      case ADD_TO_CART:
-        return { ...state, isLoading: false};
-
-
-
+    case types.PRODUCT_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        products: payload.data,
+        totalCount: payload.totalCount,
+      };
     default:
       return state;
   }
 };
+
+export { reducer };

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../../assets/logo.png";
 import "./Signup.scss";
-import { auth } from "../../firebase";
+import { auth } from "../../library/firebase";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
 // import { async } from "@firebase/util";
