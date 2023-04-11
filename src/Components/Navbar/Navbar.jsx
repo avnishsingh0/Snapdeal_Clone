@@ -65,7 +65,7 @@ function Navbar({ name }) {
               <div className="input-group border-0.5">
 
 
-              <Input
+              {/* <Input
                 type="text"
                 className="form-control"
                 background={'white'}
@@ -74,25 +74,25 @@ function Navbar({ name }) {
                 aria-label="Recipient's username"
                 aria-describedby="button-addon2"
                 
-              />
-              <Button
+              /> */}
+              {/* <Button
                 className="btn btn-outline-secondary d-flex center"
                 type="button"
                 id="button-addon2"
               >
 
-                <MdSearch/>
+                {/* <MdSearch/> */}
 
                 
-              </Button>
+              
 
           
 
                 {/* <p>Search</p> */}
-              </Button>
+            
 
           
-                <p>Search</p>
+              
            
 
 
@@ -107,7 +107,7 @@ function Navbar({ name }) {
                 {/* <p>Cart</p> */}
                 {/* <BsCart className="icon"/> */}
 
-                <AiOutlineShoppingCart className="icon" cursor='pointer'/>
+               
 
                
 

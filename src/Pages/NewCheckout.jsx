@@ -28,7 +28,7 @@ import {
     Flex,
   } from '@chakra-ui/react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addCart, getCart } from '../Redux/CartReducer/action'
+
 import {
   Image,
   Select,
@@ -65,7 +65,7 @@ export const NewCheckout = () => {
 
 
     const getData = ()=>{
-      axios.get('https://snapdeal.onrender.com/Cart').then((res)=>{
+      axios.get('https://snapdeal-209x.onrender.com/cart').then((res)=>{
         console.log(res.data)
         setData(res.data)
       }).catch((err)=>{

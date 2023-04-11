@@ -4,18 +4,22 @@ import styles from "./Navbar.module.css";
 
 import { Link } from "react-router-dom";
 import HomeCarousel from "./HomeCarousel";
-import Navbar from "../Navbar/Navbar.jsx";
+
 import { useEffect, useState } from "react";
 
-import { auth } from "../../firebase";
-import Footer from "./Footer";
+
+
 import { Hide } from "@chakra-ui/react";
 
 
 import { auth } from "../../library/firebase";
+import { TopFooter } from "../Footer/TopFooter";
+import { MidFooter } from "../Footer/MidFooter";
+import { BottomFooter } from "../Footer/BottomFooter";
+import { About } from "../Footer/About";
 
-import Footer from "./Footer";
-import { Hide } from "@chakra-ui/react";
+
+
 // import NewNav from "../Navbar/NewNav";
 // import {Nav} from "../Navbar/Nav.jsx";
 
@@ -32,8 +36,9 @@ const LandingPage = () => {
   }, []);
 
   return (
+    <>
     <div style={{ marginTop: "6rem" }}>
-      <Navbar name={userName} />
+      
 
       {/* <!-- ------mainbody------- --> */}
 
@@ -557,11 +562,14 @@ const LandingPage = () => {
           alt=""
         />
       </div>
-      <div className={styles.last}>
-        <img src="https://user-images.githubusercontent.com/103572350/230485256-e88e9214-f849-4e3a-b8e2-f1a991758064.PNG" alt="error" />
-      </div>
-      <Footer/>
+    
+      
     </div>
+      <TopFooter/>
+      <MidFooter/>
+      <BottomFooter/>
+      <About/>
+    </>
   );
 };
 export default LandingPage;

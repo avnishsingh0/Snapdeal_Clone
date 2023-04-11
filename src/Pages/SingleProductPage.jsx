@@ -1,8 +1,5 @@
 import { ChevronRightIcon } from "@chakra-ui/icons";
 
-
-import React, { useEffect } from "react";
-
 import { Badge, useDisclosure, useToast } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 
@@ -12,7 +9,7 @@ import {  useParams } from "react-router-dom";
 import Navbar from "../Components/Navbar/Navbar";
 import styles from "../Components/Product/product.module.css";
 
-import { addCart, getSingleProduct } from "../Redux/ProductReducer/action";
+import { addCart } from "../Redux/ProductReducer/action";
 
 import { NewCartPage } from "./NewCartPage";
 import axios from "axios";

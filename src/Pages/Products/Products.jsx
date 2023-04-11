@@ -17,6 +17,10 @@ import {
 } from "@chakra-ui/breadcrumb";
 
 import DrawerComponent from "../../Components/Products/Drawer";
+import { TopFooter } from "../../Components/Footer/TopFooter";
+import { MidFooter } from "../../Components/Footer/MidFooter";
+import { BottomFooter } from "../../Components/Footer/BottomFooter";
+import { About } from "../../Components/Footer/About";
 
 const Products = () => {
   const dispatch = useDispatch();
@@ -93,6 +97,7 @@ const Products = () => {
 
 
   return (
+    <>
     <div>
       <Box borderBottomWidth={"1px"} marginTop={"25px"}>
         <Box p="0.9rem" pl={"1.0rem"}>
@@ -284,6 +289,11 @@ const Products = () => {
         />
       </Flex>
     </div>
+    <TopFooter/>
+      <MidFooter/>
+      <BottomFooter/>
+      <About/>
+    </>
   );
 };
 

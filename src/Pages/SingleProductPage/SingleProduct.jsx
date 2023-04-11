@@ -16,6 +16,10 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { TopFooter } from "../../Components/Footer/TopFooter";
+import { MidFooter } from "../../Components/Footer/MidFooter";
+import { BottomFooter } from "../../Components/Footer/BottomFooter";
+import { About } from "../../Components/Footer/About";
 
 
 
@@ -38,6 +42,14 @@ const SingleProduct = () => {
     setSingleProd(res.data);
     setLoading(false);
   };
+
+ const handleCart = () => {
+  
+  const payload = singleProd
+   axios.post(`https://snapdeal-209x.onrender.com/cart`,singleProd).then((res)=>{
+    console.log(res)
+   }).catch(err=>console.log(err))
+ }
   
 
   useEffect(() => {
@@ -45,6 +57,7 @@ const SingleProduct = () => {
   }, [id]);
 
   return (
+    <>
     <div>
      
       {isLoading ? (
@@ -135,17 +148,17 @@ const SingleProduct = () => {
                 py="0.5rem"
                 px="4rem"
             
-                onClick={() => {
+                onClick={   
+                  handleCart
+                  // toast({
+                  //   title: "Product is Added to the cart",
+                  //   status: "success",
+                  //   duration: 4000,
+                  //   position: "top",
+                  //   isClosable: true,
+                  // });
                   
-                  toast({
-                    title: "Product is Added to the cart",
-                    description: "Shop More ...",
-                    status: "success",
-                    duration: 4000,
-                    position: "top",
-                    isClosable: true,
-                  });
-                }}
+                }
               >
                 ADD TO CART
               </Button>
@@ -164,6 +177,11 @@ const SingleProduct = () => {
 
     
     </div>
+     <TopFooter/>
+      <MidFooter/>
+      <BottomFooter/>
+      <About/>
+    </>
   );
 };
 

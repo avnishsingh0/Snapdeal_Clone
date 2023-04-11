@@ -18,7 +18,7 @@ const navigate=useNavigate()
 
 
 const getData = ()=>{
-  axios.get("https://snapdeal.onrender.com/Cart").then((res)=>{
+  axios.get("https://snapdeal-209x.onrender.com/cart").then((res)=>{
     // console.log(res.data)
     setData(res.data)
   }).catch((err)=>{
@@ -31,7 +31,7 @@ useEffect(() => {
 }, [])
 
 const handleDelete =async(id) => {
-    await fetch(`https://snapdeal.onrender.com/Cart/${id}`, {
+    await fetch(`https://snapdeal-209x.onrender.com/cart/${id}`, {
       method: 'DELETE',
     });
     setData(data.filter((el) =>el.id !== id));

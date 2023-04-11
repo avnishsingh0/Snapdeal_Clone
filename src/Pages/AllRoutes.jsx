@@ -6,14 +6,13 @@ import Signup from "../Components/auth/Signup";
 import { Edit } from "../Components/Admin/Pages/Edit";
 import LandingPage from "../Components/Curousel/LandingPage";
 
-import { Cart } from "./Cart";
+
 import {NewCheckout} from "./NewCheckout";
 import Homepage from "./Homepage";
-import ProductPage from "./ProductPage";
-import SingleProductPage from "./SingleProductPage";
-import { auth } from "../firebase";
 
-import { auth } from "../library/firebase";
+
+
+
 
 import { MainPage } from "../Components/Admin/Components/MainPage";
 import { ProductView } from "../Components/Admin/Pages/ProductView";
@@ -37,8 +36,8 @@ const AllRoutes = () => {
     <Routes>
       <Route path="/" element={<LandingPage />} />
 
-      <Route path="/products" element={<ProductPage />} />
-      <Route path="/products/:id" element={<SingleProductPage />} />
+      
+      
       <Route path="/checkout" element={<NewCheckout/>} />
       <Route path="/cart" element={<NewCartPage />} />
       <Route path="/login" element={<Login />} />
