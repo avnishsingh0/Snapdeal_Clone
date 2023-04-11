@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineMobile, AiOutlineShoppingCart } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { Button, ButtonGroup, Text } from "@chakra-ui/react";
@@ -17,6 +17,7 @@ import { MdSearch } from "react-icons/md";
 import { capitalize } from "lodash";
 
 function Navbar({ name }) {
+ 
   const logOut = () => {
     const auth = getAuth();
     signOut(auth)
@@ -27,6 +28,9 @@ function Navbar({ name }) {
         alert("Log Out Error");
       });
   };
+
+  
+  
 
   return (
     <div className="nav_primary">
@@ -55,7 +59,7 @@ function Navbar({ name }) {
             </Link>
 
             <div className="nav_search">
-              <div className="input-group border-0.5">
+           <div className="input-group border-0.5">
               <Input
                 type="text"
                 className="form-control"
@@ -64,6 +68,7 @@ function Navbar({ name }) {
                 placeholder="Search product & brand"
                 aria-label="Recipient's username"
                 aria-describedby="button-addon2"
+                
               />
               <Button
                 className="btn btn-outline-secondary d-flex center"
@@ -82,7 +87,9 @@ function Navbar({ name }) {
               <div className="cart">
                 {/* <p>Cart</p> */}
                 {/* <BsCart className="icon"/> */}
+                <Link to={'/cart'}>
                 <AiOutlineShoppingCart className="icon" cursor='pointer'/>
+                </Link>
               </div>
               <h3>
                 {name ? (

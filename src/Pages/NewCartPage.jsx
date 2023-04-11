@@ -6,15 +6,20 @@ import { useState } from 'react'
 import Navbar from "../Components/Navbar/Navbar.jsx";
 // import { Box, Hide } from "@chakra-ui/react";
 import Footer from '../Components/Curousel/Footer'
+import { useNavigate, useParams } from 'react-router-dom'
 
 export const NewCartPage = () => {
 const [data,setData]=useState([])
-// console.log("data:",data)
+console.log("data:",data)
+//  const { id } = useParams();
+//  console.log("id:",id)
 const [summ,setSumm]=useState(0)
+const navigate=useNavigate()
+
 
 const getData = ()=>{
-  axios.get('https://snapdeal.onrender.com/Cart').then((res)=>{
-    console.log(res.data)
+  axios.get("https://snapdeal.onrender.com/Cart").then((res)=>{
+    // console.log(res.data)
     setData(res.data)
   }).catch((err)=>{
     console.log(err)
@@ -26,7 +31,7 @@ useEffect(() => {
 }, [])
 
 const handleDelete =async(id) => {
-    await fetch(`https://snapdeal.onrender.com/Cart${id}`, {
+    await fetch(`https://snapdeal.onrender.com/Cart/${id}`, {
       method: 'DELETE',
     });
     setData(data.filter((el) =>el.id !== id));
@@ -46,7 +51,7 @@ const handleDelete =async(id) => {
       sum=sum+Number(temp[i].price);
       // console.log(temp[i].price)
     }
-    console.log("temp:",sum)
+    // console.log("temp:",sum)
     setSumm(sum);
   }
   setTimeout(() => {
@@ -54,6 +59,7 @@ const handleDelete =async(id) => {
    
   }, 100);
   return (  
+    <Box>
     <Box>
       <Navbar/>
       <Box w={'50%'} h={'100px'} margin={'auto'} mt={'10%'}>
@@ -72,7 +78,7 @@ const handleDelete =async(id) => {
               {data && data.map((el) => {
                 return (
                   <Tr
-                    key={el._id}
+                    key={el.id}
                     boxShadow="rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 2px 0px"
                   >
                     <Td p="40px">
@@ -142,13 +148,16 @@ const handleDelete =async(id) => {
                 <Th textAlign={"Right"}>Rs. {summ}</Th>
                 {/* <Th textAlign={"left"}>Qunatity</Th>
                 <Th isNumeric>Total</Th> */}
+                <Button bg={'red'} color="white" onClick={()=>navigate("/checkout")}>Proceed to Payment</Button>
               </Tr>
             </Thead>
         </Table>
 
     </Box>
     </Box>
-      {/* <Footer/> */}
+      
+    </Box>
+    {/* <Footer/> */}
     </Box>
   )
 }

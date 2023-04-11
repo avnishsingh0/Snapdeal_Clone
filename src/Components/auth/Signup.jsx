@@ -4,6 +4,9 @@ import "./Signup.scss";
 import { auth } from "../../firebase";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
+import { Box } from "@chakra-ui/react";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Curousel/Footer";
 // import { async } from "@firebase/util";
 
 function Signup() {
@@ -44,8 +47,8 @@ function Signup() {
   };
 
   return (
-    <div>
-      <div className="Login_top">
+    <Box>
+      {/* <div className="Login_top">
         <Link to="/">
         <div className="first_child">
           <img src={Logo} alt="" />
@@ -65,7 +68,8 @@ function Signup() {
             />
           </div>
         </div>
-      </div>
+      </div> */}
+      <Navbar/>
 
       <form className="container">
         <h1>Create a account</h1>
@@ -129,7 +133,8 @@ function Signup() {
           Already have an account ?
         </Link>
       </form>
-    </div>
+      <Footer/>
+    </Box>
   );
 }
 

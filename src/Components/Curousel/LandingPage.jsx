@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { auth } from "../../firebase";
 import Footer from "./Footer";
 import { Hide } from "@chakra-ui/react";
+// import NewNav from "../Navbar/NewNav";
 // import {Nav} from "../Navbar/Nav.jsx";
 
 const LandingPage = () => {
@@ -25,7 +26,7 @@ const LandingPage = () => {
   return (
     <div style={{ marginTop: "6rem" }}>
       <Navbar name={userName} />
-      {/* <Nav/> */}
+      {/* <NewNav/> */}
       {/* <!-- ------mainbody------- --> */}
 
       <div className={styles.container}>

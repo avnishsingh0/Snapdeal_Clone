@@ -5,6 +5,7 @@ import Signup from "./Components/auth/Signup";
 import { useEffect, useState } from "react";
 import { auth } from "./firebase";
 import { MainPage } from "./Components/Admin/Components/MainPage";
+// import NewNav from "./Components/Navbar/NewNav";
 
 
 function App() {
@@ -13,13 +14,8 @@ function App() {
 
   return (
     <div>
-
-     
-      {/* <Navbar name={userName}/> */}
-    
+      {/* <NewNav/> */}
       <AllRoutes/>
-      {/* <MainPage/> */}
-  {/* <NewCartPage/> */}
 
     </div>
   );

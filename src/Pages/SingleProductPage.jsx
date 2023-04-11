@@ -1,6 +1,6 @@
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { Badge, useDisclosure, useToast } from "@chakra-ui/react";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ReactImageMagnify from "react-image-magnify";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useParams } from "react-router-dom";
@@ -9,26 +9,38 @@ import styles from "../Components/Product/product.module.css";
 import { addCart, getSingleProduct } from "../Redux/ProductReducer/action";
 import { Cart } from "./Cart";
 import { NewCartPage } from "./NewCartPage";
+import axios from "axios";
 
 const SingleProductPage = () => {
-  const product = useSelector((store) => store.ProductReducer.singleProduct);
-  console.log("product:",product)
+  // const product = useSelector((store) => store.ProductReducer.singleProduct);
+  // console.log("product:",product)
+
+  const [product,setProduct]=useState([])
+  const [qty,setQty]=useState(1)
   const { id } = useParams();
   const dispatch = useDispatch();
   const magImg = product.image;
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const toast = useToast();
+  // const toast = useToast();
   const toastIdRef = React.useRef();
-
+  const toast = useToast()
   function AddtoCartToast() {
     toastIdRef.current = toast({ description: "Product Added Successfully !" });
   }
 
 
-  const handletoCart = () => {
-
-    dispatch(addCart(product))
-      AddtoCartToast()
+  const handletoCart =() => {
+    AddtoCartToast()
+    // const payload={
+    //   qty
+    // }
+    
+    //   axios.post(`https://snapdeal-209x.onrender.com/cart/${id}`, { payload }).then(res=>{
+    //     console.log("response:",res.data)
+    //     alert("aya kya")
+    //   }).catch(err => {console.log(err)})
+    //   ;
+    
     
      
     
@@ -37,7 +49,8 @@ const SingleProductPage = () => {
   }
 
   useEffect(() => {
-    dispatch(getSingleProduct(id));
+    // dispatch(getSingleProduct(id));
+    axios.get(`https://snapdeal.onrender.com/products/${id}`).then((res)=>setProduct(res.data)).catch(err=>console.log(err))
     
   }, []);
 
@@ -147,9 +160,9 @@ const SingleProductPage = () => {
           <div className={styles.buy_button}>
             <button style={{ backgroundColor: "black",borderRadius:"10px",width:"250px",display:"flex",gap:"10px",justifyContent:"center" }} onClick={
               handletoCart
-            } >ADD TO CART <Cart/></button>
+            } >Add to Cart <Cart/></button>
             
-            <button style={{ backgroundColor: "#e40046",borderRadius:"10px" }}>BUY NOW</button>
+            <button style={{ backgroundColor: "#e40046",borderRadius:"10px" }}>Buy Now</button>
           </div>
           <p style={{ color: "gray", textAlign: "center", marginTop: "15px" }}>
             Generally delivered in 5 - 9 days
