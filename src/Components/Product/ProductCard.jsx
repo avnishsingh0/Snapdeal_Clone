@@ -22,7 +22,15 @@ import styles from "./product.module.css";
 
 import { Box, Badge,Image } from '@chakra-ui/react'
 import { StarIcon } from '@chakra-ui/icons';
+
+
+
+
+
+
+
 export const ProductCard = ({image, title, old_price, price, discount, rating}) => {
+
 
 
   return (

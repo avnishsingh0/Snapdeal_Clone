@@ -1,4 +1,6 @@
+
 import React, { useState } from "react";
+
 import { AiOutlineMobile, AiOutlineShoppingCart } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { Button, ButtonGroup, Text } from "@chakra-ui/react";
@@ -59,7 +61,10 @@ function Navbar({ name }) {
             </Link>
 
             <div className="nav_search">
-           <div className="input-group border-0.5">
+
+              <div className="input-group border-0.5">
+
+
               <Input
                 type="text"
                 className="form-control"
@@ -77,12 +82,19 @@ function Navbar({ name }) {
               >
 
                 <MdSearch/>
+
+                
+              </Button>
+
+          
+
                 {/* <p>Search</p> */}
               </Button>
 
           
                 <p>Search</p>
            
+
 
             </div>
 
@@ -92,9 +104,18 @@ function Navbar({ name }) {
             <div className="nav_cart">
               <div className="cart">
 
+                {/* <p>Cart</p> */}
+                {/* <BsCart className="icon"/> */}
+
+                <AiOutlineShoppingCart className="icon" cursor='pointer'/>
+
+               
+
+
                 <Link to={'/cart'}>
                 <AiOutlineShoppingCart className="icon" cursor='pointer'/>
                 </Link>
+
 
               </div>
               <h3>

@@ -1,6 +1,11 @@
 import { ChevronRightIcon } from "@chakra-ui/icons";
+
+
+import React, { useEffect } from "react";
+
 import { Badge, useDisclosure, useToast } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
+
 import ReactImageMagnify from "react-image-magnify";
 import { useDispatch, useSelector } from "react-redux";
 import {  useParams } from "react-router-dom";
@@ -18,11 +23,16 @@ import { addToCart } from "../Redux/CartReducer/reducer";
 
 
 const SingleProductPage = () => {
+
+ 
+
+
   // const product = useSelector((store) => store.ProductReducer.singleProduct);
   // console.log("product:",product)
 
   const [product,setProduct]=useState([])
   const [qty,setQty]=useState(1)
+
   const { id } = useParams();
   const dispatch = useDispatch();
   const magImg = product.image;

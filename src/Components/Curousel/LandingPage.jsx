@@ -7,6 +7,11 @@ import HomeCarousel from "./HomeCarousel";
 import Navbar from "../Navbar/Navbar.jsx";
 import { useEffect, useState } from "react";
 
+import { auth } from "../../firebase";
+import Footer from "./Footer";
+import { Hide } from "@chakra-ui/react";
+
+
 import { auth } from "../../library/firebase";
 
 import Footer from "./Footer";
@@ -29,7 +34,7 @@ const LandingPage = () => {
   return (
     <div style={{ marginTop: "6rem" }}>
       <Navbar name={userName} />
-      {/* <NewNav/> */}
+
       {/* <!-- ------mainbody------- --> */}
 
       <div className={styles.container}>
