@@ -18,11 +18,13 @@
 // export default ProductCard;
 import React from 'react'
 import styles from "./product.module.css";
-// import { useNavigate } from 'react-router-dom';
+
+
 import { Box, Badge,Image } from '@chakra-ui/react'
 import { StarIcon } from '@chakra-ui/icons';
 export const ProductCard = ({image, title, old_price, price, discount, rating}) => {
-    // const navigate = useNavigate();
+
+
   return (
     <Box
     className={styles.productCard}

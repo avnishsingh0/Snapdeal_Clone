@@ -1,20 +1,18 @@
 import Navbar from "./Components/Navbar/Navbar";
 import AllRoutes from "./Pages/AllRoutes";
-import Login from "./Components/auth/Login";
-import Signup from "./Components/auth/Signup";
-import { useEffect, useState } from "react";
-import { auth } from "./firebase";
 import { MainPage } from "./Components/Admin/Components/MainPage";
-// import NewNav from "./Components/Navbar/NewNav";
+
+import Footer from "./Components/Footer/Footer";
+import { TopFooter } from "./Components/Footer/TopFooter";
+import { MidFooter } from "./Components/Footer/MidFooter";
+import { BottomFooter } from "./Components/Footer/BottomFooter";
+import { About } from "./Components/Footer/About";
 
 
 function App() {
- 
-
-
   return (
     <div>
-      {/* <NewNav/> */}
+
       <AllRoutes/>
 
     </div>

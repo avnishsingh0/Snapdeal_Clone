@@ -10,8 +10,8 @@ import {
   Tooltip,
   Legend
 } from "recharts";
-// import { getProduct } from "../../../Redux/AdminReducer/action";
-import { getProducts } from "../../../Redux/ProductReducer/action";
+import { getProducts } from "../../../Redux/ProductReducer/actions";
+
 
 
 export default function Chart1() {
