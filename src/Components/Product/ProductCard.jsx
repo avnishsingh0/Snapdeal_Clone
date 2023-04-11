@@ -25,7 +25,13 @@ import { StarIcon } from '@chakra-ui/icons';
 
 
 
-const ProductCard = ({ image, title, old_price, price, discount, rating }) => {
+
+
+
+
+export const ProductCard = ({image, title, old_price, price, discount, rating}) => {
+
+
 
   return (
     <Box

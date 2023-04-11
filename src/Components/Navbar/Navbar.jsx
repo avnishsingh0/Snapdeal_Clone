@@ -1,4 +1,6 @@
-import React from "react";
+
+import React, { useState } from "react";
+
 import { AiOutlineMobile, AiOutlineShoppingCart } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { Button, ButtonGroup, Text } from "@chakra-ui/react";
@@ -17,6 +19,7 @@ import { capitalize } from "lodash";
 
 
 function Navbar({ name }) {
+ 
   const logOut = () => {
     const auth = getAuth();
     signOut(auth)
@@ -27,6 +30,9 @@ function Navbar({ name }) {
         alert("Log Out Error");
       });
   };
+
+  
+  
 
   return (
     <div className="nav_primary">
@@ -50,12 +56,15 @@ function Navbar({ name }) {
             <Link to="/">
             <div className="nav_image">
               <img src={logo} alt="" />
-              <h2>MegaDeals</h2>
+              <Link to={"/"} > <h2>MegaDeals</h2> </Link>
             </div>
             </Link>
 
             <div className="nav_search">
+
               <div className="input-group border-0.5">
+
+
               <Input
                 type="text"
                 className="form-control"
@@ -64,6 +73,7 @@ function Navbar({ name }) {
                 placeholder="Search product & brand"
                 aria-label="Recipient's username"
                 aria-describedby="button-addon2"
+                
               />
               <Button
                 className="btn btn-outline-secondary d-flex center"
@@ -72,10 +82,20 @@ function Navbar({ name }) {
               >
 
                 <MdSearch/>
+
                 
               </Button>
 
           
+
+                {/* <p>Search</p> */}
+              </Button>
+
+          
+                <p>Search</p>
+           
+
+
             </div>
 
               {/* <Search /> */}
@@ -83,6 +103,7 @@ function Navbar({ name }) {
 
             <div className="nav_cart">
               <div className="cart">
+
                 {/* <p>Cart</p> */}
                 {/* <BsCart className="icon"/> */}
 
@@ -90,11 +111,17 @@ function Navbar({ name }) {
 
                
 
+
+                <Link to={'/cart'}>
+                <AiOutlineShoppingCart className="icon" cursor='pointer'/>
+                </Link>
+
+
               </div>
               <h3>
                 {name ? (
                   <div className="logout_btn">
-                    Welcom -{capitalize(name)} <button onClick={logOut}>LogOut</button>
+                   <span> Welcome -{capitalize(name)}</span> <button onClick={logOut}>LogOut</button>
                   </div>
                 ) : (
                   <Link to={"/login"}>

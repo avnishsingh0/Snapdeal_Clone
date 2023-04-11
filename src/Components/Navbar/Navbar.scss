@@ -89,12 +89,20 @@ $font-color:#fff;
             // border: 1px solid black;
             justify-content: space-between;
             .logout_btn{
+                display: flex;
                 text-align: center;
+                font-size: 15px;
+                margin-top: 15px;
                 button {
                     background-color: #333;
                     padding: 10px;
                     margin-top: 5px;
+                    margin-left:5px;
+                    border-radius: 4px;
                 }
+            }
+            .logout_btn span{
+                margin-top: 15px;
             }
             .cart{
                 width: 120px;

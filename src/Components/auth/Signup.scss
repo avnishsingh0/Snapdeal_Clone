@@ -39,16 +39,24 @@
     }
 }
 
+.error {
+    color: red;
+    padding: 5px;
+    margin: 10px;
+    font-weight: bold;
+  }
+
 .container{
     width: 400px;
     height: 450px;
     margin: auto;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 160px;
     margin-bottom: 60px;
     padding: 0 25px 0 25px;
     // margin-bottom: 40px;
+  
 
     border-radius: 5px;
     gap: 10px;
@@ -75,4 +83,6 @@
     .register_now:hover{
         color: #e40046;
     }
+
+
 }

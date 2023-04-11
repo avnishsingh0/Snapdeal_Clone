@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import Logo from "../../assets/logo.png";
 import "./Login.scss";
-import { auth } from "../../firebase";
+import { auth } from "../../library/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
-import { flatten, useToast } from "@chakra-ui/react";
+import { Box, flatten, useToast } from "@chakra-ui/react";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Curousel/Footer";
 
 function Login() {
   const navigate = useNavigate();
@@ -34,8 +36,8 @@ function Login() {
   };
 
   return (
-    <div>
-      <div className="Login_top">
+    <Box>
+      {/* <div className="Login_top">
         <div className="first_child">
           <img src={Logo} alt="" />
           <h3>Magedeal</h3>
@@ -53,8 +55,8 @@ function Login() {
             />
           </div>
         </div>
-      </div>
-
+      </div> */}
+    <Navbar/>
       <form className="container">
         <h1>Log In to Your account</h1>
         <div className="mb-3">
@@ -102,7 +104,8 @@ function Login() {
           Create an account ?
         </Link>
       </form>
-    </div>
+      <Footer/>
+    </Box>
   );
 }
 

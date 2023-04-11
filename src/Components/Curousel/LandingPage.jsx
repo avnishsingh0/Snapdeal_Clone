@@ -6,10 +6,19 @@ import { Link } from "react-router-dom";
 import HomeCarousel from "./HomeCarousel";
 import Navbar from "../Navbar/Navbar.jsx";
 import { useEffect, useState } from "react";
+
 import { auth } from "../../firebase";
 import Footer from "./Footer";
 import { Hide } from "@chakra-ui/react";
+
+
+import { auth } from "../../library/firebase";
+
+import Footer from "./Footer";
+import { Hide } from "@chakra-ui/react";
+// import NewNav from "../Navbar/NewNav";
 // import {Nav} from "../Navbar/Nav.jsx";
+
 
 const LandingPage = () => {
   const [userName, setUserName] = useState("");
@@ -25,7 +34,7 @@ const LandingPage = () => {
   return (
     <div style={{ marginTop: "6rem" }}>
       <Navbar name={userName} />
-      {/* <Nav/> */}
+
       {/* <!-- ------mainbody------- --> */}
 
       <div className={styles.container}>
@@ -38,7 +47,7 @@ const LandingPage = () => {
                 src="https://i3.sdlcdn.com/img/leftnavicon09/30x30mobile4.png"
                 alt=""
               />
-              <Link to={"/products"}>
+              <Link to={"/product/MensData"}>
                 <span style={{ cursor: "pointer" }}>All Offers</span>
               </Link>
               <div className={styles.sublists}>
