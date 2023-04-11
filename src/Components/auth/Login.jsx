@@ -19,7 +19,7 @@ function Login() {
   const handelLogin = (e) => {
     // e.preventDefault();
     if (!value.email || !value.pass) {
-      setErrorMsg("Fill all fileds");
+      setErrorMsg("Fill all fields");
       return;
     }
     setErrorMsg("");
@@ -92,6 +92,7 @@ function Login() {
           />
         </div>
         <b>{errorMsg}</b>
+        <Link to={"/"} >
         <button
           type="submit"
           className="btn"
@@ -100,6 +101,7 @@ function Login() {
         >
           Log In
         </button>
+        </Link>
         <Link className="register_now" to={"/signup"}>
           Create an account ?
         </Link>

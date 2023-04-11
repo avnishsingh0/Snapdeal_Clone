@@ -48,7 +48,7 @@ const handleDelete =async(id) => {
     var sum=0;
     
     for(let i=0;i<temp.length;i++){
-      sum=sum+Number(temp[i].price);
+      sum=sum+Number(temp[i].offerPrice);
       // console.log(temp[i].price)
     }
     // console.log("temp:",sum)
@@ -59,7 +59,7 @@ const handleDelete =async(id) => {
    
   }, 100);
   return (  
-    <Box>
+    
     <Box>
       <Navbar/>
       <Box w={'50%'} h={'100px'} margin={'auto'} mt={'10%'}>
@@ -83,7 +83,7 @@ const handleDelete =async(id) => {
                   >
                     <Td p="40px">
                       <Box display={"flex"} gap="10px">
-                        <Image src={el.image} h="130px" />
+                        <Image src={el.images[0]} h="130px" />
                         <Box>
                           <Heading fontWeight={"600"} fontSize={"13px"}>
                             {el.title}
@@ -107,7 +107,7 @@ const handleDelete =async(id) => {
                         </Box>
                       </Box>
                     </Td>
-                    <Td>Rs. {el.price}</Td>
+                    <Td>Rs. {el.offerPrice}</Td>
                     <Td>
                       <Box
                         display={"flex"}
@@ -157,8 +157,8 @@ const handleDelete =async(id) => {
     </Box>
       
     </Box>
-    {/* <Footer/> */}
-    </Box>
+    
+  
   )
 }
 

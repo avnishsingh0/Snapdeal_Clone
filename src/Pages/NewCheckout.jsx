@@ -109,7 +109,7 @@ const handleDelete =async(id) => {
   return (
     <>
     <Navbar/>
-   <Box mt={"4rem"}  >
+   <Box mt={"6rem"}  >
 
    <SimpleGrid columns={[1, 1, 1, 2]} p={5}>
     <Box border={'0px solid red'}>
@@ -229,13 +229,13 @@ const handleDelete =async(id) => {
                 <Tbody>
                   {data.length > 0 &&
                     data.map((product, index) =>{
-                     grandtotal+=(1*product.price)
+                     grandtotal+=(1*product.offerPrice)
                       return (
                         <Tr key={index}>
                         <Td display={"flex"}>
                           <Image
                             w={70}
-                            src={product.image}
+                            src={product.images[0]}
                           />
                           <Box>
                             <Text ml={4}>{product.title}</Text>
@@ -261,7 +261,7 @@ const handleDelete =async(id) => {
                           </Box>
                         </Td>
                         <Td>
-                          <Text> {product.price}</Text>
+                          <Text> {product.offerPrice}</Text>
                         </Td>
 
                         <Td>
@@ -306,11 +306,11 @@ const handleDelete =async(id) => {
                           </Text>
                           <Text mt={2} border={"0px solid red"}>
                            
-                            Qty:{product.qty}
+                            Qty:1
                           </Text>
                           <Text mt={2} border={"0px solid red"}>
                            
-                            Rs. {product.price}
+                            Rs. {product.offerPrice}
                           </Text>
                           <Box display={"flex"} mt={3}>
                             <Text fontSize={"xl"}>
@@ -421,13 +421,13 @@ const handleDelete =async(id) => {
       <Box bg={'#fbf8fb '} p={4}>
         <Text>Summary ({`${data.length}`}Items)</Text>
         {data.length > 0 && data.map((product,index)=>{
-          grandtotals+=(1*product.price)
+          grandtotals+=(1*product.offerPrice)
           return (
             <Box>
             <Text mt={3}>{product.brand}</Text>
             <Flex>
             <Text mr={"11rem"}>Quantity: 1</Text>
-            <Text>Rs. {product.price}</Text>
+            <Text>Rs. {product.offerPrice}</Text>
              </Flex>
             </Box>
           )
@@ -439,7 +439,7 @@ const handleDelete =async(id) => {
          <Text ml={"10rem"}>Rs. {grandtotals}</Text>
      </Flex>
      <Flex>
-         <Text>Delevery Charge</Text>
+         <Text>Delivery Charge</Text>
           <Text ml={"6rem"}>Free</Text>
      </Flex>
      <hr/>
@@ -449,7 +449,7 @@ const handleDelete =async(id) => {
      </Flex>
      <Center>
                 {mob.length>0 && <Link to="/thank">
-                <Button color={'white'}  bg={'#dc3545 '} w={'60%'} mt={3}>Pay Rs. {grandtotals}</Button>
+                <Button color={'white'}  bg={'#dc3545 '} w={'80%'} mt={3}>Pay Rs. {grandtotals}</Button>
                 </Link>}
                 </Center>
     </Box>
