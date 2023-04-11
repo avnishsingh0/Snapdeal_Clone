@@ -77,7 +77,7 @@ function Navbar({ name }) {
 
           
                 <p>Search</p>
-              </button>
+           
 
             </div>
 

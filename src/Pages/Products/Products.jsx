@@ -24,6 +24,8 @@ const Products = () => {
   let { products } = useParams();
 
   const [searchParams, setSearchParams] = useSearchParams();
+
+ 
   const [category, setCategory] = useState(
     searchParams.getAll("category") || []
   );
@@ -46,13 +48,15 @@ const Products = () => {
       return num > discountRange;
     });
   }
+
+
+
   const totalCount = useSelector((store) => {
     return store.productReducer.totalCount;
   });
 
-
   let params = {};
-  
+
   if (category.length) params.category = category;
   if (brand.length) params.brand = brand;
   if (discountRange) params.discountRange = discountRange;
@@ -61,16 +65,16 @@ const Products = () => {
   params.limit = 15;
   useEffect(() => {
     setSearchParams(params);
-   
+
     const getProductParams = {
       params: { brand, subCategory: category, _limit: 15, _page: page },
     };
-   
+
     if (sort) {
       getProductParams.params._sort = "offerPrice";
       getProductParams.params._order = sort;
     }
-   
+
     dispatch(getProducts(products, getProductParams));
   }, [brand, category, discountRange, page, sort, products]);
 
@@ -86,9 +90,10 @@ const Products = () => {
     setSort(e.target.value);
   };
 
+
+
   return (
     <div>
-      
       <Box borderBottomWidth={"1px"} marginTop={"25px"}>
         <Box p="0.9rem" pl={"1.0rem"}>
           <Breadcrumb>
@@ -136,6 +141,11 @@ const Products = () => {
             >
               Clear all
             </Button>
+          </Flex>
+          <Flex>
+          
+       
+      
           </Flex>
 
           <Select
@@ -273,7 +283,6 @@ const Products = () => {
           setCat={products}
         />
       </Flex>
-      
     </div>
   );
 };

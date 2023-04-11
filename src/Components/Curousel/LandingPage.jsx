@@ -9,7 +9,6 @@ import { useEffect, useState } from "react";
 
 import { auth } from "../../library/firebase";
 
-import { auth } from "../../firebase";
 import Footer from "./Footer";
 import { Hide } from "@chakra-ui/react";
 // import {Nav} from "../Navbar/Nav.jsx";
