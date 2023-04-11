@@ -50,6 +50,6 @@ Steps to run the project locally:-
 4. Enjoy! 
 
 ---
-Deployed Link : https://megadeal.vercel.app/
+Deployed Link : https://snapdeal-deployment.vercel.app/
 
 
