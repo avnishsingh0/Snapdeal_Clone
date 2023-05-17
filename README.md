@@ -33,7 +33,7 @@ Deployed Link -> https://megadeal.vercel.app/
 
 💫Tech & Tools Used :
 ---
-For Frontend : HTML5, CSS3, Javascript, JS6, ReactJS Redux.
+For Frontend : ReactJS, Redux, ChakraUI, SCSS, Firewase
 
 For database: Json Server (cyclic).
 
